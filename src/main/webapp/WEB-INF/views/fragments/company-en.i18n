@@ -10,7 +10,7 @@
 
 master.company.title = The company
 master.company.text = \
-	Acme, Inc. is a fictitious fictitious company that provides a starter \
+	Hello World, Inc. is a fictitious company that provides a starter \
 	project for the students of the Design and Testing subject of the \
 	Software Engineering Curriculum of the University of Sevilla.
 master.company.name = Acme, Inc.
