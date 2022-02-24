@@ -9,4 +9,6 @@
 # they accept any liabilities with respect to them.
 
 - Rafael Corchuelo (corchu@us.es)
+- Pablo Álvarez Caro (pabalvcar@alum.us.es)
 - Pablo Marín Gómez (pabmargom3@alum.us.es)
+
