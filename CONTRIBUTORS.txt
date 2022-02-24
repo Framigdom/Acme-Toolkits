@@ -9,6 +9,8 @@
 # they accept any liabilities with respect to them.
 
 - Rafael Corchuelo (corchu@us.es)
+- David Zamora Fernández (davzamfer@alum.us.es)
+- José Ignacio García Bohórquez (josgarboh@alum.us.es)
 - Diego Ruiz Gil (dieruigil@alum.us.es)
 - Francisco Javier Migueles (framigdom@alum.us.es)
 - Pablo Álvarez Caro (pabalvcar@alum.us.es)
