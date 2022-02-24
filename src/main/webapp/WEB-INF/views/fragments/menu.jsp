@@ -21,6 +21,7 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-josgarboh" action="https://www.spotify.com/es/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-alvarez" action="https://es.bandainamcoent.eu/elden-ring/elden-ring"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
