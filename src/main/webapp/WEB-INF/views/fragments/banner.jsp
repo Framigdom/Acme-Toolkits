@@ -16,5 +16,5 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <div class="rounded" style="background: <acme:message code='master.banner.background'/>">
-	<img src="images/banner.png" alt="Acme Jobs, Inc." class="img-fluid rounded"/>
+	<img src="images/banner.png" alt="<acme:message code='master.banner.alt'/>" class="img-fluid rounded"/>
 </div>
