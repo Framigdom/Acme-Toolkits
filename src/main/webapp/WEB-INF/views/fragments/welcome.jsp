@@ -16,5 +16,6 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <div class="jumbotron">
+	<h1><acme:message code="master.welcome.title"/></h1>
 	<acme:message code="master.welcome.text"/>
 </div>
