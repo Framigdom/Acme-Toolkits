@@ -10,6 +10,8 @@
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	¡Hola mundo!  Nunca antes ha sido tan sencillo desarrollar un \
-	proyecto y hacerlo funcionar.
-﻿
+	Bienvenidos a Acme Toolkits, la página web que te permite \
+	dar publicidad a tus inventos de forma sencilla, o buscar \
+	los inventos de otras personas para ofrecerles un mecenazgo \
+	y así asegurar que la idea que tanto te ha gustado tenga \
+	éxito en el futuro.
