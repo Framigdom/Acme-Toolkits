@@ -40,7 +40,6 @@ public class Announcement extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@NotNull
 	@Length(max=100)
 	protected String				title;
 
@@ -50,7 +49,6 @@ public class Announcement extends AbstractEntity {
 	protected Date					moment;
 
 	@NotBlank
-	@NotNull
 	@Length(max=255)
 	protected String				body;
 
