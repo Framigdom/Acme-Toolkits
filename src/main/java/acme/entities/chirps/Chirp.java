@@ -39,12 +39,10 @@ public class Chirp extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@NotNull
 	@Length(max=100)
 	protected String				title;
 	
 	@NotBlank
-	@NotNull
 	@Length(max=100)
 	protected String				author;
 
@@ -53,7 +51,6 @@ public class Chirp extends AbstractEntity {
 	protected Date					moment;
 
 	@NotBlank
-	@NotNull
 	@Length(max=255)
 	protected String				body;
 
