@@ -59,15 +59,13 @@ public class Patronage extends AbstractEntity {
 	@NotNull
 	protected Float				budget;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@DateTimeFormat(pattern = "yyyy/MM/dd")
-	@Future
-	protected LocalDate				startDate;
+	protected Date				startDate;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@DateTimeFormat(pattern = "yyyy/MM/dd")
-	@Future
-	protected LocalDate				finishDate;
+	protected Date				finishDate;
 	
 	@URL
 	protected Date				link;
