@@ -51,7 +51,6 @@ public class Patronage extends AbstractEntity {
 
 	@NotBlank
 	@Length(max=255)
-	@NotNull
 	protected String			legalStuff;
 
 	@Positive
@@ -67,7 +66,7 @@ public class Patronage extends AbstractEntity {
 	protected Date				finishDate;
 	
 	@URL
-	protected Date				link;
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 
