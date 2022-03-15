@@ -34,11 +34,11 @@ public class Component  extends AbstractEntity{
 	protected String				code;
 
 	@NotBlank
-	@Length(max=101)
+	@Length(max=100)
 	protected String				technology;
 
 	@NotBlank
-	@Length(max=256)
+	@Length(max=255)
 	protected String				description;
 
 	@Positive
