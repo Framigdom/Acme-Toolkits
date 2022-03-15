@@ -1,4 +1,4 @@
-package acme.entities.roles;
+package acme.roles;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Inventor extends AbstractEntity {
+public class Patron extends AbstractEntity {
 	
 	// Serialisation identifier -----------------------------------------------
 
