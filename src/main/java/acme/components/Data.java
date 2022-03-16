@@ -11,7 +11,7 @@ public class Data {
 	// Attributes -------------------------------------------------------------
 	
 	public String 			systemCurrency;
-	public List<String> 	acceptedCurrencies;
+	public List<String> 		acceptedCurrencies;
 	public String 			strongSpamTerms;
 	public String			weakSpamTerms;
 	public Double 			strongSpamTreshold;
