@@ -10,14 +10,16 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.forms;
+package acme.entities.dashboards;
 
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Map;
 
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 public class AdministratorDashboard implements Serializable {
@@ -28,7 +30,7 @@ public class AdministratorDashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Integer						totalNumberOfComponents;
+	int						totalNumberOfComponents;
 	
 	Map<String,Double>			averageRetailPriceOfComponentsGroupedByTechnology;
 	Map<String,Double>			deviationRetailPriceOfComponentsGroupedByTechnology;
@@ -40,7 +42,7 @@ public class AdministratorDashboard implements Serializable {
 	Map<String,Double>			minimunRetailPriceOfComponentsGroupedByCurrency;
 	Map<String,Double>			maximumRetailPriceOfComponentsGroupedByCurrency;
 	
-	Integer						totalNumberOfTools;
+	int						totalNumberOfTools;
 	
 	Map<String,Double>			averageRetailPriceOfToolsGroupedByCurrency;
 	Map<String,Double>			deviationRetailPriceOfToolsGroupedByCurrency;
@@ -48,28 +50,28 @@ public class AdministratorDashboard implements Serializable {
 	Map<String,Double>			maximumRetailPriceOfToolsGroupedByCurrency;
 	
 	
-	Integer			totalNumberOfProposedPatronages;
+	int			totalNumberOfProposedPatronages;
 	
-	Double			averageBudgetOfProposedPatronages;
-	Double			deviationBudgetOfProposedPatronages;
-	Double			minimunBudgetOfProposedPatronages;
-	Double			maximumBudgetOfProposedPatronages;
-	
-	
-	Integer			totalNumberOfAcceptedPatronages;
-	
-	Double			averageBudgetOfAcceptedPatronages;
-	Double			deviationBudgetOfAcceptedPatronages;
-	Double			minimunBudgetOfAcceptedPatronages;
-	Double			maximumBudgetOfAcceptedPatronages;
+	double			averageBudgetOfProposedPatronages;
+	double			deviationBudgetOfProposedPatronages;
+	double			minimunBudgetOfProposedPatronages;
+	double			maximumBudgetOfProposedPatronages;
 	
 	
-	Integer			totalNumberOfDeniedPatronages;
+	int			totalNumberOfAcceptedPatronages;
 	
-	Double			averageBudgetOfDeniedPatronages;
-	Double			deviationBudgetOfDeniedPatronages;
-	Double			minimunBudgetOfDeniedPatronages;
-	Double			maximumBudgetOfDeniedPatronages;
+	double			averageBudgetOfAcceptedPatronages;
+	double			deviationBudgetOfAcceptedPatronages;
+	double			minimunBudgetOfAcceptedPatronages;
+	double			maximumBudgetOfAcceptedPatronages;
+	
+	
+	int			totalNumberOfDeniedPatronages;
+	
+	double			averageBudgetOfDeniedPatronages;
+	double			deviationBudgetOfDeniedPatronages;
+	double			minimunBudgetOfDeniedPatronages;
+	double			maximumBudgetOfDeniedPatronages;
 
 
 	// Derived attributes -----------------------------------------------------
