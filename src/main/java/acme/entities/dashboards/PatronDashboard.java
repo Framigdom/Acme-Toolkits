@@ -10,14 +10,17 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.forms;
+package acme.entities.dashboards;
 
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Map;
 
 import lombok.Getter;
 import lombok.Setter;
 
+
+@Entity
 @Getter
 @Setter
 public class PatronDashboard implements Serializable {
@@ -28,9 +31,9 @@ public class PatronDashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Integer						totalNumberofProposedPatronages;
-	Integer						totalNumberofAceptedPatronages;
-	Integer						totalNumberofDeniedPatronages;
+	int						totalNumberofProposedPatronages;
+	int						totalNumberofAceptedPatronages;
+	int						totalNumberofDeniedPatronages;
 	
 	Map<String,Double>			averageBudgetOfProposedPatronagesGroupedByCurrency;
 	Map<String,Double>			deviationBudgetOfProposedPatronagesGroupedByCurrency;
