@@ -1,7 +1,5 @@
 package acme.components;
 
-import java.util.List;
-
 public class Data {
 
 	// Serialisation identifier -----------------------------------------------
@@ -11,11 +9,10 @@ public class Data {
 	// Attributes -------------------------------------------------------------
 	
 	public String 			systemCurrency;
-	public List<String> 		acceptedCurrencies;
+	public String 			acceptedCurrencies;
 	public String 			strongSpamTerms;
 	public String			weakSpamTerms;
 	public Double 			strongSpamTreshold;
 	public Double			weakSpamTreshold;
-	
 	
 }
