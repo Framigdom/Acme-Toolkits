@@ -18,6 +18,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -42,6 +43,13 @@ public class PatronageReport extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	
+	@Pattern(regexp = "^[0-9]{4}$")
+    @Transient
+    @NotBlank
+    protected String                serialNumber;
+	
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
@@ -56,10 +64,9 @@ public class PatronageReport extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 	
-	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$:[0-9]{3}")
-	protected String				sequenceNumber;
-	
+	public String sequenceNumber(){		
+		return this.patronage.getCode() + ":" + this.serialNumber;		
+	}	
 
 	// Relationships ----------------------------------------------------------
 	
