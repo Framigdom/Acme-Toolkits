@@ -12,17 +12,22 @@
 
 package acme.entities.dashboards;
 
-import javax.persistence.Entity;
-import java.io.Serializable;
 import java.util.Map;
 
+import javax.persistence.Entity;
+
+import org.springframework.data.util.Pair;
+
+import acme.entities.patronage.Status;
+import acme.framework.datatypes.Money;
+import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class AdministratorDashboard implements Serializable {
+public class AdministratorDashboard extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -32,47 +37,26 @@ public class AdministratorDashboard implements Serializable {
 
 	int						totalNumberOfComponents;
 	
-	Map<String,Double>			averageRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double>			deviationRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double>			minimunRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double>			maximumRetailPriceOfComponentsGroupedByTechnology;
-
-	Map<String,Double>			averageRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double>			deviationRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double>			minimunRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double>			maximumRetailPriceOfComponentsGroupedByCurrency;
+	Map<Pair<String,String>,Money>			averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Money>			deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Money>			minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Money>			maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	
-	int						totalNumberOfTools;
+	int										totalNumberOfTools;
 	
-	Map<String,Double>			averageRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Double>			deviationRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Double>			minimunRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Double>			maximumRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Money>						averageRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Money>						deviationRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Money>						minimunRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Money>						maximumRetailPriceOfToolsGroupedByCurrency;
 	
 	
-	int			totalNumberOfProposedPatronages;
+	Map<Status,Integer>						totalNumberOfPatronagesGroupedByStatus;
 	
-	double			averageBudgetOfProposedPatronages;
-	double			deviationBudgetOfProposedPatronages;
-	double			minimunBudgetOfProposedPatronages;
-	double			maximumBudgetOfProposedPatronages;
+	Map<Status,Money>						averageBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Money>						deviationBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Money>						minimunBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Money>						maximumBudgetOfPatronagesGroupedByStatus;
 	
-	
-	int			totalNumberOfAcceptedPatronages;
-	
-	double			averageBudgetOfAcceptedPatronages;
-	double			deviationBudgetOfAcceptedPatronages;
-	double			minimunBudgetOfAcceptedPatronages;
-	double			maximumBudgetOfAcceptedPatronages;
-	
-	
-	int			totalNumberOfDeniedPatronages;
-	
-	double			averageBudgetOfDeniedPatronages;
-	double			deviationBudgetOfDeniedPatronages;
-	double			minimunBudgetOfDeniedPatronages;
-	double			maximumBudgetOfDeniedPatronages;
-
 
 	// Derived attributes -----------------------------------------------------
 
