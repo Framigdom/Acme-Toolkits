@@ -1,3 +1,1 @@
-This is a dummy file.  It's intended to force Git
-to upload this folder to the GitHub repository.
-Delete this file when this folder gets contents.
+#Blank on purpose, remove when something gets added here
