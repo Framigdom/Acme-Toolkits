@@ -55,8 +55,7 @@ public class Announcement extends AbstractEntity {
 	@URL
 	protected String				link;
 	
-	@NotNull
-	protected Boolean				critical;
+	protected boolean				critical;
 
 	// Derived attributes -----------------------------------------------------
 
