@@ -15,6 +15,7 @@ package acme.entities.dashboards;
 import java.util.Map;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 
 import org.springframework.data.util.Pair;
 
@@ -40,10 +41,13 @@ public class PatronDashboard extends AbstractEntity {
 	int						totalNumberofAceptedPatronages;
 	int						totalNumberofDeniedPatronages;
 	
-	
+	@Transient
 	Map<Pair<Status,String>,Money>			averageBudgetOfPatronagesGroupedByStatusAndCurrency;
+	@Transient
 	Map<Pair<Status,String>,Money>			deviationBudgetOfPatronagesGroupedByStatusAndCurrency;
+	@Transient
 	Map<Pair<Status,String>,Money>			minimunBudgetOfPatronagesGroupedByStatusAndCurrency;
+	@Transient
 	Map<Pair<Status,String>,Money>			maximunBudgetOfPatronagesGroupedByStatusAndCurrency;
 	
 
