@@ -36,7 +36,6 @@ public class ConfigData extends AbstractEntity{
     @Range(min = 0, max = 100)
     public int                strongSpamTreshold;
     
-    @NotNull
     @Range(min = 0, max = 100)
     public int                weakSpamTreshold;
 
