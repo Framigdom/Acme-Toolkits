@@ -12,10 +12,15 @@
 
 package acme.entities.dashboards;
 
-import javax.persistence.Entity;
-import java.io.Serializable;
 import java.util.Map;
 
+import javax.persistence.Entity;
+
+import org.springframework.data.util.Pair;
+
+import acme.entities.patronage.Status;
+import acme.framework.datatypes.Money;
+import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +28,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class PatronDashboard implements Serializable {
+public class PatronDashboard extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -35,22 +40,12 @@ public class PatronDashboard implements Serializable {
 	int						totalNumberofAceptedPatronages;
 	int						totalNumberofDeniedPatronages;
 	
-	Map<String,Double>			averageBudgetOfProposedPatronagesGroupedByCurrency;
-	Map<String,Double>			deviationBudgetOfProposedPatronagesGroupedByCurrency;
-	Map<String,Double>			minimunBudgetOfProposedPatronagesGroupedByCurrency;
-	Map<String,Double>			maximunBudgetOfProposedPatronagesGroupedByCurrency;
 	
-	Map<String,Double>			averageBudgetOfAceptedPatronagesGroupedByCurrency;
-	Map<String,Double>			deviationBudgetOfAceptedPatronagesGroupedByCurrency;
-	Map<String,Double>			minimunBudgetOfAceptedPatronagesGroupedByCurrency;
-	Map<String,Double>			maximunBudgetOfAceptedPatronagesGroupedByCurrency;
+	Map<Pair<Status,String>,Money>			averageBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Money>			deviationBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Money>			minimunBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Money>			maximunBudgetOfPatronagesGroupedByStatusAndCurrency;
 	
-
-	Map<String,Double>			averageBudgetOfDeniedPatronagesGroupedByCurrency;
-	Map<String,Double>			deviationBudgetOfDeniedPatronagesGroupedByCurrency;
-	Map<String,Double>			minimunBudgetOfDeniedPatronagesGroupedByCurrency;
-	Map<String,Double>			maximunBudgetOfDeniedPatronagesGroupedByCurrency;
-
 
 	// Derived attributes -----------------------------------------------------
 
