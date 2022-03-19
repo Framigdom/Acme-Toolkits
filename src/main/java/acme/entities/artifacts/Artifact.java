@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -12,6 +11,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,9 +43,8 @@ public class Artifact extends AbstractEntity{
 	@Length(max = 255)
 	protected String			description;
 	
-	@Min(0)
-	@NotNull
-	protected Integer			retailPrice;
+	@Valid
+	protected Money				retailPrice;
 	
 	@NotNull
 	protected ArtifactType		artifactType;
@@ -58,5 +57,4 @@ public class Artifact extends AbstractEntity{
 	@NotNull
 	protected Toolkit			toolkit;
 
-	
 }
