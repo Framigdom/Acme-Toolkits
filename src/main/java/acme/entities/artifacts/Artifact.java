@@ -1,8 +1,12 @@
-package acme.entities.tools;
+package acme.entities.artifacts;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.PositiveOrZero;
 
@@ -16,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Tool extends AbstractEntity{
+public class Artifact extends AbstractEntity{
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -40,11 +44,20 @@ public class Tool extends AbstractEntity{
 	@Length(max = 255)
 	protected String			description;
 	
-	@PositiveOrZero
+	@Min(0)
+	@NotNull
 	protected Integer			retailPrice;
+	
+	@NotNull
+	protected ArtifactType		artifactType;
 	
 	@URL
 	protected String			link;
+	
+	@ManyToOne(optional = true)
+	@Valid
+	@NotNull
+	protected Toolkit			toolkit;
 
 	
 }
