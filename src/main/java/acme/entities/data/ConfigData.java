@@ -1,15 +1,19 @@
 package acme.entities.data;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
+
+import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class Data {
+public class ConfigData extends AbstractEntity{
 
     // Serialisation identifier -----------------------------------------------
 
@@ -17,19 +21,24 @@ public class Data {
 
     // Attributes -------------------------------------------------------------
 
-    @NotNull
+    @NotBlank
     public String             systemCurrency;
     
-    @NotNull
+    @NotBlank
     public String             acceptedCurrencies;
 
-    @NotNull
+    @NotBlank
     public String             strongSpamTerms;
     
-    @NotNull
+    @NotBlank
     public String			  weakSpamTerms;
 
-    public double             strongSpamTreshold;
-    public double             weakSpamTreshold;
+    @NotNull
+    @Range(min = 0, max = 100)
+    public Integer             strongSpamTreshold;
+    
+    @NotNull
+    @Range(min = 0, max = 100)
+    public Integer             weakSpamTreshold;
 
 }
