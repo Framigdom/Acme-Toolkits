@@ -15,8 +15,11 @@ package acme.entities.patronage;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -41,24 +44,37 @@ public class PatronageReport extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	
-	@NotBlank
-	@Pattern(regexp = "<patronage-code>:<serial-number>")
-	protected String sequenceNumber;
-
+	@Pattern(regexp = "^[0-9]{4}$")
+    @Transient
+    @NotBlank
+    protected String                serialNumber;
+	
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	protected Date					creationMoment;
 	
 	@NotBlank
-	@Length(max=255)
+	@Length(min=0,max=255)
 	protected String				memorandum;
 	
 	@URL
 	protected String				link;
 
 	// Derived attributes -----------------------------------------------------
+	
+	public String sequenceNumber(){		
+		return this.patronage.getCode() + ":" + this.serialNumber;		
+	}	
 
 	// Relationships ----------------------------------------------------------
+	
+	@Valid
+	@NotNull
+	@ManyToOne(optional=false)
+	protected Patronage				patronage;
+	
+	
 
 }
