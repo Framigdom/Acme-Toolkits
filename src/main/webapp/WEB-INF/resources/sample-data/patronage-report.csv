@@ -1,3 +1,3 @@
-key,sequenceNumber,creationMoment,memorandum,link
-patronage-report1,ALO014:1,"2021-12-01 12:00",Patronage accepted!,nano.net
-patronage-report2,HAM044:5,"2020-12-01 12:00",Patronage denied!,ham.net
+key,serial-number,sequence-number,creation-moment,memorandum,link,key:patronage
+patronage-report-01,0001,AAA-101-A:0001,"2021/12/01 12:00",Patronage accepted!,https://www.nano.com,patronage-01
+patronage-report-02,0002,BBB-202-B:0002,"2020/12/01 12:00",Patronage denied!,https://www.ham.com,patronage-02

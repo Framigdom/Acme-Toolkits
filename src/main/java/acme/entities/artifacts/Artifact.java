@@ -51,10 +51,5 @@ public class Artifact extends AbstractEntity{
 	
 	@URL
 	protected String			link;
-	
-	@ManyToOne(optional = true)
-	@Valid
-	@NotNull
-	protected Toolkit			toolkit;
 
 }

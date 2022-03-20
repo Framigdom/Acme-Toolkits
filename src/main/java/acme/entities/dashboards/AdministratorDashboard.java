@@ -15,6 +15,7 @@ package acme.entities.dashboards;
 import java.util.Map;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 
 import org.springframework.data.util.Pair;
 
@@ -36,25 +37,37 @@ public class AdministratorDashboard extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	int						totalNumberOfComponents;
-	
+
+	@Transient
 	Map<Pair<String,String>,Money>			averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	@Transient
 	Map<Pair<String,String>,Money>			deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	@Transient
 	Map<Pair<String,String>,Money>			minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	@Transient
 	Map<Pair<String,String>,Money>			maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	
 	int										totalNumberOfTools;
 	
+	@Transient
 	Map<String,Money>						averageRetailPriceOfToolsGroupedByCurrency;
+	@Transient
 	Map<String,Money>						deviationRetailPriceOfToolsGroupedByCurrency;
+	@Transient
 	Map<String,Money>						minimunRetailPriceOfToolsGroupedByCurrency;
+	@Transient
 	Map<String,Money>						maximumRetailPriceOfToolsGroupedByCurrency;
 	
-	
+	@Transient
 	Map<Status,Integer>						totalNumberOfPatronagesGroupedByStatus;
 	
+	@Transient
 	Map<Status,Money>						averageBudgetOfPatronagesGroupedByStatus;
+	@Transient
 	Map<Status,Money>						deviationBudgetOfPatronagesGroupedByStatus;
+	@Transient
 	Map<Status,Money>						minimunBudgetOfPatronagesGroupedByStatus;
+	@Transient
 	Map<Status,Money>						maximumBudgetOfPatronagesGroupedByStatus;
 	
 
