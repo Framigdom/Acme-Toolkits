@@ -1,3 +1,3 @@
-key,type,code,technology,description,retailPrice,link
-artifact-01,0,FBI123A,Arduino,A component developed using Arduino technology,"EUR 50.0",https://www.arduino.cc/
-artifact-02,1,ZYX084B,photoshop,A fast program for Graphic Desing,"GBP 20.0",adobe.com
+key,artifact-type,name,code,technology,description,retail-price,link
+artifact-01,COMPONENT,Placa arduino,FBI-123-A,Arduino,A component developed using Arduino technology,"EUR 50.0",https://www.arduino.cc/
+artifact-02,COMPONENT,Adobo photocho,ZYX-084-B,photoshop,A fast program for Graphic Desing,"GBP 20.0",https://www.adobe.com
