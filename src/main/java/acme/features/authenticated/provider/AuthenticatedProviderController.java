@@ -23,7 +23,7 @@ import acme.framework.roles.Authenticated;
 import acme.roles.Provider;
 
 @Controller
-@RequestMapping("/authenticated/provider/")
+//@RequestMapping("/authenticated/provider/")
 public class AuthenticatedProviderController extends AbstractController<Authenticated, Provider> {
 
 	// Internal state ---------------------------------------------------------
