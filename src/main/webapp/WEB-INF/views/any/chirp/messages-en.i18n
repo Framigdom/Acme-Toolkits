@@ -10,8 +10,8 @@
 
 
 
-any.shout.list.label.title = Title
-any.shout.list.label.author = Author
-any.shout.list.label.moment = Moment
-any.shout.list.label.body = Body
-any.shout.list.label.email = Email
+any.chirp.list.label.title = Title
+any.chirp.list.label.author = Author
+any.chirp.list.label.moment = Moment
+any.chirp.list.label.body = Body
+any.chirp.list.label.email = Email

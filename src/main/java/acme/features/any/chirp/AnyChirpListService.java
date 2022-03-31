@@ -19,7 +19,7 @@ public class AnyChirpListService implements AbstractListService<Any, Chirp> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected 	AnyChripRepository repository;
+	protected 	AnyChirpRepository repository;
 
 	// AbstractListService<Administrator, Announcement> interface --------------
 

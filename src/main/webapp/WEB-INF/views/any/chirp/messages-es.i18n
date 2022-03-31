@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.shout.list.title = Título
-any.shout.list.label.author = Autor
-any.shout.list.label.moment = Momento
-any.shout.list.label.body = Cuerpo
-any.shout.list.label.email = Correo
+any.chirp.list.title = Título
+any.chirp.list.label.author = Autor
+any.chirp.list.label.moment = Momento
+any.chirp.list.label.body = Cuerpo
+any.chirp.list.label.email = Correo

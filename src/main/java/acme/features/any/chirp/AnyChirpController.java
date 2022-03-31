@@ -10,7 +10,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Any;
 
 @Controller
-public class AnyChripController extends AbstractController<Any, Chirp> {
+public class AnyChirpController extends AbstractController<Any, Chirp> {
 
 	// Internal state ---------------------------------------------------------
 

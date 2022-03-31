@@ -56,6 +56,6 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 # master.menu.any ##########################################################
 
-master.menu.any.chirps = Chirp
+master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
 

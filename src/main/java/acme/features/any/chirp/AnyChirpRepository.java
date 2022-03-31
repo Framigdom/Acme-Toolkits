@@ -10,7 +10,7 @@ import acme.entities.chirps.Chirp;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnyChripRepository extends AbstractRepository {
+public interface AnyChirpRepository extends AbstractRepository {
 
 	@Query("select c from Chirp c where c.moment > :deadline")
 	Collection<Chirp> findRecentChirp(Date deadline);
