@@ -12,6 +12,7 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Inventor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -50,5 +51,10 @@ public class Artifact extends AbstractEntity{
 	
 	@URL
 	protected String			link;
+	
+	// Relationships -------------------------------------------------------------
+	
+	@ManyToOne(optional = false)
+	protected Inventor			inventor;
 
 }
