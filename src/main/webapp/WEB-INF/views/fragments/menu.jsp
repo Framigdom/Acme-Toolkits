@@ -45,9 +45,10 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.inventor.artifacts" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.artifacts.components-link" action="/inventor/artifact/list-my-components"/>
-    </acme:menu-option>
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-my-components"/>
+			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-my-tools"/>
+    	</acme:menu-option>
       
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
