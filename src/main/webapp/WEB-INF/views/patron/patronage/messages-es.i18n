@@ -10,3 +10,4 @@ patron.patronage.form.label.finishDate = Fecha de fin
 patron.patronage.form.label.info = Más información (Opcional)
 
 patron.patronage.form.button.inventor = Inventor
+patron.patronage.form.button.patronageReport = Informe

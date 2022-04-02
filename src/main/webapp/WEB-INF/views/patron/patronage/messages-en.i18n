@@ -10,3 +10,4 @@ patron.patronage.form.label.finishDate = Finish ate
 patron.patronage.form.label.info = More info (Optional)
 
 patron.patronage.form.button.inventor = Inventor
+patron.patronage.form.button.patronageReport = Report
