@@ -45,6 +45,11 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.patron ##########################################################
+
+master.menu.patron = Mecenas
+master.menu.patron.patronages = Mecenazgos
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -54,8 +59,15 @@ master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
+
 # master.menu.any ##########################################################
 
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
+
+
+# master.menu.inventor.artifacts #############################################
+
+master.menu.inventor.artifacts = Mis artefactos
+master.menu.inventor.artifacts.components-link = Mis componentes
 

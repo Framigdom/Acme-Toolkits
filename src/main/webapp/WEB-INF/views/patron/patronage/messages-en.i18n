@@ -1,0 +1,12 @@
+patron.patronage.list.label.status = Status
+patron.patronage.list.label.code = Code
+
+patron.patronage.form.label.status = Status
+patron.patronage.form.label.code = Code
+patron.patronage.form.label.legalStuff = Legal stuff
+patron.patronage.form.label.budget = Budget
+patron.patronage.form.label.startDate = Start date
+patron.patronage.form.label.finishDate = Finish ate
+patron.patronage.form.label.info = More info (Optional)
+
+patron.patronage.form.button.inventor = Inventor
