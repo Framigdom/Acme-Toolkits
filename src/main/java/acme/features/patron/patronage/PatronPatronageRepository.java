@@ -9,7 +9,7 @@ import acme.entities.patronage.Patronage;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface PatronPatronageRepository extends AbstractRepository{
+public interface PatronPatronageRepository extends AbstractRepository {
 	
 	@Query("select patronage from Patronage patronage where patronage.patron.id = :id")
 	Collection<Patronage> findPatrongeByPatronId(int id);
