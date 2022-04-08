@@ -51,8 +51,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-my-components"/>
-			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-my-tools"/>
+			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
+			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
     	</acme:menu-option>
       
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
