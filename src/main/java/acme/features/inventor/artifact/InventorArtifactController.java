@@ -15,10 +15,8 @@ public class InventorArtifactController extends AbstractController<Inventor, Art
 	// Internal state ---------------------------------------------------------
 	
 	@Autowired
-	protected InventorArtifactListMyComponentsService listMyComponentsService;
+	protected InventorArtifactListMineService listMineService;
 	
-	@Autowired
-	protected InventorArtifactListMyToolsService listMyToolsService;
 	
 	@Autowired
 	protected InventorArtifactShowService showService;
@@ -27,8 +25,7 @@ public class InventorArtifactController extends AbstractController<Inventor, Art
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list-my-components", "list", listMyComponentsService);
-		super.addCommand("list-my-tools", "list", listMyToolsService);
+		super.addCommand("list-mine", "list", listMineService);
 		super.addCommand("show", showService);
 	}
 	
