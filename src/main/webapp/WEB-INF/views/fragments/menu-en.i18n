@@ -59,6 +59,9 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 
+# master.menu.authenticated ##########################################################
+master.menu.authenticated.announcement=Announcements
+master.menu.authenticated.announcement.list=List announcements
 
 # master.menu.inventor #############################################
 

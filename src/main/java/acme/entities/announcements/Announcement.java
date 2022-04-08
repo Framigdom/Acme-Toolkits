@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.entities.announcement;
+package acme.entities.announcements;
 
 import java.util.Date;
 
