@@ -45,6 +45,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.patron ##########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronages
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -57,3 +62,21 @@ master.menu.user-account.become-consumer = Become a consumer
 # master.menu.authenticated ##########################################################
 master.menu.authenticated.announcement=Announcements
 master.menu.authenticated.announcement.list=List announcements
+
+# master.menu.inventor #############################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.components-link = My components
+master.menu.inventor.tools-link = My tools
+
+# master.menu.any ##########################################################
+master.menu.any.chirps = Chirps
+master.menu.any.chirps.list = List chirps
+
+
+# master.menu.inventor.artifacts #############################################
+
+master.menu.inventor.artifacts = My artifacts
+master.menu.inventor.artifacts.components-link = My components
+
+
