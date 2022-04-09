@@ -16,4 +16,4 @@ patron.patronage.form.label.inventor.company = Company
 patron.patronage.form.label.inventor.statement = Statement
 patron.patronage.form.label.inventor.info = More Info
 
-patron.patronage.form.button.inventor = Inventor
+patron.patronage.form.button.patronageReport = Report

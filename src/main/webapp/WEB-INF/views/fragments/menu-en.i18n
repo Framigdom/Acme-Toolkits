@@ -58,3 +58,25 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.authenticated ##########################################################
+master.menu.authenticated.announcement=Announcements
+master.menu.authenticated.announcement.list=List announcements
+
+# master.menu.inventor #############################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.components-link = My components
+master.menu.inventor.tools-link = My tools
+
+# master.menu.any ##########################################################
+master.menu.any.chirps = Chirps
+master.menu.any.chirps.list = List chirps
+
+
+# master.menu.inventor.artifacts #############################################
+
+master.menu.inventor.artifacts = My artifacts
+master.menu.inventor.artifacts.components-link = My components
+
+
