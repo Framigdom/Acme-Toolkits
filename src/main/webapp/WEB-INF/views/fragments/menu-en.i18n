@@ -53,3 +53,14 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+#master.menu.any.useraccount ##########################################
+
+master.menu.any.useraccount = Users
+master.menu.any.useraccount.consumer = List all consumers
+master.menu.any.useraccount.inventor = List all inventors
+master.menu.any.useraccount.patron = List all patrons
+master.menu.any.useraccount.provider = List all providers
+
+
+
