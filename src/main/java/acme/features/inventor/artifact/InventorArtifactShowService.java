@@ -24,7 +24,16 @@ public class InventorArtifactShowService implements AbstractShowService<Inventor
 	public boolean authorise(Request<Artifact> request) {
 		assert request != null;
 		
-		return true;
+		Integer id;
+		Artifact artifact;
+		boolean result;
+		id = request.getModel().getInteger("id");
+		artifact = repository.findArtifactById(id);
+		
+		result = request.getPrincipal().getActiveRoleId() == artifact.getInventor().getId();
+		
+		
+		return result;
 	}
 
 	@Override
