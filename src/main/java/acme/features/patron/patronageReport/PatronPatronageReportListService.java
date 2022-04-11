@@ -25,7 +25,19 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
 		
-		return true;
+		boolean result;
+		int patronageId;
+		PatronageReport patronageReport;
+		
+		patronageId = request.getModel().getInteger("patronageId");
+		patronageReport = this.repository.findPatronageReportByPatronageId(patronageId)
+			.stream().findFirst().orElse(null);
+		
+		result = false;
+		if(patronageReport != null)
+			result = request.getPrincipal().getActiveRoleId() == patronageReport.getPatronage().getPatron().getId();
+		
+		return result;
 	}
 
 	@Override
