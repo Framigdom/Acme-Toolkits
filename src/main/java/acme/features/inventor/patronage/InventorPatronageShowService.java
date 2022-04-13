@@ -6,8 +6,10 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronage.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
+import acme.roles.Patron;
 
 @Service
 public class InventorPatronageShowService implements AbstractShowService<Inventor, Patronage>{
@@ -23,7 +25,15 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int patronageId;
+		Patronage patronage;
+
+		patronageId = request.getModel().getInteger("id");
+		patronage = this.repository.findPatronageById(patronageId);
+		result = request.getPrincipal().getActiveRoleId() == patronage.getInventor().getId();
+
+		return result;
 	}
 
 	@Override
@@ -45,9 +55,13 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		assert entity != null;
 		assert model != null;
 
+		final Patron patron = entity.getPatron();
+		final UserAccount patronAccount = patron.getUserAccount();
+		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget",
 			"startDate", "finishDate", "link", "patron", "inventor");
-		model.setAttribute("patronId", entity.getPatron().getId());
+		request.unbind(patron, model, "company", "statement", "link");
+		request.unbind(patronAccount, model, "username");
 		model.setAttribute("patronageId", entity.getId());
 	}
 
