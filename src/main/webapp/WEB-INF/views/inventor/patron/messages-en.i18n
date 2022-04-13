@@ -1,0 +1,4 @@
+inventor.patron.form.label.username = Username
+inventor.patron.form.label.company = Company
+inventor.patron.form.label.statement = Statement
+inventor.patron.form.label.info = More Info (Optional)

@@ -1,0 +1,12 @@
+inventor.patronage.list.label.status = Estado
+inventor.patronage.list.label.code = Código
+
+inventor.patronage.form.label.status = Estado
+inventor.patronage.form.label.code = Código
+inventor.patronage.form.label.legalStuff = Aspectos legales
+inventor.patronage.form.label.budget = Presupuesto
+inventor.patronage.form.label.startDate = Fecha de inicio
+inventor.patronage.form.label.finishDate = Fecha de fin
+inventor.patronage.form.label.info = Más información (Opcional)
+
+inventor.patronage.form.button.patron = Patron
