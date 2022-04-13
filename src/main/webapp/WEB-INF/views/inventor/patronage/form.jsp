@@ -13,4 +13,5 @@
 	<acme:input-url code="inventor.patronage.form.label.info" path="link"/>
 
 	<acme:button code="inventor.patronage.form.button.patron" action="/inventor/patron/show?patronId=${patronId}"/>
+	<acme:button code="inventor.patronage.form.button.patronageReport" action="/inventor/patronage-report/list?patronageId=${patronageId}"/>
 </acme:form> 
