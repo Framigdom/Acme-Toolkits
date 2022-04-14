@@ -15,6 +15,7 @@
 	<acme:input-textbox code="inventor.patronage.form.label.patron.company" path="company"/>
 	<acme:input-textbox code="inventor.patronage.form.label.patron.statement" path="statement"/>
 	<acme:input-url code="inventor.patronage.form.label.patron.info" path="link"/>
-	
+
 	<acme:button code="inventor.patronage.form.button.patronageReport" action="/inventor/patronage-report/list?patronageId=${patronageId}"/>
+
 </acme:form> 

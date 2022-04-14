@@ -10,11 +10,12 @@ inventor.patronage.form.label.startDate = Fecha de inicio
 inventor.patronage.form.label.finishDate = Fecha de fin
 inventor.patronage.form.label.info = Más información (Opcional)
 
-
 inventor.patronage.message.patron = Información del Mecenas
 inventor.patronage.form.label.patron.username = Nombre de Usuario
 inventor.patronage.form.label.patron.company = Compañía
 inventor.patronage.form.label.patron.statement = Declaración
+
 inventor.patronage.form.label.patron.info = Más Información
 
 inventor.patronage.form.button.patronageReport = Informe
+
