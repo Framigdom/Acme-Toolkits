@@ -62,7 +62,8 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Anuncios
+master.menu.authenticated = Autenticado
+master.menu.authenticated.config-data.list = Lista de configData
 master.menu.authenticated.announcement.list=Lista de anuncios
 
 

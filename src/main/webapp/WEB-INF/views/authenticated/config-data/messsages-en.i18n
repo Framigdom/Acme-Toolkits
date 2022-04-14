@@ -1,0 +1,5 @@
+authenticated.config-data.form.label.systemCurrency = System Currency
+authenticated.config-data.form.label.acceptedCurrencies = Accepted Currencies
+
+authenticated.config-data.form.list.systemCurrency = System Currency
+authenticated.config-data.form.list.acceptedCurrencies = Accepted Currencies

@@ -61,7 +61,8 @@ master.menu.user-account.become-consumer = Become a consumer
 
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Announcements
+master.menu.authenticated = Authenticated
+master.menu.authenticated.config-data.list = List of configData
 master.menu.authenticated.announcement.list=List announcements
 
 # master.menu.inventor #############################################
