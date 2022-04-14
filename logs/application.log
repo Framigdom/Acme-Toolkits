@@ -383,3 +383,4 @@
 2022-03-31 12:56:15.199 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-1] RealPath: D:\Universidad\3º Curso\DP\DP2\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\views\patron\patronage\list.jsp 
 2022-03-31 12:56:15.199 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-1] RequestURI: /acme-toolkits-22.1/WEB-INF/views/master/page.jsp 
 2022-03-31 12:56:15.200 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-1] QueryString: null 
+
