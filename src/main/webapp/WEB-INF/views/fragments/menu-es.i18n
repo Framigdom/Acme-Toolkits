@@ -45,6 +45,11 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.patron ##########################################################
+
+master.menu.patron = Mecenas
+master.menu.patron.patronages = Mecenazgos
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -54,6 +59,7 @@ master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
+
 #master.menu.any.useraccount ##########################################
 
 master.menu.any.useraccount = Usuarios
@@ -61,3 +67,31 @@ master.menu.any.useraccount.consumer = Lista de todos los consumidores
 master.menu.any.useraccount.inventor = Listar todos los inventores
 master.menu.any.useraccount.patron = Listar todos los patronos
 master.menu.any.useraccount.provider = Listar todos los proveedores
+
+
+# master.menu.authenticated ##########################################################
+master.menu.authenticated.announcement=Anuncios
+master.menu.authenticated.announcement.list=Lista de anuncios
+
+
+# master.menu.inventor #############################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.components-link = Mis componentes
+master.menu.inventor.tools-link = Mis herramientas
+master.menu.inventor.patronages = Mecenazgos
+
+
+# master.menu.any ##########################################################
+
+master.menu.any.chirps = Chirps
+master.menu.any.chirps.list = Lista de chirps
+
+
+# master.menu.inventor.artifacts #############################################
+
+master.menu.inventor.artifacts = Mis artefactos
+master.menu.inventor.artifacts.components-link = Mis componentes
+
+
+

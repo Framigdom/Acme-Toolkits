@@ -1,0 +1,7 @@
+patron.patronage-report.list.label.sequenceNumber = Número de secuencia
+patron.patronage-report.list.label.creationMoment = Fecha de creación
+
+patron.patronage-report.form.label.sequenceNumber = Número de secuencia
+patron.patronage-report.form.label.creationMoment = Fecha de creación
+patron.patronage-report.form.label.memorandum = Memorándum
+patron.patronage-report.form.label.info = Más información

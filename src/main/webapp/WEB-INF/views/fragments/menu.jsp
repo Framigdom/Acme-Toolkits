@@ -20,7 +20,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-      <acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
+      		<acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-marin" action="https://github.com/TheNeoStormZ"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-david-zamora" action="https://theuselessweb.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-josgarboh" action="https://www.spotify.com/es/"/>
@@ -33,6 +33,17 @@
 			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
+    </acme:menu-option>
+
+
+		<acme:menu-option code="master.menu.authenticated.announcement" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
+    </acme:menu-option>
+
+		<acme:menu-option code="master.menu.any.chirps">
+			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/>
+   
+			<acme:menu-separator/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -51,6 +62,17 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+		  <acme:menu-suboption code="master.menu.inventor.patronages" action="/inventor/patronage/list"/>
+			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
+			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
+    </acme:menu-option>
+      
+		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
+			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+		</acme:menu-option>
+
 	</acme:menu-left>
 
 	<acme:menu-right>
