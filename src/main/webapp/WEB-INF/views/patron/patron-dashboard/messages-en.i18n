@@ -1,0 +1,14 @@
+patron.patron-dashboard.form.title.general-indicators = General Indicators
+
+patron.patron-dashboard.form.title.average = Average
+patron.patron-dashboard.form.title.deviation = Deviation
+patron.patron-dashboard.form.title.maximum = Maximum
+patron.patron-dashboard.form.title.minimum = Minimum
+
+patron.patron-dashboard.form.title.proposed = Proposed
+patron.patron-dashboard.form.title.accepted = Accepted
+patron.patron-dashboard.form.title.denied = Denied
+
+patron.patron-dashboard.form.title.patronages-total-number-status = Total number of patronages by status
+
+patron.patron-dashboard.form.title.prueba = Esto es una prueba en
