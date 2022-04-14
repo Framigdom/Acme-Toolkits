@@ -1,0 +1,8 @@
+inventor.artifact.list.label.name = Nombre
+inventor.artifact.list.label.code = Código
+inventor.artifact.list.label.technology = Tecnología
+inventor.artifact.list.label.description = Descripción
+inventor.artifact.list.label.retailprice = Precio
+inventor.artifact.list.label.type = Tipo
+inventor.artifact.list.label.link = Enlace
+inventor.artifact.list.label.inventor = Inventor
