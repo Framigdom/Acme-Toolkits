@@ -60,6 +60,14 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
 
+#master.menu.any.useraccount ##########################################
+
+master.menu.any.useraccount = Usuarios
+master.menu.any.useraccount.consumer = Lista de todos los consumidores
+master.menu.any.useraccount.inventor = Listar todos los inventores
+master.menu.any.useraccount.patron = Listar todos los patronos
+master.menu.any.useraccount.provider = Listar todos los proveedores
+
 
 # master.menu.authenticated ##########################################################
 master.menu.authenticated.announcement=Anuncios

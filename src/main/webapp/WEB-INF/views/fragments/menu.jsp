@@ -28,13 +28,21 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-framigdom" action="https://mcdonalds.es/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.any.useraccount">
+			<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
+    </acme:menu-option>
+
 
 		<acme:menu-option code="master.menu.authenticated.announcement" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
+    </acme:menu-option>
 
 		<acme:menu-option code="master.menu.any.chirps">
 			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/>
-      
+   
 			<acme:menu-separator/>
 		</acme:menu-option>
 
