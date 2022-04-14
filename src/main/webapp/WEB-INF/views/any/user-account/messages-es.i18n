@@ -1,0 +1,19 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.useraccount.list.label.name = Nombre
+any.useraccount.list.label.surname = Apellido
+any.useraccount.list.label.email = Correo electrónico
+
+any.user-account.form.label.username = Nombre de usuario:
+any.user-account.form.label.name = Nombre:
+any.user-account.form.label.surname = Apellido:
+any.user-account.form.label.email = Correo electrónico:
+any.user-account.form.label.role-list = Roles:
