@@ -34,10 +34,7 @@ public class AuthenticatedConfigDataShowService implements AbstractShowService<A
 		assert request != null;
 
 		ConfigData result;
-		int id;
-
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneConfigDataById(id);
+		result = this.repository.findConfigData();
 
 		return result;
 	}

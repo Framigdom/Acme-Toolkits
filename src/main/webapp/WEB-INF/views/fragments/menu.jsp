@@ -38,7 +38,7 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.authenticated.config-data.list" action="/authenticated/config-data/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.config-data.show" action="/authenticated/config-data/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.any.chirps">

@@ -1,5 +1,2 @@
 authenticated.config-data.form.label.systemCurrency = Moneda del sistema
 authenticated.config-data.form.label.acceptedCurrencies = Monedas aceptadas
-
-authenticated.config-data.list.label.systemCurrency = Moneda del sistema
-authenticated.config-data.list.label.acceptedCurrencies = Monedas aceptadas
