@@ -59,6 +59,13 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 
+#master.menu.any.useraccount ##########################################
+
+master.menu.any.useraccount = Users
+master.menu.any.useraccount.consumer = List all consumers
+master.menu.any.useraccount.inventor = List all inventors
+master.menu.any.useraccount.patron = List all patrons
+master.menu.any.useraccount.provider = List all providers
 
 # master.menu.authenticated ##########################################################
 master.menu.authenticated = Authenticated
@@ -81,6 +88,7 @@ master.menu.any.chirps.list = List chirps
 
 master.menu.inventor.artifacts = My artifacts
 master.menu.inventor.artifacts.components-link = My components
+
 
 
 
