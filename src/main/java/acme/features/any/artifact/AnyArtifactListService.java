@@ -24,19 +24,23 @@ public class AnyArtifactListService implements AbstractListService<Any, Artifact
 	@Override
 	public boolean authorise(final Request<Artifact> request) {
 		assert request != null;
-
+		
 		return true;
 	}
 
 	@Override
 	public Collection<Artifact> findMany(final Request<Artifact> request) {
 		assert request != null;
-
+		
 		Collection<Artifact> result;
-
-		result = this.repository.findAllComponentsByAny();
-
-		return result;
+		final String type=request.getModel().getString("type");
+		if(type.equals("component")) {
+			result = this.repository.findAllComponentsByAny();
+			return result;
+		}else {
+			result = this.repository.findAllToolsByAny();
+			return result;
+		}
 	}
 	
 	@Override

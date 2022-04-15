@@ -32,27 +32,41 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-alvarez" action="https://es.bandainamcoent.eu/elden-ring/elden-ring"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-framigdom" action="https://mcdonalds.es/"/>
+			  <acme:menu-separator/>
+			<%--any.useraccount --%>
+	  		<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
+			  <acme:menu-separator/>
+			<%--any.chirp--%>
+			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
+			  <acme:menu-separator/>
+			<%--any.artifact --%>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list?type=tool"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.any.useraccount">
-			<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
-      <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
-      <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
-      <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
-    </acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.config-data.show" action="/authenticated/config-data/show"/>
+			  <acme:menu-separator/>
+			<%--any.useraccount --%>
+	  		<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
+			  <acme:menu-separator/>
+			<%--any.chirp--%>
+			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
+			  <acme:menu-separator/>
+			<%--any.artifact --%>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list?type=tool"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.any.chirps">
-			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/>  
-		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -62,10 +76,6 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
-			<acme:menu-suboption code="master.menu.any.artifact" action="/any/artifact/list"/>
 		</acme:menu-option>
 		
 		

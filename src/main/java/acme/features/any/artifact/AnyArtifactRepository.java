@@ -14,6 +14,9 @@ public interface AnyArtifactRepository extends AbstractRepository {
 	@Query("select a from Artifact a where a.artifactType = 1 ")
 	Collection<Artifact> findAllComponentsByAny();
 	
-	@Query("select a from Artifact a where a.id=:id and a.artifactType = 1 ")
-	Artifact findOneAnyComponentById(int id);
+	@Query("select a from Artifact a where a.id=:id")
+	Artifact findOneAnyArtifactById(int id);
+	
+	@Query("select a from Artifact a where a.artifactType = 0 ")
+	Collection<Artifact> findAllToolsByAny();
 }
