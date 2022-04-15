@@ -33,8 +33,8 @@ public class AnyArtifactShowService implements AbstractShowService<Any, Artifact
 		int id;
 		id=request.getModel().getInteger("id");
 		
-		result = this.repository.findOneAnyComponentById(id);
-
+		result = this.repository.findOneAnyArtifactById(id);
+		
 		return result;
 	}
 	
