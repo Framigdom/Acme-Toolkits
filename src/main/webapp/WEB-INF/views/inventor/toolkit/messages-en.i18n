@@ -1,0 +1,7 @@
+inventor.toolkit.list.label.title = Title
+inventor.toolkit.list.label.code = Code
+inventor.toolkit.list.label.description = Description
+inventor.toolkit.list.label.assemblyNotes = Assembly Notes
+inventor.toolkit.list.label.link = Link
+inventor.toolkit.list.label.price = Price
+inventor.toolkit.form.button.artifact = See tools and components of the toolkit

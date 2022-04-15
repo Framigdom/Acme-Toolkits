@@ -68,6 +68,7 @@ master.menu.authenticated.announcement.list=List announcements
 master.menu.inventor = Inventor
 master.menu.inventor.components-link = My components
 master.menu.inventor.tools-link = My tools
+master.menu.inventor.toolkits-link = My toolkits
 
 # master.menu.any ##########################################################
 master.menu.any.chirps = Chirps

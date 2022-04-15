@@ -31,6 +31,7 @@
 
 		<acme:menu-option code="master.menu.authenticated.announcement" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.any.chirps">
 			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/>
@@ -58,6 +59,7 @@
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
 			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
+			<acme:menu-suboption code="master.menu.inventor.toolkits-link" action="/inventor/toolkit/list"/>
     	</acme:menu-option>
       
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">

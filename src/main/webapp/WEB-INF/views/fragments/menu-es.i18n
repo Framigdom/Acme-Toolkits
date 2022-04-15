@@ -61,8 +61,8 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Anuncios
-master.menu.authenticated.announcement.list=Lista de anuncios
+master.menu.authenticated.announcement = Anuncios
+master.menu.authenticated.announcement.list = Lista de anuncios
 
 
 # master.menu.inventor #############################################
@@ -70,6 +70,7 @@ master.menu.authenticated.announcement.list=Lista de anuncios
 master.menu.inventor = Inventor
 master.menu.inventor.components-link = Mis componentes
 master.menu.inventor.tools-link = Mis herramientas
+master.menu.inventor.toolkits-link = Mis toolkits
 
 
 # master.menu.any ##########################################################
