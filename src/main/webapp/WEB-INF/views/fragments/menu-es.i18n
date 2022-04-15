@@ -60,6 +60,7 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
 
+
 #master.menu.any.useraccount ##########################################
 
 master.menu.any.useraccount = Usuarios
@@ -85,6 +86,8 @@ master.menu.inventor.patronages = Mecenazgos
 
 # master.menu.any ##########################################################
 
+master.menu.any = Cualquiera
+master.menu.any.artifact= Lista de Artefactos
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
 
@@ -93,6 +96,7 @@ master.menu.any.chirps.list = Lista de chirps
 
 master.menu.inventor.artifacts = Mis artefactos
 master.menu.inventor.artifacts.components-link = Mis componentes
+
 
 
 
