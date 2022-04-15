@@ -68,7 +68,8 @@ master.menu.any.useraccount.patron = List all patrons
 master.menu.any.useraccount.provider = List all providers
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Announcements
+master.menu.authenticated = Authenticated
+master.menu.authenticated.config-data.show = System Currencies
 master.menu.authenticated.announcement.list=List announcements
 
 # master.menu.inventor #############################################

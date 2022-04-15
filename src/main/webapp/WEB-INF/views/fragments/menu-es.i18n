@@ -70,7 +70,8 @@ master.menu.any.useraccount.provider = Listar todos los proveedores
 
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Anuncios
+master.menu.authenticated = Autenticado
+master.menu.authenticated.config-data.show = Monedas del sistema
 master.menu.authenticated.announcement.list=Lista de anuncios
 
 
