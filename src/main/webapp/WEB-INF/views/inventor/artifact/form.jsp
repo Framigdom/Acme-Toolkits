@@ -11,6 +11,5 @@
 	<acme:input-money code="inventor.artifact.list.label.retailprice" path="retailPrice"/>
 	<acme:input-textbox code="inventor.artifact.list.label.type" path="artifactType"/>
 	<acme:input-textbox code="inventor.artifact.list.label.link" path="link"/>
-<!--<acme:input-textbox code="inventor.artifact.list.label.inventor" path="inventor"/> -->
 </acme:form>
 

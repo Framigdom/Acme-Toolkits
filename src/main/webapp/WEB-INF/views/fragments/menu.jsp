@@ -44,7 +44,6 @@
 			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
     </acme:menu-option>
 
-
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
 			<acme:menu-separator/>
@@ -84,6 +83,7 @@
 		 	<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
+			<acme:menu-suboption code="master.menu.inventor.toolkits-link" action="/inventor/toolkit/list"/>
     </acme:menu-option>
       
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
