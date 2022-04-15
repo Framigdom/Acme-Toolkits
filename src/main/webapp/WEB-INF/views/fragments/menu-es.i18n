@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
@@ -60,9 +60,21 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
 
+
+#master.menu.any.useraccount ##########################################
+
+master.menu.any.useraccount = Usuarios
+master.menu.any.useraccount.consumer = Lista de todos los consumidores
+master.menu.any.useraccount.inventor = Listar todos los inventores
+master.menu.any.useraccount.patron = Listar todos los patronos
+master.menu.any.useraccount.provider = Listar todos los proveedores
+
+
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement = Anuncios
+master.menu.authenticated = Autenticado
+master.menu.authenticated.config-data.show = Monedas del sistema
 master.menu.authenticated.announcement.list = Lista de anuncios
+
 
 
 # master.menu.inventor #############################################
@@ -71,10 +83,13 @@ master.menu.inventor = Inventor
 master.menu.inventor.components-link = Mis componentes
 master.menu.inventor.tools-link = Mis herramientas
 master.menu.inventor.toolkits-link = Mis toolkits
+master.menu.inventor.patronages = Mecenazgos
 
 
 # master.menu.any ##########################################################
 
+master.menu.any = Cualquiera
+master.menu.any.artifact= Lista de Artefactos
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
 
@@ -83,5 +98,7 @@ master.menu.any.chirps.list = Lista de chirps
 
 master.menu.inventor.artifacts = Mis artefactos
 master.menu.inventor.artifacts.components-link = Mis componentes
+
+
 
 

@@ -1,0 +1,22 @@
+inventor.patronage.list.label.status = Status
+inventor.patronage.list.label.code = Code
+
+inventor.patronage.message.patronage = Patronage's Info
+inventor.patronage.form.label.status = Status
+inventor.patronage.form.label.code = Code
+inventor.patronage.form.label.legalStuff = Legal stuff
+inventor.patronage.form.label.budget = Budget
+inventor.patronage.form.label.startDate = Start date
+inventor.patronage.form.label.finishDate = Finish ate
+inventor.patronage.form.label.info = More info (Optional)
+
+
+inventor.patronage.message.patron = Patron's Info
+inventor.patronage.form.label.patron.username = UserName
+inventor.patronage.form.label.patron.company = Company
+inventor.patronage.form.label.patron.statement = Statement
+
+inventor.patronage.form.label.patron.info = More Info
+
+inventor.patronage.form.button.patronageReport = Report
+

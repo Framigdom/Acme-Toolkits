@@ -1,0 +1,2 @@
+authenticated.config-data.form.label.systemCurrency = Moneda del sistema
+authenticated.config-data.form.label.acceptedCurrencies = Monedas aceptadas
