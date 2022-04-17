@@ -39,7 +39,7 @@ public class PatronPatronageListTest extends TestHarness {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void negative(final int recordIndex, final String status, final String code, final String legalStuff, final String budget, final String startDate, final String finishDate, final String link) {
 		super.signIn("patron2", "patron2");
 		
