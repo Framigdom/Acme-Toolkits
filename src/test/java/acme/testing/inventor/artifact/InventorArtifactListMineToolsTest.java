@@ -39,6 +39,18 @@ public class InventorArtifactListMineToolsTest extends TestHarness {
 
 		super.signOut();
 	}
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/inventor/artifact/list-mine.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)
+	public void negativeTest(final int recordIndex, final String artifactType, final String name, final String code, final String technology, final String description, final String retailPrice, final String link) {
+		super.signIn("patron1", "patron1");
+
+		super.navigate("/inventor/artifact/list-mine", "type=tool");
+		super.checkErrorsExist();
+
+		super.signOut();
+	}
 
 	// Ancillary methods ------------------------------------------------------
 
