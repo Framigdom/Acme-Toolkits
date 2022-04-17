@@ -10,26 +10,20 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.entities.dashboards;
+package acme.forms;
 
 import java.util.Map;
-
-import javax.persistence.Entity;
-import javax.persistence.Transient;
 
 import org.springframework.data.util.Pair;
 
 import acme.entities.patronage.Status;
-import acme.framework.datatypes.Money;
-import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 
-@Entity
 @Getter
 @Setter
-public class PatronDashboard extends AbstractEntity {
+public class PatronDashboard {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -38,17 +32,13 @@ public class PatronDashboard extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	int						totalNumberofProposedPatronages;
-	int						totalNumberofAceptedPatronages;
+	int						totalNumberofAcceptedPatronages;
 	int						totalNumberofDeniedPatronages;
 	
-	@Transient
-	Map<Pair<Status,String>,Money>			averageBudgetOfPatronagesGroupedByStatusAndCurrency;
-	@Transient
-	Map<Pair<Status,String>,Money>			deviationBudgetOfPatronagesGroupedByStatusAndCurrency;
-	@Transient
-	Map<Pair<Status,String>,Money>			minimunBudgetOfPatronagesGroupedByStatusAndCurrency;
-	@Transient
-	Map<Pair<Status,String>,Money>			maximunBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Double>			averageBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Double>			deviationBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Double>			minimunBudgetOfPatronagesGroupedByStatusAndCurrency;
+	Map<Pair<Status,String>,Double>			maximunBudgetOfPatronagesGroupedByStatusAndCurrency;
 	
 
 	// Derived attributes -----------------------------------------------------

@@ -1,0 +1,14 @@
+patron.patron-dashboard.form.title.general-indicators = Indicadores Generales
+
+patron.patron-dashboard.form.title.average = Media
+patron.patron-dashboard.form.title.deviation = Desviación
+patron.patron-dashboard.form.title.maximum = Máximo
+patron.patron-dashboard.form.title.minimum = Mínimo
+
+patron.patron-dashboard.form.title.proposed = Propuestos
+patron.patron-dashboard.form.title.accepted = Aceptados
+patron.patron-dashboard.form.title.denied = Denegados
+
+patron.patron-dashboard.form.title.patronages-total-number-status = Número total de mecenazgos por estado
+
+patron.patron-dashboard.form.title.prueba = Esto es una prueba es
