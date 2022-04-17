@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronage.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractShowService;
-import acme.roles.Inventor;
 import acme.roles.Patron;
 
 @Service
@@ -55,14 +53,10 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		assert entity != null;
 		assert model != null;
 		
-		final Inventor inventor = entity.getInventor();
-		final UserAccount inventorAccount = inventor.getUserAccount();
-		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget",
-			"startDate", "finishDate", "link", "patron", "inventor");
-		request.unbind(inventor, model, "company", "statement", "link");
-		request.unbind(inventorAccount, model, "username");
-    
+			"startDate", "finishDate", "link", "inventor.company", "inventor.statement",
+			"inventor.link", "inventor.userAccount.username");
+		
 		model.setAttribute("patronageId", entity.getId());
 	}
 
