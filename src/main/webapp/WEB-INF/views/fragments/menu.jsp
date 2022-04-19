@@ -91,8 +91,8 @@
 		  <acme:menu-suboption code="master.menu.inventor.patronages" action="/inventor/patronage/list"/>
 			<acme:menu-separator/>		 	
 		 	<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.inventor.toolkits-link" action="/inventor/toolkit/list"/>
     </acme:menu-option>
     
