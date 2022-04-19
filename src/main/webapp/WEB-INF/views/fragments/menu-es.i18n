@@ -93,6 +93,9 @@ master.menu.inventor.patronages = Mecenazgos
 master.menu.any = Cualquiera
 master.menu.any.artifact.components= Lista de Componentes
 master.menu.any.artifact.tools= Lista de Herramientas
+master.menu.any.toolkits= Lista de Toolkits
+master.menu.any.toolkitSearch = Buscar Toolkit
+
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
 

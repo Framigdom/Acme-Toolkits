@@ -4,12 +4,12 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form readonly="${readOnly}"> 
-	<acme:input-textbox code="inventor.toolkit.list.label.title" path="title"/>
-	<acme:input-textbox code="inventor.toolkit.list.label.code" path="code"/>
-	<acme:input-textarea code="inventor.toolkit.list.label.description" path="description"/>
-	<acme:input-textarea code="inventor.toolkit.list.label.assemblyNotes" path="assemblyNotes"/>
-	<acme:input-textbox code="inventor.toolkit.list.label.link" path="link"/>
-	<acme:input-textbox code="inventor.toolkit.list.label.price" path="price" placeholder="${price}"/>
+	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
+	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
+	<acme:input-textarea code="inventor.toolkit.form.label.description" path="description"/>
+	<acme:input-textarea code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>
+	<acme:input-textbox code="inventor.toolkit.form.label.link" path="link"/>
+	<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}"/>
 	
 	<acme:button code="inventor.toolkit.form.button.artifact" action="/inventor/artifact/list?toolkitId=${id}"/>
 

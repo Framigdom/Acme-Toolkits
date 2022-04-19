@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>368</x>
+      <x>280</x>
       <y>688</y>
       <w>224</w>
       <h>88</h>
@@ -22,7 +22,7 @@ Chirp
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>160</x>
+      <x>72</x>
       <y>720</y>
       <w>144</w>
       <h>48</h>
@@ -36,7 +36,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>296</x>
+      <x>208</x>
       <y>728</y>
       <w>88</w>
       <h>32</h>
@@ -47,7 +47,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
+      <x>536</x>
       <y>688</y>
       <w>256</w>
       <h>104</h>
@@ -66,10 +66,10 @@ Announcement
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1896</x>
+      <x>1808</x>
       <y>0</y>
       <w>368</w>
-      <h>104</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -79,16 +79,17 @@ Toolkit
 + title: String {NotBlank, Length(0,100)}
 + description: String {NotBlank, Length(0,255)}
 + assemblyNotes: String {NotBlank, Length(0,255)}
-+ link: String {URL}</panel_attributes>
++ link: String {URL}
++ published: boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1904</x>
+      <x>1816</x>
       <y>328</y>
       <w>312</w>
-      <h>128</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -100,13 +101,14 @@ Artifact
 + technology: String {NotBlank, Length(0,100)}
 + description: String {NotBlank, Length(0,255)}
 + retailPrice: Money
-+ link: String {URL}</panel_attributes>
++ link: String {URL}
++ published: boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2224</x>
+      <x>2136</x>
       <y>176</y>
       <w>160</w>
       <h>40</h>
@@ -119,7 +121,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2112</x>
+      <x>2024</x>
       <y>184</y>
       <w>128</w>
       <h>32</h>
@@ -130,7 +132,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2224</x>
+      <x>2136</x>
       <y>224</y>
       <w>128</w>
       <h>40</h>
@@ -143,7 +145,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2112</x>
+      <x>2024</x>
       <y>224</y>
       <w>128</w>
       <h>40</h>
@@ -154,7 +156,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>936</x>
       <y>536</y>
       <w>256</w>
       <h>80</h>
@@ -171,7 +173,7 @@ Patron
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1432</x>
+      <x>1344</x>
       <y>536</y>
       <w>360</w>
       <h>128</h>
@@ -192,7 +194,7 @@ Patronage
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1688</x>
+      <x>1600</x>
       <y>712</y>
       <w>168</w>
       <h>64</h>
@@ -207,7 +209,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1760</x>
+      <x>1672</x>
       <y>656</y>
       <w>24</w>
       <h>72</h>
@@ -218,7 +220,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1816</x>
+      <x>1728</x>
       <y>536</y>
       <w>96</w>
       <h>72</h>
@@ -235,7 +237,7 @@ Status
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1512</x>
+      <x>1424</x>
       <y>336</y>
       <w>240</w>
       <h>80</h>
@@ -252,7 +254,7 @@ Inventor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1272</x>
+      <x>1184</x>
       <y>560</y>
       <w>176</w>
       <h>40</h>
@@ -266,7 +268,7 @@ m2=1..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1624</x>
+      <x>1536</x>
       <y>408</y>
       <w>80</w>
       <h>144</h>
@@ -280,7 +282,7 @@ Funds a ^</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
+      <x>896</x>
       <y>704</y>
       <w>432</w>
       <h>104</h>
@@ -300,7 +302,7 @@ PatronageReport
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1408</x>
+      <x>1320</x>
       <y>656</y>
       <w>176</w>
       <h>128</h>
@@ -312,7 +314,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2240</x>
+      <x>2152</x>
       <y>328</y>
       <w>104</w>
       <h>64</h>
@@ -328,7 +330,7 @@ ArtifactType
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>88</x>
+      <x>0</x>
       <y>464</y>
       <w>504</w>
       <h>128</h>
@@ -349,7 +351,7 @@ PatronDashboard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1992</x>
+      <x>1904</x>
       <y>192</y>
       <w>128</w>
       <h>56</h>
@@ -364,21 +366,21 @@ Quantity
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2048</x>
-      <y>96</y>
+      <x>1960</x>
+      <y>104</y>
       <w>56</w>
-      <h>112</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 Has ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2048</x>
+      <x>1960</x>
       <y>240</y>
       <w>56</w>
       <h>104</h>
@@ -392,7 +394,7 @@ Has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>632</x>
+      <x>544</x>
       <y>472</y>
       <w>232</w>
       <h>120</h>
@@ -412,7 +414,7 @@ ConfigData
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>88</x>
+      <x>0</x>
       <y>208</y>
       <w>560</w>
       <h>232</h>
@@ -441,7 +443,7 @@ AdministratorDashboard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1136</x>
+      <x>1048</x>
       <y>168</y>
       <w>80</w>
       <h>48</h>
@@ -454,7 +456,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>936</x>
       <y>168</y>
       <w>80</w>
       <h>48</h>
@@ -467,7 +469,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1248</x>
+      <x>1160</x>
       <y>168</y>
       <w>80</w>
       <h>48</h>
@@ -480,7 +482,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1056</x>
+      <x>968</x>
       <y>208</y>
       <w>136</w>
       <h>88</h>
@@ -491,7 +493,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
+      <x>1080</x>
       <y>208</y>
       <w>24</w>
       <h>88</h>
@@ -502,7 +504,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
+      <x>1080</x>
       <y>208</y>
       <w>136</w>
       <h>88</h>
@@ -513,7 +515,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
+      <x>1032</x>
       <y>280</y>
       <w>112</w>
       <h>48</h>
@@ -526,7 +528,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
+      <x>1080</x>
       <y>320</y>
       <w>24</w>
       <h>232</h>
@@ -537,7 +539,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
+      <x>1080</x>
       <y>320</y>
       <w>360</w>
       <h>64</h>
@@ -548,7 +550,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1744</x>
+      <x>1656</x>
       <y>360</y>
       <w>176</w>
       <h>40</h>
@@ -563,7 +565,7 @@ Invents &gt;
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1168</x>
+      <x>1080</x>
       <y>856</y>
       <w>408</w>
       <h>64</h>
@@ -578,7 +580,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1312</x>
+      <x>1224</x>
       <y>800</y>
       <w>24</w>
       <h>72</h>
