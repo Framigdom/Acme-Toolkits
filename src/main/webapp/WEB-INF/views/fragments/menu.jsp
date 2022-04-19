@@ -41,8 +41,6 @@
 			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list-published?type=component"/>
 			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list-published?type=tool"/>
 			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/toolkit/list"/>
-			<%--any.toolkitSearch --%>
-			<acme:menu-suboption code="master.menu.any.toolkitSearch" action="/any/toolkit-search/perform"/>
 		</acme:menu-option>
 		
 
