@@ -1,3 +1,5 @@
 key,amount,key:toolkit,key:artifact
 quantity-01,3,toolkit-01,artifact-01
 quantity-02,1,toolkit-01,artifact-02
+quantity-03,2,toolkit-02,artifact-03
+quantity-04,2,toolkit-02,artifact-04

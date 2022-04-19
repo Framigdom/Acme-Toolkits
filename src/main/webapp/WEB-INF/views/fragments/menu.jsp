@@ -21,18 +21,13 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-separator/>
-      <acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
-			<acme:menu-separator/>
+     		<acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-marin" action="https://github.com/TheNeoStormZ"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-david-zamora" action="https://theuselessweb.com/"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-josgarboh" action="https://www.spotify.com/es/"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-alvarez" action="https://es.bandainamcoent.eu/elden-ring/elden-ring"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-framigdom" action="https://mcdonalds.es/"/>
-			  <acme:menu-separator/>
+				<acme:menu-separator/>
 			<%--any.useraccount --%>
 	  		<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
@@ -43,8 +38,11 @@
 			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
 			  <acme:menu-separator/>
 			<%--any.artifact --%>
-			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list?type=component"/>
-			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list-published?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list-published?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/toolkit/list"/>
+			<%--any.toolkitSearch --%>
+			<acme:menu-suboption code="master.menu.any.toolkitSearch" action="/any/toolkit-search/perform"/>
 		</acme:menu-option>
 		
 
@@ -63,8 +61,9 @@
 			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
 			  <acme:menu-separator/>
 			<%--any.artifact --%>
-			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list?type=component"/>
-			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list-published?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list-published?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/toolkit/list"/>
 		</acme:menu-option>
 		
 
