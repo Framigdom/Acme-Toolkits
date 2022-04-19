@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.artifacts.Toolkit;
-import acme.framework.datatypes.Money;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
