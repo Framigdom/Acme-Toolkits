@@ -336,7 +336,7 @@ ArtifactType
       <h>128</h>
     </coordinates>
     <panel_attributes>bg=green
-&lt;&lt;Entity&gt;&gt;
+&lt;&lt;Form&gt;&gt;
 PatronDashboard
 --
 + totalNumberofProposedPatronages: int
@@ -420,7 +420,7 @@ ConfigData
       <h>232</h>
     </coordinates>
     <panel_attributes>bg=green
-&lt;&lt;Entity&gt;&gt;
+&lt;&lt;Form&gt;&gt;
 AdministratorDashboard
 --
 + totalNumberofComponents: int

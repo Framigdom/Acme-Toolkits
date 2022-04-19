@@ -48,6 +48,8 @@ master.menu.consumer.favourite-link = Enlace favorito
 # master.menu.patron ##########################################################
 
 master.menu.patron = Mecenas
+master.menu.patron.patronages = Mecenazgo
+master.menu.patron.dashboard = Panel de indicadores
 master.menu.patron.patronages = Mecenazgos
 
 # master.menu.user-account ####################################################
