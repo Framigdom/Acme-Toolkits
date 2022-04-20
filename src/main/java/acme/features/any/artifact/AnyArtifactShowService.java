@@ -21,8 +21,14 @@ public class AnyArtifactShowService implements AbstractShowService<Any, Artifact
 	@Override
 	public boolean authorise(final Request<Artifact> request) {
 		assert request != null;
-
-		return true;
+		
+		Artifact result;
+		int id;
+		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneAnyArtifactById(id);
+		
+		return result.isPublished();
 	}
 
 	@Override
@@ -31,8 +37,8 @@ public class AnyArtifactShowService implements AbstractShowService<Any, Artifact
 
 		Artifact result;
 		int id;
-		id=request.getModel().getInteger("id");
 		
+		id=request.getModel().getInteger("id");
 		result = this.repository.findOneAnyArtifactById(id);
 		
 		return result;
