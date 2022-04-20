@@ -22,16 +22,23 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
+		int id;
+		Toolkit toolkit;
 		
-		return true;
+		id = request.getModel().getInteger("id");
+		toolkit = this.repository.findOneToolkitById(id);
+		
+		return toolkit.isPublished();
 	}
 
 	@Override
 	public Toolkit findOne(final Request<Toolkit> request) {
 		assert request != null;
 	
-		final Integer id = request.getModel().getInteger("id");
+		int id;
 		Toolkit toolkit;
+		
+		id = request.getModel().getInteger("id");
 		toolkit = this.repository.findOneToolkitById(id);
 		
 		return toolkit;
