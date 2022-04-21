@@ -29,6 +29,7 @@ master.menu.anonymous.favourite-link-framigdom = 29541858Z: Migueles Dominguez, 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.config-data.show = Configuracion del Sistema
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
