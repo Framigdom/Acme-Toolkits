@@ -1,5 +1,7 @@
 package acme.features.any.artifact;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,10 +9,11 @@ import acme.entities.artifacts.Artifact;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyArtifactShowService implements AbstractShowService<Any, Artifact>{
+public class AnyArtifactListPublishedService implements AbstractListService<Any, Artifact> {
+	
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
@@ -22,26 +25,22 @@ public class AnyArtifactShowService implements AbstractShowService<Any, Artifact
 	public boolean authorise(final Request<Artifact> request) {
 		assert request != null;
 		
-		Artifact result;
-		int id;
-		
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAnyArtifactById(id);
-		
-		return result.isPublished();
+		return true;
 	}
 
 	@Override
-	public Artifact findOne(final Request<Artifact> request) {
+	public Collection<Artifact> findMany(final Request<Artifact> request) {
 		assert request != null;
-
-		Artifact result;
-		int id;
 		
-		id=request.getModel().getInteger("id");
-		result = this.repository.findOneAnyArtifactById(id);
-		
-		return result;
+		Collection<Artifact> result;
+		final String type=request.getModel().getString("type");
+		if(type.equals("component")) {
+			result = this.repository.findAllComponentsPublished();
+			return result;
+		}else {
+			result = this.repository.findAllToolsPublished();
+			return result;
+		}
 	}
 	
 	@Override
@@ -50,7 +49,8 @@ public class AnyArtifactShowService implements AbstractShowService<Any, Artifact
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "artifactType", "link");
-	}
+		request.unbind(entity, model, "name", "retailPrice", "artifactType");
+		model.setAttribute("canShowQuantity", false);
 
+	}
 }

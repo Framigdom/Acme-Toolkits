@@ -15,17 +15,22 @@ public class AnyArtifactController extends AbstractController<Any, Artifact> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyArtifactListService		listService;
+	protected AnyArtifactListPublishedService		listService;
 
 	@Autowired
 	protected AnyArtifactShowService		showService;
+	
+	@Autowired
+	protected AnyArtifactListToolkitService		listToolkitService;
 	
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.listService);
+		
+		super.addCommand("list-published","list",this.listService);
+		super.addCommand("list-toolkit","list" ,this.listToolkitService);
 		super.addCommand("show", this.showService);
 	}
 }

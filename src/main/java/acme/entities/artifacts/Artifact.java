@@ -53,6 +53,8 @@ public class Artifact extends AbstractEntity{
 	@URL
 	protected String			link;
 	
+	protected boolean 			published;
+	
 	// Relationships -------------------------------------------------------------
 	
 	@ManyToOne(optional = false)

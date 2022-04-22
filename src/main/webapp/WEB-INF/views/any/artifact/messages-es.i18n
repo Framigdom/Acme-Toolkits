@@ -6,7 +6,7 @@ any.artifact.form.label.retailprice = Precio
 any.artifact.form.label.type = Tipo
 any.artifact.form.label.link = Enlace
 
-
+any.artifact.list.label.quantity = Cantidad
 any.artifact.list.label.name = Nombre
 any.artifact.list.label.retailPrice = Precio
 any.artifact.list.label.artifactType = Tipo

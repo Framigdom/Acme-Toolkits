@@ -69,7 +69,7 @@ Announcement
       <x>1808</x>
       <y>0</y>
       <w>368</w>
-      <h>104</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -79,7 +79,8 @@ Toolkit
 + title: String {NotBlank, Length(0,100)}
 + description: String {NotBlank, Length(0,255)}
 + assemblyNotes: String {NotBlank, Length(0,255)}
-+ link: String {URL}</panel_attributes>
++ link: String {URL}
++ published: boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -88,7 +89,7 @@ Toolkit
       <x>1816</x>
       <y>328</y>
       <w>312</w>
-      <h>128</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -100,7 +101,8 @@ Artifact
 + technology: String {NotBlank, Length(0,100)}
 + description: String {NotBlank, Length(0,255)}
 + retailPrice: Money
-+ link: String {URL}</panel_attributes>
++ link: String {URL}
++ published: boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -367,13 +369,13 @@ Quantity
       <x>1960</x>
       <y>96</y>
       <w>56</w>
-      <h>112</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 Has ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

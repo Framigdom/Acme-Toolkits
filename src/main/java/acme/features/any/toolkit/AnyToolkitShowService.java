@@ -1,5 +1,4 @@
-package acme.features.inventor.toolkit;
-
+package acme.features.any.toolkit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,34 +6,40 @@ import org.springframework.stereotype.Service;
 import acme.entities.artifacts.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
-import acme.roles.Inventor;
 
 @Service
-public class InventorToolkitShowService implements AbstractShowService<Inventor, Toolkit>{
-	
+public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> {
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected InventorToolkitRepository repository;
+	protected AnyToolkitRepository repository;
 
 	// AbstractListService<Inventor, Artifact> interface ---------------------------
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
+		int id;
+		Toolkit toolkit;
 		
-		return true;
+		id = request.getModel().getInteger("id");
+		toolkit = this.repository.findOneToolkitById(id);
+		
+		return toolkit.isPublished();
 	}
 
 	@Override
 	public Toolkit findOne(final Request<Toolkit> request) {
 		assert request != null;
 	
-		Integer id;
+		int id;
 		Toolkit toolkit;
+		
 		id = request.getModel().getInteger("id");
-		toolkit = this.repository.findToolkitById(id);
+		toolkit = this.repository.findOneToolkitById(id);
 		
 		return toolkit;
 	}
@@ -45,9 +50,8 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		assert entity != null;
 		assert model != null;
 		
-		Integer id;
-		id = request.getModel().getInteger("id");
-		final Double price = this.repository.findToolkitPrice(id);
+		final Integer id = request.getModel().getInteger("id");
+		final Double price = this.repository.findPriceByToolkit(id);
 		model.setAttribute("price", price);
 		
 		

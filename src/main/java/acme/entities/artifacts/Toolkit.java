@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
@@ -40,6 +41,8 @@ public class Toolkit extends AbstractEntity{
 	
 	@URL
 	protected String			link;
+	
+	protected boolean 			published;
 	
 	
 	
