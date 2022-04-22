@@ -1,0 +1,12 @@
+administrator.administrator-dashboard.form.title.general-indicators = General Indicators
+
+administrator.administrator-dashboard.form.title.average = Average
+administrator.administrator-dashboard.form.title.deviation = Deviation
+administrator.administrator-dashboard.form.title.maximum = Maximum
+administrator.administrator-dashboard.form.title.minimum = Minimum
+
+administrator.administrator-dashboard.form.title.proposed = Proposed
+administrator.administrator-dashboard.form.title.accepted = Accepted
+administrator.administrator-dashboard.form.title.denied = Denied
+
+administrator.administrator-dashboard.form.title.prueba = Esto es una prueba en
