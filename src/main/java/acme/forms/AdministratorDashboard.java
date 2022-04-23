@@ -17,7 +17,6 @@ import java.util.Map;
 import org.springframework.data.util.Pair;
 
 import acme.entities.patronage.Status;
-import acme.framework.datatypes.Money;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,25 +32,26 @@ public class AdministratorDashboard {
 
 	int						totalNumberOfComponents;
 
-	Map<Pair<String,String>,Money>			averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
-	Map<Pair<String,String>,Money>			deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
-	Map<Pair<String,String>,Money>			minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
-	Map<Pair<String,String>,Money>			maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double>			averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double>			deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double>			minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double>			maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	
 	
 	int										totalNumberOfTools;
 	
-	Map<String,Money>						averageRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Money>						deviationRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Money>						minimunRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Money>						maximumRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Double>						averageRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Double>						deviationRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Double>						minimumRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Double>						maximumRetailPriceOfToolsGroupedByCurrency;
 	
 	
 	Map<Status,Integer>						totalNumberOfPatronagesGroupedByStatus;
 	
-	Map<Status,Money>						averageBudgetOfPatronagesGroupedByStatus;
-	Map<Status,Money>						deviationBudgetOfPatronagesGroupedByStatus;
-	Map<Status,Money>						minimunBudgetOfPatronagesGroupedByStatus;
-	Map<Status,Money>						maximumBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Double>						averageBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Double>						deviationBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Double>						minimumBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Double>						maximumBudgetOfPatronagesGroupedByStatus;
 	
 
 	// Derived attributes -----------------------------------------------------
