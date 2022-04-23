@@ -4,8 +4,7 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="inventor.artifact.list.label.quantity" path="amount" width="15%"/>
 	<acme:list-column code="inventor.artifact.list.label.name" path="name" width="20%"/>
-	<acme:list-column code="inventor.artifact.list.label.retailprice" path="retailPrice" width="15%"/>
+	<acme:list-column code="inventor.artifact.list.label.retailprice" path="retailPrice" width="30%"/>
 	<acme:list-column code="inventor.artifact.list.label.type" path="artifactType" width="50%"/>
 </acme:list>

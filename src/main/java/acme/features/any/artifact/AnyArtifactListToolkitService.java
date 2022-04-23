@@ -44,11 +44,8 @@ public class AnyArtifactListToolkitService  implements AbstractListService<Any, 
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		final Quantity quantity = this.repository.findQuantityByArtifactId(entity.getId());
 
-		request.unbind(quantity, model, "amount");
 		request.unbind(entity, model, "name", "retailPrice", "artifactType");
-		model.setAttribute("canShowQuantity", true);
 
 	}
 

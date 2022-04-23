@@ -50,7 +50,6 @@ public class AnyArtifactListPublishedService implements AbstractListService<Any,
 		assert model != null;
 
 		request.unbind(entity, model, "name", "retailPrice", "artifactType");
-		model.setAttribute("canShowQuantity", false);
 
 	}
 }

@@ -16,7 +16,6 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="any.artifact.list.label.quantity" path="amount"/>
 	<acme:list-column code="any.artifact.list.label.name" path="name"/>	
 	<acme:list-column code="any.artifact.list.label.retailPrice" path="retailPrice"/>
 	<acme:list-column code="any.artifact.list.label.artifactType" path="artifactType"/>
