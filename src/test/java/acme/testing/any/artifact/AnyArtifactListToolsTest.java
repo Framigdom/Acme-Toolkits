@@ -37,15 +37,6 @@ public class AnyArtifactListToolsTest extends TestHarness {
 		super.checkInputBoxHasValue("link", link);
 		
 	}
-	@ParameterizedTest
-	@CsvFileSource(resources = "/any/artifact/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
-	public void negative(final int recordIndex, final String artifactType, final String name, final String code, final String technology,final String description, final String retailPrice, final String link) {
-		
-		super.navigate("/any/artifact/show", "id=16");
-		super.checkErrorsExist();
-		
-	}
 
 	
 	// Ancillary methods ------------------------------------------------------
