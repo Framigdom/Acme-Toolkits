@@ -10,6 +10,7 @@
 <jstl:forEach items="${statusList}" var="status">
 	<h3><acme:message code="patron.patron-dashboard.form.title.${status.toString().toLowerCase()}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="patron.patron-dashboard.form.title.average"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -29,6 +30,7 @@
 <jstl:forEach items="${statusList}" var="status">
 	<h3><acme:message code="patron.patron-dashboard.form.title.${status.toString().toLowerCase()}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="patron.patron-dashboard.form.title.deviation"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -48,6 +50,7 @@
 <jstl:forEach items="${statusList}" var="status">
 	<h3><acme:message code="patron.patron-dashboard.form.title.${status.toString().toLowerCase()}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="patron.patron-dashboard.form.title.minimum"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -67,6 +70,7 @@
 <jstl:forEach items="${statusList}" var="status">
 	<h3><acme:message code="patron.patron-dashboard.form.title.${status.toString().toLowerCase()}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="patron.patron-dashboard.form.title.maximum"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">

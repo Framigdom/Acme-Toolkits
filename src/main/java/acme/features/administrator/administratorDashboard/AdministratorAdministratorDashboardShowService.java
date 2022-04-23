@@ -1,6 +1,7 @@
 package acme.features.administrator.administratorDashboard;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -166,9 +167,9 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 	}
 	
 	private Map<Status, Double> patronagesMethodsMap(final List<String> ls) {
-		final Map<Status, Double> result;
+		EnumMap<Status, Double> result;
 		
-		result = new HashMap<>();
+		result = new EnumMap<>(Status.class);
 		for(final String entry: ls) {
 			// entry -> status, amount
 			final String[] splitEntry = entry.split(",");
@@ -187,9 +188,9 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 	}
 	
 	private Map<Status, Integer> totalNumberOfPatronagesGroupedByStatusMap(final List<String> ls) {
-		final Map<Status, Integer> result;
+		EnumMap<Status, Integer> result;
 		
-		result = new HashMap<>();
+		result = new EnumMap<>(Status.class);
 		for(final String entry: ls) {
 			// entry -> status, count(patronage)
 			final String[] splitEntry = entry.split(",");

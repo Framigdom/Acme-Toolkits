@@ -10,6 +10,7 @@
 <h1><acme:message code="administrator.administrator-dashboard.form.title.component"/></h1>
 
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.component"/></caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.administrator-dashboard.form.title.total-components"/>
@@ -25,6 +26,7 @@
 <jstl:forEach items="${technologiesList}" var="technology">
 	<h3><acme:print value = "${technology}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="administrator.administrator-dashboard.form.title.average"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -44,6 +46,7 @@
 <jstl:forEach items="${technologiesList}" var="technology">
 	<h3><acme:print value = "${technology}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="administrator.administrator-dashboard.form.title.deviation"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -63,6 +66,7 @@
 <jstl:forEach items="${technologiesList}" var="technology">
 	<h3><acme:print value = "${technology}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="administrator.administrator-dashboard.form.title.minimum"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -82,6 +86,7 @@
 <jstl:forEach items="${technologiesList}" var="technology">
 	<h3><acme:print value = "${technology}"/></h3>
 	<table class="table table-sm">
+	<caption><acme:message code="administrator.administrator-dashboard.form.title.maximum"/></caption>
 		<jstl:forEach items="${acceptedCurrencies}" var="currency">
 			<tr>
 				<th scope="row">
@@ -102,6 +107,7 @@
 <h1><acme:message code="administrator.administrator-dashboard.form.title.tool"/></h1>
 
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.total-tools"/></caption>
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.administrator-dashboard.form.title.total-tools"/>
@@ -112,9 +118,9 @@
 		</td>
 	</tr>
 </table>
-
 <h2><acme:message code="administrator.administrator-dashboard.form.title.average"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.average"/></caption>
 	<jstl:forEach items="${acceptedCurrencies}" var="currency">
 		<tr>
 			<th scope="row">
@@ -130,6 +136,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.deviation"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.deviation"/></caption>
 	<jstl:forEach items="${acceptedCurrencies}" var="currency">
 		<tr>
 			<th scope="row">
@@ -145,6 +152,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.minimum"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.minimum"/></caption>
 	<jstl:forEach items="${acceptedCurrencies}" var="currency">
 		<tr>
 			<th scope="row">
@@ -160,6 +168,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.maximum"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.maximum"/></caption>
 	<jstl:forEach items="${acceptedCurrencies}" var="currency">
 		<tr>
 			<th scope="row">
@@ -179,6 +188,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.total-patronages"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.total-patronages"/></caption>
 	<jstl:forEach items="${statusList}" var="status">
 		<tr>
 			<th scope="row">
@@ -194,6 +204,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.average"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.average"/></caption>
 	<jstl:forEach items="${statusList}" var="status">
 		<tr>
 			<th scope="row">
@@ -209,6 +220,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.deviation"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.deviation"/></caption>
 	<jstl:forEach items="${statusList}" var="status">
 		<tr>
 			<th scope="row">
@@ -224,6 +236,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.minimum"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.minimum"/></caption>
 	<jstl:forEach items="${statusList}" var="status">
 		<tr>
 			<th scope="row">
@@ -239,6 +252,7 @@
 
 <h2><acme:message code="administrator.administrator-dashboard.form.title.maximum"/></h2>
 <table class="table table-sm">
+<caption><acme:message code="administrator.administrator-dashboard.form.title.maximum"/></caption>
 	<jstl:forEach items="${statusList}" var="status">
 		<tr>
 			<th scope="row">
