@@ -73,6 +73,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/administrator-dashboard/show"/>
+      <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.config-data.show" action="/administrator/config-data/show"/>
 		</acme:menu-option>
 		
 		

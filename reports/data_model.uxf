@@ -342,10 +342,10 @@ PatronDashboard
 + totalNumberofProposedPatronages: int
 + totalNumberofAceptedPatronages: int
 + totalNumberofDeniedPatronages: int
-+ averageBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Money&gt;
-+ deviationBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Money&gt;
-+ maximunBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Money&gt;
-+ minimunBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Money&gt;</panel_attributes>
++ averageBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Double&gt;
++ deviationBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Double&gt;
++ maximunBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Double&gt;
++ minimunBudgetOfPatronagesGroupedByStatusAndCurrency: Map&lt;Pair&lt;Status,String&gt;,Double&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -367,7 +367,7 @@ Quantity
     <id>Relation</id>
     <coordinates>
       <x>1960</x>
-      <y>104</y>
+      <y>96</y>
       <w>56</w>
       <h>104</h>
     </coordinates>
@@ -424,20 +424,20 @@ ConfigData
 AdministratorDashboard
 --
 + totalNumberofComponents: int
-+ averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Money&gt;
-+ deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Money&gt;
-+ minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Money&gt;
-+ maximunRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Money&gt;
++ averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
++ deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
++ minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
++ maximunRetailPriceOfComponentsGroupedByTechnologyAndCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + totalNumberOfTools: int
-+ averageRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Money&gt;
-+ deviationRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Money&gt;
-+ minimunRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Money&gt;
-+ maximunRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Money&gt;
++ averageRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Double&gt;
++ deviationRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Double&gt;
++ minimunRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Double&gt;
++ maximunRetailPriceOfToolsGroupedByCurrency: Map&lt;String,Double&gt;
 + totalNumberOfPatronagesGroupedByStatus: Map&lt;Status,Integer&gt;
-+ averageBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Money&gt;
-+ deviationBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Money&gt;
-+ minimunBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Money&gt;
-+ maximunBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Money&gt;</panel_attributes>
++ averageBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Double&gt;
++ deviationBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Double&gt;
++ minimunBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Double&gt;
++ maximunBudgetOfPatronagesGroupedByStatus: Map&lt;Status,Double&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
