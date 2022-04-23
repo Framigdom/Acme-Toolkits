@@ -44,11 +44,8 @@ public class InventorArtifactListService implements AbstractListService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		Quantity quantity = this.repository.findQuantityByArtifactId(entity.getId());
-		
-		request.unbind(quantity, model, "amount");
+
 		request.unbind(entity, model, "name", "retailPrice", "artifactType");
-		model.setAttribute("fromToolkit", true);
 		
 	}
 
