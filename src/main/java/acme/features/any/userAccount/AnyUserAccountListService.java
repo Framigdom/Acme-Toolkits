@@ -1,7 +1,6 @@
 package acme.features.any.userAccount;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,14 +39,14 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 			
 		final Collection<UserAccount> accounts = this.repository.findAccounts();
 		
-		final List<UserAccount> result = accounts.stream()
+		return accounts.stream()
 			.filter(account -> !account.isAnonymous() && !account.hasRole(Administrator.class))
 			.filter(account -> account.getRoles().stream()
 				.anyMatch(role -> role.getAuthorityName()
 					.equalsIgnoreCase(roleString)))
 			.collect(Collectors.toList());
 		
-		return result;
+
 	
 			
 	}
