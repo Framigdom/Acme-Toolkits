@@ -22,7 +22,7 @@ public interface AdministratorAdministratorDashboardRepository extends AbstractR
 	List<String> deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency();
 	
 	@Query("select a.technology, a.retailPrice.currency, min(a.retailPrice.amount) from Artifact a where a.artifactType = 1 group by a.technology, a.retailPrice.currency")
-	List<String> minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency();
+	List<String> minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency();
 	
 	@Query("select a.technology, a.retailPrice.currency, max(a.retailPrice.amount) from Artifact a where a.artifactType = 1 group by a.technology, a.retailPrice.currency")
 	List<String> maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency();
@@ -39,7 +39,7 @@ public interface AdministratorAdministratorDashboardRepository extends AbstractR
 	List<String> deviationRetailPriceOfToolsGroupedByCurrency();
 	
 	@Query("select a.retailPrice.currency, min(a.retailPrice.amount) from Artifact a where a.artifactType = 0 group by a.retailPrice.currency")
-	List<String> minimunRetailPriceOfToolsGroupedByCurrency();
+	List<String> minimumRetailPriceOfToolsGroupedByCurrency();
 	
 	@Query("select a.retailPrice.currency, max(a.retailPrice.amount) from Artifact a where a.artifactType = 0 group by a.retailPrice.currency")
 	List<String> maximumRetailPriceOfToolsGroupedByCurrency();
@@ -56,7 +56,7 @@ public interface AdministratorAdministratorDashboardRepository extends AbstractR
 	List<String> deviationBudgetOfPatronagesGroupedByStatus();
 	
 	@Query("select p.status, min(p.budget.amount) from Patronage p group by p.status")
-	List<String> minimunBudgetOfPatronagesGroupedByStatus();
+	List<String> minimumBudgetOfPatronagesGroupedByStatus();
 	
 	@Query("select p.status, max(p.budget.amount) from Patronage p group by p.status")
 	List<String> maximumBudgetOfPatronagesGroupedByStatus();
@@ -66,7 +66,7 @@ public interface AdministratorAdministratorDashboardRepository extends AbstractR
 	@Query("select cd.acceptedCurrencies from ConfigData cd")
 	String acceptedCurrencies();
 	
-	@Query("select a.technology from Artifact a")
+	@Query("select distinct(a.technology) from Artifact a")
 	List<String> allTechnologies();
 
 }

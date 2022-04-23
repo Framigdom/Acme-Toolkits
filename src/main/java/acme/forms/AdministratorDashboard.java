@@ -34,7 +34,7 @@ public class AdministratorDashboard {
 
 	Map<Pair<String,String>,Double>			averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	Map<Pair<String,String>,Double>			deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
-	Map<Pair<String,String>,Double>			minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double>			minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	Map<Pair<String,String>,Double>			maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	
 	
@@ -42,7 +42,7 @@ public class AdministratorDashboard {
 	
 	Map<String,Double>						averageRetailPriceOfToolsGroupedByCurrency;
 	Map<String,Double>						deviationRetailPriceOfToolsGroupedByCurrency;
-	Map<String,Double>						minimunRetailPriceOfToolsGroupedByCurrency;
+	Map<String,Double>						minimumRetailPriceOfToolsGroupedByCurrency;
 	Map<String,Double>						maximumRetailPriceOfToolsGroupedByCurrency;
 	
 	
@@ -50,7 +50,7 @@ public class AdministratorDashboard {
 	
 	Map<Status,Double>						averageBudgetOfPatronagesGroupedByStatus;
 	Map<Status,Double>						deviationBudgetOfPatronagesGroupedByStatus;
-	Map<Status,Double>						minimunBudgetOfPatronagesGroupedByStatus;
+	Map<Status,Double>						minimumBudgetOfPatronagesGroupedByStatus;
 	Map<Status,Double>						maximumBudgetOfPatronagesGroupedByStatus;
 	
 

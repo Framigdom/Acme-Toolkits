@@ -1,5 +1,13 @@
 administrator.administrator-dashboard.form.title.general-indicators = General Indicators
 
+administrator.administrator-dashboard.form.title.component = Components statistics 
+administrator.administrator-dashboard.form.title.tool = Tools statistics
+administrator.administrator-dashboard.form.title.patronage = Patronages statistics
+
+administrator.administrator-dashboard.form.title.total-components = Total number of components
+administrator.administrator-dashboard.form.title.total-tools = Total number of tools
+administrator.administrator-dashboard.form.title.total-patronages = Total number of patronages (grouped by status)
+
 administrator.administrator-dashboard.form.title.average = Average
 administrator.administrator-dashboard.form.title.deviation = Deviation
 administrator.administrator-dashboard.form.title.maximum = Maximum

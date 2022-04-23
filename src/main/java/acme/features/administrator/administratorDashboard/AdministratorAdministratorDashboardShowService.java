@@ -42,19 +42,19 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		final int totalNumberOfComponents;
 		final Map<Pair<String,String>,Double> averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 		final Map<Pair<String,String>,Double> deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
-		final Map<Pair<String,String>,Double> minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+		final Map<Pair<String,String>,Double> minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 		final Map<Pair<String,String>,Double> maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 		
 		final int totalNumberOfTools;
 		final Map<String,Double>	averageRetailPriceOfToolsGroupedByCurrency;
 		final Map<String,Double>	deviationRetailPriceOfToolsGroupedByCurrency;
-		final Map<String,Double>	minimunRetailPriceOfToolsGroupedByCurrency;
+		final Map<String,Double>	minimumRetailPriceOfToolsGroupedByCurrency;
 		final Map<String,Double>	maximumRetailPriceOfToolsGroupedByCurrency;
 		
 		final Map<Status,Integer> 	totalNumberOfPatronagesGroupedByStatus;
 		final Map<Status,Double> 	averageBudgetOfPatronagesGroupedByStatus;
 		final Map<Status,Double>	deviationBudgetOfPatronagesGroupedByStatus;
-		final Map<Status,Double>	minimunBudgetOfPatronagesGroupedByStatus;
+		final Map<Status,Double>	minimumBudgetOfPatronagesGroupedByStatus;
 		final Map<Status,Double>	maximumBudgetOfPatronagesGroupedByStatus;
 		
 		
@@ -69,8 +69,8 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 			this.repository.averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency());
 		deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency = this.componentsMethodsMap(
 			this.repository.deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency());
-		minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency = this.componentsMethodsMap(
-			this.repository.minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency());
+		minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency = this.componentsMethodsMap(
+			this.repository.minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency());
 		maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency = this.componentsMethodsMap(
 			this.repository.maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency());
 		
@@ -80,8 +80,8 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 			this.repository.averageRetailPriceOfToolsGroupedByCurrency());
 		deviationRetailPriceOfToolsGroupedByCurrency = this.toolsMethodsMap(
 			this.repository.deviationRetailPriceOfToolsGroupedByCurrency());
-		minimunRetailPriceOfToolsGroupedByCurrency = this.toolsMethodsMap(
-			this.repository.minimunRetailPriceOfToolsGroupedByCurrency());
+		minimumRetailPriceOfToolsGroupedByCurrency = this.toolsMethodsMap(
+			this.repository.minimumRetailPriceOfToolsGroupedByCurrency());
 		maximumRetailPriceOfToolsGroupedByCurrency = this.toolsMethodsMap(
 			this.repository.maximumRetailPriceOfToolsGroupedByCurrency());
 		
@@ -91,8 +91,8 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 			this.repository.averageBudgetOfPatronagesGroupedByStatus());
 		deviationBudgetOfPatronagesGroupedByStatus = this.patronagesMethodsMap(
 			this.repository.deviationBudgetOfPatronagesGroupedByStatus());
-		minimunBudgetOfPatronagesGroupedByStatus = this.patronagesMethodsMap(
-			this.repository.minimunBudgetOfPatronagesGroupedByStatus());
+		minimumBudgetOfPatronagesGroupedByStatus = this.patronagesMethodsMap(
+			this.repository.minimumBudgetOfPatronagesGroupedByStatus());
 		maximumBudgetOfPatronagesGroupedByStatus = this.patronagesMethodsMap(
 			this.repository.maximumBudgetOfPatronagesGroupedByStatus());
 		
@@ -105,17 +105,17 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		
 		result.setAverageRetailPriceOfComponentsGroupedByTechnologyAndCurrency(averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
 		result.setDeviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency(deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
-		result.setMinimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency(minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
+		result.setMinimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency(minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
 		result.setMaximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency(maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
 		
 		result.setAverageRetailPriceOfToolsGroupedByCurrency(averageRetailPriceOfToolsGroupedByCurrency);
 		result.setDeviationRetailPriceOfToolsGroupedByCurrency(deviationRetailPriceOfToolsGroupedByCurrency);
-		result.setMinimunRetailPriceOfToolsGroupedByCurrency(minimunRetailPriceOfToolsGroupedByCurrency);
+		result.setMinimumRetailPriceOfToolsGroupedByCurrency(minimumRetailPriceOfToolsGroupedByCurrency);
 		result.setMaximumRetailPriceOfToolsGroupedByCurrency(maximumRetailPriceOfToolsGroupedByCurrency);
 		
 		result.setAverageBudgetOfPatronagesGroupedByStatus(averageBudgetOfPatronagesGroupedByStatus);
 		result.setDeviationBudgetOfPatronagesGroupedByStatus(deviationBudgetOfPatronagesGroupedByStatus);
-		result.setMinimunBudgetOfPatronagesGroupedByStatus(minimunBudgetOfPatronagesGroupedByStatus);
+		result.setMinimumBudgetOfPatronagesGroupedByStatus(minimumBudgetOfPatronagesGroupedByStatus);
 		result.setMaximumBudgetOfPatronagesGroupedByStatus(maximumBudgetOfPatronagesGroupedByStatus);
 		
 		return result;
@@ -223,10 +223,7 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 			statusList.add(s.toString().toLowerCase());
 		}
 		
-		technologyList = new ArrayList<>();
-		for(final String s: this.repository.allTechnologies()) {
-			technologyList.add(s.toLowerCase());
-		}
+		technologyList = this.repository.allTechnologies();
 		
 		acceptedCurrencies = new ArrayList<>();
 		for(final String currency: this.repository.acceptedCurrencies().split(",")) {
@@ -237,22 +234,22 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 				"totalNumberOfComponents",
 			"averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency",
 			"deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency",
-			"minimunRetailPriceOfComponentsGroupedByTechnologyAndCurrency",
+			"minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency",
 			"maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency",
 				"totalNumberOfTools",
 			"averageRetailPriceOfToolsGroupedByCurrency",
 			"deviationRetailPriceOfToolsGroupedByCurrency",
-			"minimunRetailPriceOfToolsGroupedByCurrency",
+			"minimumRetailPriceOfToolsGroupedByCurrency",
 			"maximumRetailPriceOfToolsGroupedByCurrency",
 				"totalNumberOfPatronagesGroupedByStatus",
 			"averageBudgetOfPatronagesGroupedByStatus",
 			"deviationBudgetOfPatronagesGroupedByStatus",
-			"minimunBudgetOfPatronagesGroupedByStatus",
+			"minimumBudgetOfPatronagesGroupedByStatus",
 			"maximumBudgetOfPatronagesGroupedByStatus");
 		
 		
 		model.setAttribute("statusList", Status.values());
-		model.setAttribute("technologyList", technologyList);
+		model.setAttribute("technologiesList", technologyList);
 		model.setAttribute("acceptedCurrencies", acceptedCurrencies);
 	}
 
