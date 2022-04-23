@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
@@ -29,6 +29,7 @@ master.menu.anonymous.favourite-link-framigdom = 29541858Z: Migueles Dominguez, 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.config-data.show = Configuracion del Sistema
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
@@ -48,6 +49,8 @@ master.menu.consumer.favourite-link = Enlace favorito
 # master.menu.patron ##########################################################
 
 master.menu.patron = Mecenas
+master.menu.patron.patronages = Mecenazgo
+master.menu.patron.dashboard = Panel de indicadores
 master.menu.patron.patronages = Mecenazgos
 
 # master.menu.user-account ####################################################
@@ -60,6 +63,7 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
 
+
 #master.menu.any.useraccount ##########################################
 
 master.menu.any.useraccount = Usuarios
@@ -70,8 +74,10 @@ master.menu.any.useraccount.provider = Listar todos los proveedores
 
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Anuncios
-master.menu.authenticated.announcement.list=Lista de anuncios
+master.menu.authenticated = Autenticado
+master.menu.authenticated.config-data.show = Monedas del sistema
+master.menu.authenticated.announcement.list = Lista de anuncios
+
 
 
 # master.menu.inventor #############################################
@@ -79,10 +85,17 @@ master.menu.authenticated.announcement.list=Lista de anuncios
 master.menu.inventor = Inventor
 master.menu.inventor.components-link = Mis componentes
 master.menu.inventor.tools-link = Mis herramientas
+master.menu.inventor.toolkits-link = Mis toolkits
 master.menu.inventor.patronages = Mecenazgos
 
 
 # master.menu.any ##########################################################
+
+master.menu.any = Cualquiera
+master.menu.any.artifact.components= Lista de Componentes
+master.menu.any.artifact.tools= Lista de Herramientas
+master.menu.any.toolkits= Lista de Toolkits
+master.menu.any.toolkitSearch = Buscar Toolkit
 
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = Lista de chirps
@@ -92,6 +105,7 @@ master.menu.any.chirps.list = Lista de chirps
 
 master.menu.inventor.artifacts = Mis artefactos
 master.menu.inventor.artifacts.components-link = Mis componentes
+
 
 
 

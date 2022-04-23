@@ -1,0 +1,12 @@
+any.artifact.form.label.name = Name
+any.artifact.form.label.code = Code
+any.artifact.form.label.technology = Technology
+any.artifact.form.label.description = Description
+any.artifact.form.label.retailprice = Price
+any.artifact.form.label.type = Type
+any.artifact.form.label.link = Link
+
+any.artifact.list.label.quantity = Quantity
+any.artifact.list.label.name = Name
+any.artifact.list.label.retailPrice = Price
+any.artifact.list.label.artifactType = Type

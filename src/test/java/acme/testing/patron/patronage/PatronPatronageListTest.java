@@ -36,7 +36,7 @@ public class PatronPatronageListTest extends TestHarness {
 		
 		super.signOut();
 	}
-	
+
 	// Ancillary methods ------------------------------------------------------
 
 }

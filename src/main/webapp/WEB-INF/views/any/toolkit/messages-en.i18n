@@ -1,0 +1,11 @@
+any.toolkit.list.label.title = Title
+any.toolkit.list.label.description = Description
+
+
+any.toolkit.form.label.title = Title
+any.toolkit.form.label.code = Code
+any.toolkit.form.label.description = Description
+any.toolkit.form.label.assemblyNotes = Assembly Notes
+any.toolkit.form.label.link = Link
+any.toolkit.form.label.price = Price
+any.toolkit.form.button.artifact = See tools and components of the toolkit

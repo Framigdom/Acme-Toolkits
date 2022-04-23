@@ -29,6 +29,7 @@ master.menu.anonymous.favourite-link-framigdom = 29541858Z: Migueles Dominguez, 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.config-data.show = System Configuration Data
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
@@ -49,6 +50,7 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.patron = Patron
 master.menu.patron.patronages = Patronages
+master.menu.patron.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
@@ -59,6 +61,7 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 
+
 #master.menu.any.useraccount ##########################################
 
 master.menu.any.useraccount = Users
@@ -68,7 +71,8 @@ master.menu.any.useraccount.patron = List all patrons
 master.menu.any.useraccount.provider = List all providers
 
 # master.menu.authenticated ##########################################################
-master.menu.authenticated.announcement=Announcements
+master.menu.authenticated = Authenticated
+master.menu.authenticated.config-data.show = System Currencies
 master.menu.authenticated.announcement.list=List announcements
 
 # master.menu.inventor #############################################
@@ -76,9 +80,17 @@ master.menu.authenticated.announcement.list=List announcements
 master.menu.inventor = Inventor
 master.menu.inventor.components-link = My components
 master.menu.inventor.tools-link = My tools
+master.menu.inventor.toolkits-link = My toolkits
 master.menu.inventor.patronages = Patronages
 
 # master.menu.any ##########################################################
+
+master.menu.any = Any
+master.menu.any.artifact.components= List of Components
+master.menu.any.artifact.tools= List of Tools
+master.menu.any.toolkits= List of Toolkits
+master.menu.any.toolkitSearch = Particular Toolkit
+
 master.menu.any.chirps = Chirps
 master.menu.any.chirps.list = List chirps
 

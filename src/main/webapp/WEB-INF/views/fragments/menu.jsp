@@ -19,42 +19,65 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-      		<acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
+     		<acme:menu-suboption code="master.menu.anonymous.favourite-link-diego-ruiz" action="https://www.teamcherry.com.au/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-marin" action="https://github.com/TheNeoStormZ"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-david-zamora" action="https://theuselessweb.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-josgarboh" action="https://www.spotify.com/es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo-alvarez" action="https://es.bandainamcoent.eu/elden-ring/elden-ring"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-framigdom" action="https://mcdonalds.es/"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.any.useraccount">
-			<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
+				<acme:menu-separator/>
+			<%--any.useraccount --%>
+	  		<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
-    </acme:menu-option>
-
-
-		<acme:menu-option code="master.menu.authenticated.announcement" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
-    </acme:menu-option>
-
-		<acme:menu-option code="master.menu.any.chirps">
-			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/>
-   
-			<acme:menu-separator/>
+			  <acme:menu-separator/>
+			<%--any.chirp--%>
+			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
+			  <acme:menu-separator/>
+			<%--any.artifact --%>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list-published?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list-published?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/toolkit/list"/>
 		</acme:menu-option>
+		
+
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.announcement.list" action="/authenticated/announcement/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.config-data.show" action="/authenticated/config-data/show"/>
+			  <acme:menu-separator/>
+			<%--any.useraccount --%>
+	  		<acme:menu-suboption code="master.menu.any.useraccount.consumer" action="/any/user-account/list?role=consumer"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.inventor" action="/any/user-account/list?role=inventor"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.patron" action="/any/user-account/list?role=patron"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.provider" action="/any/user-account/list?role=provider"/>
+			  <acme:menu-separator/>
+			<%--any.chirp--%>
+			<acme:menu-suboption code="master.menu.any.chirps.list" action="/any/chirp/list"/> 
+			  <acme:menu-separator/>
+			<%--any.artifact --%>
+			<acme:menu-suboption code="master.menu.any.artifact.components" action="/any/artifact/list-published?type=component"/>
+			<acme:menu-suboption code="master.menu.any.artifact.tools" action="/any/artifact/list-published?type=tool"/>
+			<acme:menu-suboption code="master.menu.any.toolkits" action="/any/toolkit/list"/>
+		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/administrator-dashboard/show"/>
+      <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.config-data.show" action="/administrator/config-data/show"/>
 		</acme:menu-option>
-
+		
+		
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
@@ -63,16 +86,20 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-		  <acme:menu-suboption code="master.menu.inventor.patronages" action="/inventor/patronage/list"/>
-			<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
-			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
-    </acme:menu-option>
-      
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+			<acme:menu-suboption code="master.menu.patron.dashboard" action="/patron/patron-dashboard/show"/>
 		</acme:menu-option>
-
+  
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+		  <acme:menu-suboption code="master.menu.inventor.patronages" action="/inventor/patronage/list"/>
+			<acme:menu-separator/>		 	
+		 	<acme:menu-suboption code="master.menu.inventor.components-link" action="/inventor/artifact/list-mine?type=component"/>
+			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.inventor.toolkits-link" action="/inventor/toolkit/list"/>
+    </acme:menu-option>
+    
 	</acme:menu-left>
 
 	<acme:menu-right>
@@ -81,9 +108,13 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
 		</acme:menu-option>
 

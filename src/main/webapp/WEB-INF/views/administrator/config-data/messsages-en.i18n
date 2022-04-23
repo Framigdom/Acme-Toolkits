@@ -1,0 +1,6 @@
+administrator.config-data.form.label.systemCurrency = System Currency
+administrator.config-data.form.label.acceptedCurrencies = Accepted Currencies
+administrator.config-data.form.label.strongSpamTerms = Strong Spam Terms
+administrator.config-data.form.label.weakSpamTerms = Weak Spam Terms
+administrator.config-data.form.label.strongSpamTreshold = Strong Spam Treshold
+administrator.config-data.form.label.weakSpamTreshold = Weak Spam Treshold
