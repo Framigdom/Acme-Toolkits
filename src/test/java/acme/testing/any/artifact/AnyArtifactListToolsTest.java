@@ -21,9 +21,9 @@ public class AnyArtifactListToolsTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
-		super.checkColumnHasValue(recordIndex, 1, name);
-		super.checkColumnHasValue(recordIndex, 2, retailPrice);
-		super.checkColumnHasValue(recordIndex, 3, artifactType);
+		super.checkColumnHasValue(recordIndex, 0, name);
+		super.checkColumnHasValue(recordIndex, 1, retailPrice);
+		super.checkColumnHasValue(recordIndex, 2, artifactType);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
