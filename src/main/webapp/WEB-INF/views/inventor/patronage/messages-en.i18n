@@ -10,6 +10,8 @@ inventor.patronage.form.label.startDate = Start date
 inventor.patronage.form.label.finishDate = Finish ate
 inventor.patronage.form.label.info = More info (Optional)
 
+inventor.patronage.form.button.updateStatus.accept = Accept
+inventor.patronage.form.button.updateStatus.deny = Deny 
 
 inventor.patronage.message.patron = Patron's Info
 inventor.patronage.form.label.patron.username = UserName
