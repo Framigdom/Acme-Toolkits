@@ -10,6 +10,9 @@ inventor.patronage.form.label.startDate = Fecha de inicio
 inventor.patronage.form.label.finishDate = Fecha de fin
 inventor.patronage.form.label.info = Más información (Opcional)
 
+inventor.patronage.form.button.updateStatus.accept = Aceptar 
+inventor.patronage.form.button.updateStatus.deny = Denegar 
+
 inventor.patronage.message.patron = Información del Mecenas
 inventor.patronage.form.label.patron.username = Nombre de Usuario
 inventor.patronage.form.label.patron.company = Compañía
