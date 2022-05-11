@@ -1,5 +1,6 @@
 inventor.toolkit.list.label.title = Title
 inventor.toolkit.list.label.description = Description
+inventor.toolkit.list.button.create = Create new toolkit
 
 
 inventor.toolkit.form.label.title = Title
@@ -8,4 +9,10 @@ inventor.toolkit.form.label.description = Description
 inventor.toolkit.form.label.assemblyNotes = Assembly Notes
 inventor.toolkit.form.label.link = Link
 inventor.toolkit.form.label.price = Price
+inventor.toolkit.form.label.select.artifacts = Artifact
+inventor.toolkit.form.label.artifact.amount = Amount
 inventor.toolkit.form.button.artifact = See tools and components of the toolkit
+inventor.toolkit.form.button.update = Update
+inventor.toolkit.form.button.delete = Delete
+inventor.toolkit.form.button.publish = Publish
+inventor.toolkit.form.button.create = Create new toolkit
