@@ -1,10 +1,13 @@
 package acme.features.inventor.toolkit;
 
 import java.util.Collection;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.artifacts.Artifact;
 import acme.entities.artifacts.Toolkit;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
@@ -23,5 +26,23 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	
 	@Query("SELECT q.artifact.inventor FROM Quantity q WHERE q.toolkit.id = :id")
 	Collection<Inventor> findInventorsByToolkitId(int id);
+	
+	@Query("SELECT inventor.id FROM Inventor inventor")
+	Collection<Integer> findAllInventorId();
+	
+	@Query("SELECT inventor FROM Inventor inventor WHERE inventor.id = :id")
+	Inventor findInventorById(int id);
+	
+	@Modifying
+	@Query("DELETE FROM Quantity q WHERE q.toolkit.id = :id")
+	void deleteQuantityByToolkitId(int id);
+	
+	@Query("SELECT q.artifact FROM Quantity q WHERE q.artifact.inventor.id = :id GROUP BY q.artifact")
+	List<Artifact> findArtifactsByInventorId(int id);
+	
+	@Query("SELECT a FROM Artifact a WHERE a.name = :name")
+	Artifact findArtifactByName(String name);
+	
+	
 	
 }
