@@ -176,7 +176,7 @@ Patron
       <x>1344</x>
       <y>536</y>
       <w>360</w>
-      <h>128</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -188,7 +188,8 @@ Patronage
 + budget: Money
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
 + finishDate: Date {NotNull, Temporal(TIMESTAMP)}
-+ link: String {URL}</panel_attributes>
++ link: String {URL}
++ draftMode: boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -210,12 +211,12 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1672</x>
-      <y>656</y>
+      <y>672</y>
       <w>24</w>
-      <h>72</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -303,13 +304,13 @@ PatronageReport
     <id>Relation</id>
     <coordinates>
       <x>1320</x>
-      <y>656</y>
+      <y>672</y>
       <w>176</w>
-      <h>128</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
 m2=0..n</panel_attributes>
-    <additional_attributes>200.0;10.0;200.0;130.0;10.0;130.0</additional_attributes>
+    <additional_attributes>200.0;10.0;200.0;110.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>

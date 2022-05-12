@@ -1,3 +1,4 @@
-key,status,code,legal-stuff,budget,start-date,finish-date,link,key:patron,key:inventor
-patronage-01,ACCEPTED,ALO-014-A,Absolutely legal,"EUR 250.00","2021/12/31 12:00","2022/12/31 15:00",https://www.nano.com,patron-01,inventor-01
-patronage-02,DENIED,HAM-044-B,Totally illegal,"EUR 50.00","2020/12/31 15:36","2021/12/30 22:47",https://www.ham.com,patron-02,inventor-01
+key,status,code,legal-stuff,budget,start-date,finish-date,link,draftMode,key:patron,key:inventor
+patronage-01,ACCEPTED,ALO-014-A,Absolutely legal,"EUR 250.00","2021/12/31 12:00","2022/12/31 15:00",https://www.nano.com,false,patron-01,inventor-01
+patronage-02,DENIED,HAM-044-B,Totally illegal,"EUR 50.00","2020/12/31 15:36","2021/12/30 22:47",https://www.ham.com,false,patron-02,inventor-01
+patronage-03,PROPOSED,ABC-044-D,Totally illegal,"EUR 135.20","2020/12/31 15:36","2021/12/30 22:47",https://www.ham.com,true,patron-02,inventor-01
