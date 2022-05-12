@@ -1,6 +1,8 @@
 patron.patronage.list.label.status = Estado
 patron.patronage.list.label.code = Código
 
+patron.patronage.list.button.create = Crear
+
 patron.patronage.message.patronage = Información del Mecenazgo
 patron.patronage.form.label.status = Estado
 patron.patronage.form.label.code = Código
@@ -10,6 +12,12 @@ patron.patronage.form.label.startDate = Fecha de inicio
 patron.patronage.form.label.finishDate = Fecha de fin
 patron.patronage.form.label.info = Más información (Opcional)
 
+patron.patronage.form.button.update = Actualizar
+patron.patronage.form.button.publish = Publicar
+patron.patronage.form.button.delete = Borrar
+patron.patronage.form.label.select.inventor = Inventor
+patron.patronage.form.button.create = Crear
+
 patron.patronage.message.inventor = Información del Inventor
 patron.patronage.form.label.inventor.username = Nombre de Usuario
 patron.patronage.form.label.inventor.company = Compañía
@@ -17,3 +25,6 @@ patron.patronage.form.label.inventor.statement = Declaración
 patron.patronage.form.label.inventor.info = Más Información
 
 patron.patronage.form.button.patronageReport = Informe
+
+patron.patronage.form.error.finishDate = El periodo de tiempo debe ser de al menos un mes
+patron.patronage.form.error.startDate = El periodo de tiempo debe emepzar al menos un mes después de su creación
