@@ -1,7 +1,10 @@
 inventor.patronage-report.list.label.sequenceNumber = Número de secuencia
 inventor.patronage-report.list.label.creationMoment = Fecha de creación
-
+inventor.patronage-report.list.button.create = Crear informe
 inventor.patronage-report.form.label.sequenceNumber = Número de secuencia
 inventor.patronage-report.form.label.creationMoment = Fecha de creación
 inventor.patronage-report.form.label.memorandum = Memorándum
 inventor.patronage-report.form.label.info = Más información
+inventor.patronage-report.form.button.create = Crear
+inventor.patronage-report.form.label.confirm = Confirma creación del nuevo informe
+inventor.patronage-report.form.error.must-confirm = Por favor confirma
