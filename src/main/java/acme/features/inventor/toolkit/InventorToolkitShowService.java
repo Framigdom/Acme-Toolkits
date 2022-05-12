@@ -23,14 +23,14 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 	// AbstractListService<Inventor, Artifact> interface ---------------------------
 	
 	@Override
-	public boolean authorise(Request<Toolkit> request) {
+	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
 		
 		Integer toolkitId;
 		toolkitId = request.getModel().getInteger("id");
-		Integer inventorId = request.getPrincipal().getActiveRoleId();
+		final Integer inventorId = request.getPrincipal().getActiveRoleId();
 		
-		Collection<Inventor> toolkitInventors = repository.findInventorsByToolkitId(toolkitId);
+		final Collection<Inventor> toolkitInventors = this.repository.findInventorsByToolkitId(toolkitId);
 		
 		return toolkitInventors.stream().anyMatch(x -> x.getId() == inventorId);
 	}
@@ -59,7 +59,7 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		model.setAttribute("price", price);
 		
 		
-		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link");
+		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link","published");
 		
 	}
 	

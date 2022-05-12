@@ -35,6 +35,7 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.create-announcement = Create announcement
 
 # master.menu.provider ########################################################
 
@@ -60,7 +61,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-
+master.menu.user-account.become-inventor = Become a inventor
+master.menu.user-account.become-patron = Become a patron
 
 #master.menu.any.useraccount ##########################################
 
