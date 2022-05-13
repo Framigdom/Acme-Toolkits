@@ -8,10 +8,8 @@ import acme.entities.patronage.Status;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
-import acme.roles.Patron;
 
 @Service
 public class InventorPatronageUpdateStatusService implements AbstractUpdateService<Inventor, Patronage>{
@@ -44,8 +42,6 @@ public class InventorPatronageUpdateStatusService implements AbstractUpdateServi
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "status", "code", "legalStuff", "budget",
-			"startDate", "finishDate", "link");
 	}
 
 	@Override
@@ -54,18 +50,6 @@ public class InventorPatronageUpdateStatusService implements AbstractUpdateServi
 		assert entity != null;
 		assert model != null;
 		
-		final Patron patron = entity.getPatron();
-		final UserAccount patronAccount = patron.getUserAccount();
-		final String patronLink = patron.getLink();
-		
-		request.unbind(entity, model, "status", "code", "legalStuff", "budget",
-			"startDate", "finishDate", "link");
-		
-		model.setAttribute("company", patron.getCompany());
-		model.setAttribute("statement", patron.getStatement());
-		model.setAttribute("username", patronAccount.getUsername());
-		model.setAttribute("patronageId", entity.getId());
-		model.setAttribute("patronLink", patronLink);
 	}
 
 	@Override
