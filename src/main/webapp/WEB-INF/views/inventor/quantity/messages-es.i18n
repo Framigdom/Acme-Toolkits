@@ -1,0 +1,28 @@
+inventor.quantity.list.label.artifact.name = Nombre del artefacto
+inventor.quantity.list.label.amount = Cantidad
+inventor.quantity.list.button.create = Añadir Artefacto
+inventor.quantity.list.label.total-price = Precio Total
+
+inventor.artifact.form.label.name = Nombre
+inventor.artifact.form.label.code = Código
+inventor.artifact.form.label.technology = Tecnología
+inventor.artifact.form.label.description = Descripcion
+inventor.artifact.form.label.retailprice = Precio
+inventor.artifact.form.label.type = Tipo
+inventor.artifact.form.label.link = Enlace
+inventor.artifact.form.label.inventor = Inventor
+inventor.artifact.form.label.quantity = Cantidad
+inventor.quantity.form.button.create = Añadir Artefacto
+inventor.quantity.form.button.delete = Eliminar de toolkit
+inventor.quantity.form.button.update = Actualizar
+inventor.quantity.form.label.select.artifact = Artefacto
+inventor.quantity.form.label.amount = Cantidad
+inventor.quantity.form.error.only-1-type-of-tool-allowed = Solo puedes coger una unidad de cada herramienta
+inventor.quantity.form.error.repeated-artifact = Este artefacto ya se encuentra en el toolkit
+
+
+
+
+
+
+
