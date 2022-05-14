@@ -15,6 +15,8 @@ administrator.announcement.form.label.moment = Momento
 administrator.announcement.form.label.body = Cuerpo
 administrator.announcement.form.label.link = Enlace
 administrator.announcement.form.label.critical = Crítico
+administrator.announcement.form.label.critical.option.true = Verdadero
+administrator.announcement.form.label.critical.option.false = Falso
 
 administrator.announcement.form.label.confirm = Confirmar publicación (el anuncio no se puede borrar)
 

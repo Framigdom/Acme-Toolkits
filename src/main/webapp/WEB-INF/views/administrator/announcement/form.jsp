@@ -19,7 +19,10 @@
 	<acme:input-textbox code="administrator.announcement.form.label.title" path="title"/>	
 	<acme:input-textarea code="administrator.announcement.form.label.body" path="body"/>
 	<acme:input-url code="administrator.announcement.form.label.link" path="link"/>
-	<acme:input-textbox code="administrator.announcement.form.label.critical" path="critical"/>
+	<acme:input-select code="administrator.announcement.form.label.critical" path="critical">
+		<acme:input-option code="administrator.announcement.form.label.critical.option.true" value="${true}"/>
+		<acme:input-option code="administrator.announcement.form.label.critical.option.false" value="${false}"/>
+	</acme:input-select>
 	
 	<acme:input-checkbox code="administrator.announcement.form.label.confirm" path="confirm"/>
 	<acme:submit code="administrator.announcement.form.button.create" action="/administrator/announcement/create"/>
