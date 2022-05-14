@@ -17,4 +17,16 @@ public interface AdministratorAnnouncementRepository extends AbstractRepository 
 	
 	@Query("select a from Announcement a where a.id = :id")
 	Announcement findOneAnnouncementById(int id);
+	
+	@Query("select config.strongSpamTerms from ConfigData config")
+	String findStrongSpamTerms();
+	
+	@Query("select config.weakSpamTerms from ConfigData config")
+	String findWeakSpamTerms();
+	
+	@Query("select config.strongSpamTreshold from ConfigData config")
+	int findStrongSpamTreshold();
+	
+	@Query("select config.weakSpamTreshold from ConfigData config")
+	int findWeakSpamTreshold();
 }

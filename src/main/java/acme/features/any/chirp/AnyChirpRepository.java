@@ -14,4 +14,16 @@ public interface AnyChirpRepository extends AbstractRepository {
 
 	@Query("select c from Chirp c where c.moment > :deadline")
 	Collection<Chirp> findRecentChirp(Date deadline);
+	
+	@Query("select config.strongSpamTerms from ConfigData config")
+	String findStrongSpamTerms();
+	
+	@Query("select config.weakSpamTerms from ConfigData config")
+	String findWeakSpamTerms();
+	
+	@Query("select config.strongSpamTreshold from ConfigData config")
+	int findStrongSpamTreshold();
+	
+	@Query("select config.weakSpamTreshold from ConfigData config")
+	int findWeakSpamTreshold();
 }
