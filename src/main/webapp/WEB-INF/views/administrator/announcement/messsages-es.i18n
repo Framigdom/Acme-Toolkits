@@ -1,0 +1,27 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for authenticated particular
+# purposes.  The copyright owner does not offer authenticated warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+####Show JSP
+
+administrator.announcement.form.label.title = Título
+administrator.announcement.form.label.moment = Momento
+administrator.announcement.form.label.body = Cuerpo
+administrator.announcement.form.label.link = Enlace
+administrator.announcement.form.label.critical = Crítico
+administrator.announcement.form.label.critical.option.true = Verdadero
+administrator.announcement.form.label.critical.option.false = Falso
+
+administrator.announcement.form.label.confirm = Confirmar publicación (el anuncio no se puede borrar)
+
+administrator.announcement.form.button.create = Crear anuncio
+administrator.announcement.form.error.must-confirm = Se debe confirmar la publicación
+
+administrator.announcement.form.error.must-confirm = Se debe confirmar la publicación
+administrator.announcement.form.error.spam = El texto contiene spam

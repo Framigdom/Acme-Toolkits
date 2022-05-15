@@ -1,5 +1,6 @@
 inventor.toolkit.list.label.title = Título
 inventor.toolkit.list.label.description = Descripción
+inventor.toolkit.list.button.create = Crear toolkit
 
 inventor.toolkit.form.label.title = Título
 inventor.toolkit.form.label.description = Descripción
@@ -7,4 +8,13 @@ inventor.toolkit.form.label.code = Código
 inventor.toolkit.form.label.assemblyNotes = Notas de montaje
 inventor.toolkit.form.label.link = Enlace
 inventor.toolkit.form.label.price = Precio
+inventor.toolkit.form.label.select.artifacts = Artefactos
+inventor.toolkit.form.label.artifact.amount = Cantidad
 inventor.toolkit.form.button.artifact = Ver herramientas y componentes del toolkit
+inventor.toolkit.form.button.update = Actualizar
+inventor.toolkit.form.button.delete = Eliminar
+inventor.toolkit.form.button.publish = Publicar
+inventor.toolkit.form.button.create = Crear toolkit
+
+inventor.toolkit.form.error.must-confirm = Se debe confirmar la publicación
+inventor.toolkit.form.error.spam = El texto contiene spam
