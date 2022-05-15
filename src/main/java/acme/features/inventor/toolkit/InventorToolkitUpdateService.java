@@ -1,7 +1,5 @@
 package acme.features.inventor.toolkit;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,10 +28,9 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		
 		Integer toolkitId;
 		toolkitId = request.getModel().getInteger("id");
-		final Integer inventorId = request.getPrincipal().getActiveRoleId();
-		
-		final Collection<Inventor> toolkitInventors = this.repository.findInventorsByToolkitId(toolkitId);		
-		return  toolkitInventors.stream().anyMatch(x -> x.getId() == inventorId);		
+		final Integer inventorId = request.getPrincipal().getActiveRoleId();		
+		final Inventor toolkitInventor = this.repository.findInventorByToolkitId(toolkitId);		
+		return inventorId.equals(toolkitInventor.getId());		
 	}
 	
 	@Override
