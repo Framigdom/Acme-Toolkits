@@ -1,7 +1,10 @@
 inventor.patronage-report.list.label.sequenceNumber = Sequence number
 inventor.patronage-report.list.label.creationMoment = Creation moment
-
+inventor.patronage-report.list.button.create = Create patronage report
 inventor.patronage-report.form.label.sequenceNumber = Sequence number
 inventor.patronage-report.form.label.creationMoment = Creation moment
 inventor.patronage-report.form.label.memorandum = Memorandum
 inventor.patronage-report.form.label.info = More info
+inventor.patronage-report.form.button.create = Create
+inventor.patronage-report.form.label.confirm = Confirm creation of new patronage report
+inventor.patronage-report.form.error.must-confirm = Please confirm

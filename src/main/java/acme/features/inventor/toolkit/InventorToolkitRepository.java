@@ -47,6 +47,16 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	@Query("SELECT q FROM Quantity q WHERE q.toolkit.id = :id")
 	List<Quantity> findQuantitiesByToolkitId(int id);
 	
+	@Query("select config.strongSpamTerms from ConfigData config")
+	String findStrongSpamTerms();
 	
+	@Query("select config.weakSpamTerms from ConfigData config")
+	String findWeakSpamTerms();
+	
+	@Query("select config.strongSpamTreshold from ConfigData config")
+	int findStrongSpamTreshold();
+	
+	@Query("select config.weakSpamTreshold from ConfigData config")
+	int findWeakSpamTreshold();
 	
 }
