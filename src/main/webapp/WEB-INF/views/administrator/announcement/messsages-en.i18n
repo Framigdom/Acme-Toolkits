@@ -15,6 +15,8 @@ administrator.announcement.form.label.moment = Moment
 administrator.announcement.form.label.body = Body
 administrator.announcement.form.label.link = Link
 administrator.announcement.form.label.critical = Critical
+administrator.announcement.form.label.critical.option.true = True
+administrator.announcement.form.label.critical.option.false = False
 
 administrator.announcement.form.label.confirm = Confirm publishing (the announcement can't be deleted)
 
