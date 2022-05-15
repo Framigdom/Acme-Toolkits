@@ -20,3 +20,6 @@ administrator.announcement.form.label.confirm = Confirm publishing (the announce
 
 administrator.announcement.form.button.create = Create announcement
 administrator.announcement.form.error.must-confirm = Must confirm to publish
+
+administrator.announcement.form.error.must-confirm = Must confirm to publish
+administrator.announcement.form.error.spam = The text contains spam

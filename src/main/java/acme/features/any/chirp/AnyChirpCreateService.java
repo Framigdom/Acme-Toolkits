@@ -11,6 +11,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
+import features.SpamDetector;
 
 @Service
 public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> {
@@ -60,7 +61,37 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert entity != null;
 		assert errors != null;
 		
-		Boolean isConfirmed = request.getModel().getBoolean("confirm");
+		SpamDetector spamDetector;
+		String strongSpamTerms;
+		String weakSpamTerms;
+		int strongSpamThreshold;
+		int weakSpamThreshold;
+		
+		spamDetector = new SpamDetector();
+		strongSpamTerms = this.repository.findStrongSpamTerms();
+		weakSpamTerms = this.repository.findWeakSpamTerms();
+		strongSpamThreshold = this.repository.findStrongSpamTreshold();
+		weakSpamThreshold = this.repository.findWeakSpamTreshold();
+		
+		if(!errors.hasErrors("title")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
+				"title", "any.chirp.form.error.spam");
+		}
+		
+		if(!errors.hasErrors("author")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getAuthor())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAuthor()),
+				"author", "any.chirp.form.error.spam");
+		}
+		
+		if(!errors.hasErrors("body")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getBody())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getBody()),
+				"body", "any.chirp.form.error.spam");
+		}
+		
+		final Boolean isConfirmed = request.getModel().getBoolean("confirm");
 		errors.state(request, isConfirmed, "confirm", "any.chirp.form.error.must-confirm");
 
 	}

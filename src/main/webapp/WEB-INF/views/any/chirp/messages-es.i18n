@@ -25,3 +25,4 @@ any.chirp.form.button.create = Crear Chirp
 
 any.chirp.form.label.confirm = Confirmar publicación (el chirp no se puede borrar)
 any.chirp.form.error.must-confirm = Se debe confirmar la publicación
+any.chirp.form.error.spam = El texto contiene spam
