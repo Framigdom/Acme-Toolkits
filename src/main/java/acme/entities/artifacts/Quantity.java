@@ -1,10 +1,12 @@
 package acme.entities.artifacts;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,15 +22,15 @@ public class Quantity extends AbstractEntity{
 
 	// Attributes -------------------------------------------------------------
 	
-	@Min(0)
+	@Min(1)
 	protected int				amount;
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(cascade=CascadeType.PERSIST, optional = true)
 	@Valid
 	@NotNull
 	protected Toolkit			toolkit;
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(cascade=CascadeType.PERSIST, optional = true)
 	@Valid
 	@NotNull
 	protected Artifact			artifact;

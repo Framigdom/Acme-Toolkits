@@ -8,10 +8,21 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-
-
 any.chirp.list.label.title = Title
 any.chirp.list.label.author = Author
 any.chirp.list.label.moment = Moment
 any.chirp.list.label.body = Body
 any.chirp.list.label.email = Email
+
+any.chirp.list.button.create = New Chirp
+
+any.chirp.form.label.title = Title
+any.chirp.form.label.author = Author
+any.chirp.form.label.body = Body
+any.chirp.form.label.email = Email
+
+any.chirp.form.button.create = Create Chirp
+
+any.chirp.form.label.confirm = Confirm publishing (the chirp can't be deleted)
+any.chirp.form.error.must-confirm = Must confirm to publish
+any.chirp.form.error.spam = The text contains spam

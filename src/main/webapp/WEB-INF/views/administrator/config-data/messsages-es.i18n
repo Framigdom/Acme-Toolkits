@@ -4,3 +4,8 @@ administrator.config-data.form.label.strongSpamTerms = Terminos de spam fuertes
 administrator.config-data.form.label.weakSpamTerms = Terminos de spam debiles
 administrator.config-data.form.label.strongSpamTreshold = Umbral de spam fuerte
 administrator.config-data.form.label.weakSpamTreshold = Umbral de spam debil
+
+administrator.config-data.form.button.update = Actualizar la Configuración del Sistema
+
+administrator.configData.form.error.strongSpamTreshold = El valor introducido debe estar entre 0 y 100
+administrator.configData.form.error.weakSpamTreshold = El valor introducido debe estar entre 0 y 100

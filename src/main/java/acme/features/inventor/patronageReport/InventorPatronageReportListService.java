@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronage.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.helpers.CollectionHelper;
 import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
@@ -54,13 +55,23 @@ public class InventorPatronageReportListService implements AbstractListService<I
 	}
 
 	@Override
+	public void unbind(final Request<PatronageReport> request, final Collection<PatronageReport> entities, final Model model) {
+		assert request != null;
+		assert !CollectionHelper.someNull(entities);
+		assert model != null;
+		
+		
+		model.setAttribute("patronageId", request.getModel().getInteger("patronageId"));
+		
+	}
+	@Override
 	public void unbind(final Request<PatronageReport> request, final PatronageReport entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "creationMoment");
 		model.setAttribute("sequenceNumber", entity.getSequenceNumber());
+		request.unbind(entity, model, "creationMoment");
 	}
 
 }

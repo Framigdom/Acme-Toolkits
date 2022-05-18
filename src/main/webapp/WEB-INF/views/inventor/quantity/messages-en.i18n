@@ -1,0 +1,21 @@
+inventor.quantity.list.label.artifact.name = Artifact Name
+inventor.quantity.list.label.amount = Amount
+inventor.quantity.list.button.create = Add new Artifact
+inventor.quantity.list.label.total-price = Total Price
+
+inventor.artifact.form.label.name = Name
+inventor.artifact.form.label.code = Code
+inventor.artifact.form.label.technology = Technology
+inventor.artifact.form.label.description = Description
+inventor.artifact.form.label.retailprice = Price
+inventor.artifact.form.label.type = Type
+inventor.artifact.form.label.link = Link
+inventor.artifact.form.label.inventor = Inventor
+inventor.artifact.form.label.quantity = Quantity
+inventor.quantity.form.button.create = Add new Artifact
+inventor.quantity.form.button.delete = Delete from toolkit
+inventor.quantity.form.button.update = Update
+inventor.quantity.form.label.select.artifact = Artifact
+inventor.quantity.form.label.amount = Amount
+inventor.quantity.form.error.only-1-type-of-tool-allowed = You can't take more than 1 of each tool
+inventor.quantity.form.error.repeated-artifact = This artifact is already in your toolkit
