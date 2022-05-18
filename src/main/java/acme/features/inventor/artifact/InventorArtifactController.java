@@ -20,17 +20,33 @@ public class InventorArtifactController extends AbstractController<Inventor, Art
 	@Autowired
 	protected InventorArtifactListService listService;
 	
-	
 	@Autowired
 	protected InventorArtifactShowService showService;
+	
+	@Autowired
+	protected InventorArtifactCreateService createService;
+	
+	@Autowired
+	protected InventorArtifactPublishService publishService;
+	
+	@Autowired
+	protected InventorArtifactDeleteService deleteService;
+	
+	@Autowired
+	protected InventorArtifactUpdateService updateService;
 	
 	// Constructors -----------------------------------------------------------
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", listService);
-		super.addCommand("list-mine", "list", listMineService);
-		super.addCommand("show", showService);
+		super.addCommand("publish", "update", this.publishService);
+		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
+		super.addCommand("delete", this.deleteService);
+		
+		super.addCommand("list", this.listService);
+		super.addCommand("list-mine", "list", this.listMineService);
+		super.addCommand("show", this.showService);
 	}
 	
 }
