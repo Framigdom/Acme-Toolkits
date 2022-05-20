@@ -1,5 +1,8 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -77,6 +80,13 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("code") && !Objects.equals(this.repository.findToolkitById(entity.getId()).getCode(), entity.getCode())) {
+			final Collection<String> codes = this.repository.findAllToolkitCodes();
+			final String toolkitCode = entity.getCode();
+			final boolean repeatedCode = codes.stream()
+										.anyMatch(x -> x.equals(toolkitCode));
+			errors.state(request, !repeatedCode, "code", "inventor.toolkit.form.error.repeated-code");
+		}
 	}
 
 	@Override

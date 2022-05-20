@@ -20,3 +20,4 @@ inventor.toolkit.form.button.create = Create new toolkit
 inventor.toolkit.form.error.empty-quantities = First you need to add at least 1 artifact to this toolkit 
 inventor.toolkit.form.error.must-confirm = Must confirm to publish
 inventor.toolkit.form.error.spam = The text contains spam
+inventor.toolkit.form.error.repeated-code = This code already exists
