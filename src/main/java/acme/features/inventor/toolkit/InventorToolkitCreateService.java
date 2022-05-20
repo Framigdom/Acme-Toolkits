@@ -104,6 +104,13 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAssemblyNotes()),
 				"assemblyNotes", "inventor.toolkit.form.error.spam");
 		}
+		if(!errors.hasErrors("code")) {
+			final Collection<String> codes = this.repository.findAllToolkitCodes();
+			final String toolkitCode = entity.getCode();
+			final boolean repeatedCode = codes.stream()
+										.anyMatch(x -> x.equals(toolkitCode));
+			errors.state(request, !repeatedCode, "code", "inventor.toolkit.form.error.repeated-code");
+		}
 	}
 
 	@Override

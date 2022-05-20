@@ -58,5 +58,8 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	
 	@Query("select config.weakSpamTreshold from ConfigData config")
 	int findWeakSpamTreshold();
+
+	@Query("select toolkit.code from Toolkit toolkit")
+	Collection<String> findAllToolkitCodes();
 	
 }
