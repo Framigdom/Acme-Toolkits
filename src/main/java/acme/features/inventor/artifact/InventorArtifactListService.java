@@ -22,14 +22,14 @@ public class InventorArtifactListService implements AbstractListService<Inventor
 	// AbstractListService<Inventor, Artifact> interface ---------------------------
 	
 	@Override
-	public boolean authorise(Request<Artifact> request) {
+	public boolean authorise(final Request<Artifact> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Collection<Artifact> findMany(Request<Artifact> request) {
+	public Collection<Artifact> findMany(final Request<Artifact> request) {
 		
 		int masterId;
 		masterId = request.getModel().getInteger("toolkitId");
@@ -39,7 +39,7 @@ public class InventorArtifactListService implements AbstractListService<Inventor
 	}
 
 	@Override
-	public void unbind(Request<Artifact> request, Artifact entity, Model model) {
+	public void unbind(final Request<Artifact> request, final Artifact entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;

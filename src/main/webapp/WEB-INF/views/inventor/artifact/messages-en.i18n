@@ -1,9 +1,27 @@
 inventor.artifact.list.label.name = Name
-inventor.artifact.list.label.code = Code
-inventor.artifact.list.label.technology = Technology
-inventor.artifact.list.label.description = Description
 inventor.artifact.list.label.retailprice = Price
 inventor.artifact.list.label.type = Type
-inventor.artifact.list.label.link = Link
+inventor.artifact.list.label.published = Published
+inventor.artifact.list.button.create = Create
+
+
+inventor.artifact.form.label.name = Name
+inventor.artifact.form.label.code = Code
+inventor.artifact.form.label.technology = Technology
+inventor.artifact.form.label.description = Description
+inventor.artifact.form.label.retailprice = Price
+inventor.artifact.form.label.link = Link
+
+
 inventor.artifact.list.label.inventor = Inventor
 inventor.artifact.list.label.quantity = Quantity
+
+
+
+inventor.artifact.form.button.update = Update
+inventor.artifact.form.button.delete = Delete
+inventor.artifact.form.button.publish = Publish
+inventor.artifact.form.button.create = Create
+
+inventor.artifact.form.error.duplicated = This code is taken
+inventor.artifact.form.error.negative-retailPrice = The price must be positive
