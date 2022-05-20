@@ -44,7 +44,9 @@ public class Artifact extends AbstractEntity{
 	@Length(max = 255)
 	protected String			description;
 	
+	
 	@Valid
+	@NotNull
 	protected Money				retailPrice;
 	
 	@NotNull
