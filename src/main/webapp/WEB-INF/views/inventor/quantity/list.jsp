@@ -9,4 +9,4 @@
 	<acme:list-column code="inventor.quantity.list.label.total-price" path="total-price" width="20%"/>
 </acme:list>
 
-<acme:button  test="${showCreate}" code="inventor.quantity.list.button.create" action="/inventor/quantity/create?toolkitId=${toolkitId}"/>
+<acme:button  test="${showCreate && publishedArtifacts}" code="inventor.quantity.list.button.create" action="/inventor/quantity/create?toolkitId=${toolkitId}"/>

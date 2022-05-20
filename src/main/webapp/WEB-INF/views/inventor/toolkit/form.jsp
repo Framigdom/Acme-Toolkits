@@ -13,7 +13,7 @@
 	<jstl:choose>
 	
 		<jstl:when test="${published == false && acme:anyOf(command, 'show,update,delete,publish')}">
-		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}"/>
+		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}" readonly="true"/>
 		<acme:button code="inventor.toolkit.form.button.quantity" action="/inventor/quantity/list?toolkitId=${id}"/>
 		<acme:submit code="inventor.toolkit.form.button.update" action="/inventor/toolkit/update"/>
 		<acme:submit code="inventor.toolkit.form.button.delete" action="/inventor/toolkit/delete"/>
@@ -21,7 +21,7 @@
 		
 		</jstl:when>
 		<jstl:when test="${published == true}">
-		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}"/>
+		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}" readonly="true"/>
 		<acme:button code="inventor.toolkit.form.button.quantity" action="/inventor/quantity/list?toolkitId=${id}"/>
 		</jstl:when>
 		

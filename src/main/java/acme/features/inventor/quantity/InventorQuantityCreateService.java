@@ -35,8 +35,9 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		final Integer toolkitId = request.getModel().getInteger("toolkitId");
 		final Toolkit toolkit = this.repository.findToolkitById(toolkitId);
 		final Integer activeId = request.getPrincipal().getActiveRoleId();
+		final boolean publishedArtifacts = !this.repository.findPublishedArtifacts().isEmpty();
 		
-		return (!toolkit.isPublished() && toolkit.getInventor().getId()==activeId);	
+		return (!toolkit.isPublished() && toolkit.getInventor().getId()==activeId && publishedArtifacts);	
 	}
 
 	@Override
@@ -109,7 +110,10 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 			final boolean repeatedArtifact = quantities.stream()
 										.anyMatch(x -> Objects.equal(x.getArtifact().getName(), artifactName));
 			errors.state(request, !repeatedArtifact, "*", "inventor.quantity.form.error.repeated-artifact");
+			errors.state(request, entity.getArtifact()!=null, "*", "inventor.quantity.form.error.repeated-artifact");
+			
 		}
+		
 		
 	}
 
