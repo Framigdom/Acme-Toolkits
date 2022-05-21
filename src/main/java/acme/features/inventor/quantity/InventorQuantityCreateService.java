@@ -110,7 +110,6 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 			final boolean repeatedArtifact = quantities.stream()
 										.anyMatch(x -> Objects.equal(x.getArtifact().getName(), artifactName));
 			errors.state(request, !repeatedArtifact, "*", "inventor.quantity.form.error.repeated-artifact");
-			errors.state(request, entity.getArtifact()!=null, "*", "inventor.quantity.form.error.repeated-artifact");
 			
 		}
 		
