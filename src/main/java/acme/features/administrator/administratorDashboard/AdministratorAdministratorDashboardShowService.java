@@ -58,11 +58,19 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		final Map<Status,Double>	minimumBudgetOfPatronagesGroupedByStatus;
 		final Map<Status,Double>	maximumBudgetOfPatronagesGroupedByStatus;
 		
+		final int						ratioOfARTIFACTSWithCHIMPUMP;
+
+		final Map<String,Double>			averageBudgetOfCHIMPUMPSGroupedByCurrency;
+		final Map<String,Double>			deviationBudgetOfCHIMPUMPSGroupedByCurrency;
+		final Map<String,Double>			minimumBudgetOfCHIMPUMPSGroupedByCurrency;
+		final Map<String,Double>			maximumBudgetOfCHIMPUMPSGroupedByCurrency;
+		
 		
 		totalNumberOfComponents = this.repository.totalNumberOfComponents();
 		totalNumberOfTools = this.repository.totalNumberOfTools();
 		totalNumberOfPatronagesGroupedByStatus = this.totalNumberOfPatronagesGroupedByStatusMap(
 			this.repository.totalNumberOfPatronagesGroupedByStatus());
+		ratioOfARTIFACTSWithCHIMPUMP = this.repository.ratioOfARTIFACTSWithCHIMPUMP();
 		
 		//Components methods
 		
@@ -97,6 +105,10 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		maximumBudgetOfPatronagesGroupedByStatus = this.patronagesMethodsMap(
 			this.repository.maximumBudgetOfPatronagesGroupedByStatus());
 		
+		//CHIMPUM methods
+		
+
+		
 		
 		result = new AdministratorDashboard();
 		
@@ -118,6 +130,8 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		result.setDeviationBudgetOfPatronagesGroupedByStatus(deviationBudgetOfPatronagesGroupedByStatus);
 		result.setMinimumBudgetOfPatronagesGroupedByStatus(minimumBudgetOfPatronagesGroupedByStatus);
 		result.setMaximumBudgetOfPatronagesGroupedByStatus(maximumBudgetOfPatronagesGroupedByStatus);
+		
+		
 		
 		return result;
 	}
