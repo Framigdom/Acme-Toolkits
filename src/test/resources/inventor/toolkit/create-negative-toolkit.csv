@@ -1,0 +1,6 @@
+recordIndex,title,code,description,assemblyNotes,link,published,key:inventor
+0,Test Tool Kit,TES-001-,description test,assembly test,,false,inventor-01
+1,,TES-001-T,description test,assembly test,,false,inventor-01
+2,Test Tool Kit,TES-002-T,,assembly test,,false,inventor-01
+3,Test Tool Kit,TES-003-T,description test,,,false,inventor-01
+4,Test Tool Kit,TES-004-T,description test,assembly test,test,false,inventor-01
