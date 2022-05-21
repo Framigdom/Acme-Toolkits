@@ -86,7 +86,7 @@ public class InventorQuantityUpdateService implements AbstractUpdateService<Inve
 		assert errors != null;
 		
 		if(entity.getArtifact().getArtifactType() == ArtifactType.TOOL) {
-			errors.state(request, !(entity.getAmount()>1), "*", "inventor.quantity.form.error.only-1-type-of-tool-allowed");
+			errors.state(request, entity.getAmount()<=1, "*", "inventor.quantity.form.error.only-1-type-of-tool-allowed");
 		}
 	}
 

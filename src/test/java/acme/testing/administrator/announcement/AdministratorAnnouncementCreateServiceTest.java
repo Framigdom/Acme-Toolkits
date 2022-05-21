@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class AdministratorAnnouncementCreateService extends TestHarness{
+public class AdministratorAnnouncementCreateServiceTest extends TestHarness{
 	
 	// Lifecycle management ---------------------------------------------------
 
