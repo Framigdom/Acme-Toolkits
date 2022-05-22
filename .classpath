@@ -47,6 +47,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/SpamDetector.jar">
+
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

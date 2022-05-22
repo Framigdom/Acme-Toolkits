@@ -3,7 +3,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="${readOnly}"> 
+<acme:form> 
 	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
 	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
 	<acme:input-textarea code="inventor.toolkit.form.label.description" path="description"/>
@@ -13,15 +13,15 @@
 	<jstl:choose>
 	
 		<jstl:when test="${published == false && acme:anyOf(command, 'show,update,delete,publish')}">
-		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}"/>
+		<acme:input-money code="inventor.toolkit.form.label.price" path="price" placeholder="${price}" readonly="true"/>
 		<acme:button code="inventor.toolkit.form.button.quantity" action="/inventor/quantity/list?toolkitId=${id}"/>
 		<acme:submit code="inventor.toolkit.form.button.update" action="/inventor/toolkit/update"/>
 		<acme:submit code="inventor.toolkit.form.button.delete" action="/inventor/toolkit/delete"/>
 		<acme:submit code="inventor.toolkit.form.button.publish" action="/inventor/toolkit/publish"/>
 		
 		</jstl:when>
-		<jstl:when test="${published == true}">
-		<acme:input-textbox code="inventor.toolkit.form.label.price" path="price" placeholder="${price}"/>
+		<jstl:when test="${published == true && command == 'show'}">
+		<acme:input-money code="inventor.toolkit.form.label.price" path="price" placeholder="${price}" readonly="true"/>
 		<acme:button code="inventor.toolkit.form.button.quantity" action="/inventor/quantity/list?toolkitId=${id}"/>
 		</jstl:when>
 		
