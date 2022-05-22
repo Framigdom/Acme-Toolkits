@@ -113,13 +113,13 @@ public class InventorArtifactPublishService implements AbstractUpdateService<Inv
 			if (!errors.hasErrors("technology")) {
 				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTechnology())
 					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTechnology()),
-					"name", "inventor.artifact.form.error.spam");
+					"technology", "inventor.artifact.form.error.spam");
 			}
 			
 			if (!errors.hasErrors("description")) {
 				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
 					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
-					"name", "inventor.artifact.form.error.spam");
+					"description", "inventor.artifact.form.error.spam");
 			}
 			
 		}
