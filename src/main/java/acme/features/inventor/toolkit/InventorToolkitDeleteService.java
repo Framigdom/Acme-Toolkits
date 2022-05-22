@@ -53,7 +53,7 @@ public class InventorToolkitDeleteService implements AbstractDeleteService<Inven
 		model.setAttribute("price", price);
 		
 		
-		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link");
+		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link","published");
 		
 	}
 
