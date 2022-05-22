@@ -1,0 +1,6 @@
+recordIndex,artifact-type,name,code,technology,description,retail-price,published,link
+0,COMPONENT,AC Prueba,,,,,,,
+0,COMPONENT,AC Prueba,ABC-123-T,MySQL,Database gestion system,EUR 60.00,false,
+0,COMPONENT,AC Prueba,XGaaC-123-T,MySQL,Database gestion system,EUR 60.00,false,
+0,COMPONENT,AC Prueba,ABC-123-T,MySQL,Database gestion system,6,false,
+0,COMPONENT,AC Prueba,XWC-123-T,MySQL,Database gestion system,ASD -60.00,false,
