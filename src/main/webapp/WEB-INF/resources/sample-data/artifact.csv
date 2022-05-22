@@ -4,3 +4,5 @@ artifact-02,TOOL,MariaDB,ABC-123-T,MySQL,Database gestion system,EUR 60.0,https:
 artifact-03,COMPONENT,AVR ATMega,AVR-001-A,RISC,An easily programmable microcontroller ,EUR 60.0,https://start.atmel.com/,inventor-02,true
 artifact-04,TOOL,Adobo photocho,ZYX-084-B,Photoshop,A fast program for Graphic Desing,EUR 20.0,https://www.adobe.com,inventor-02,true
 artifact-05,TOOL,Adobo sega,ABC-084-B,Photoshop,A small program for Graphic Desing,EUR 20.0,https://www.adobe.com,inventor-02,false
+artifact-06,COMPONENT,AC Prueba,AFR-001-A,Ready,An easily programmable exam about test ,EUR 20.0,https://start.atmel.com/,inventor-02,false
+artifact-07,COMPONENT,AZ Prueba,AFR-301-A,Ready2,An easily programmable exam about test ,EUR 10.0,https://start.atmel.com/,inventor-02,false

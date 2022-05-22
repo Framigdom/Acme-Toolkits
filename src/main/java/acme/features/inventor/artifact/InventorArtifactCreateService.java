@@ -85,7 +85,7 @@ public class InventorArtifactCreateService implements AbstractCreateService<Inve
 			Artifact exists;
 			
 			exists = this.repository.findOneArtifactByCode(entity.getCode());
-			errors.state(request,exists== null, "code", "inventor.artifact.form.error.duplicated");
+			errors.state(request, exists== null, "code", "inventor.artifact.form.error.duplicated");
 		}
 		
 		if (!errors.hasErrors("retailPrice")) {
