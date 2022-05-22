@@ -93,6 +93,13 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("code")) {
+			Patronage exists;
+			
+			exists = this.repository.findPatronageByCode(entity.getCode());
+			errors.state(request, exists== null, "code", "patronage.patronage.form.error.duplicated");
+		}
+		
 		if(!errors.hasErrors("startDate")) {
 			Calendar calendar;
 			

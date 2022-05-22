@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.Patronage;
 import acme.entities.patronage.PatronageReport;
+import acme.entities.patronage.Status;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -34,6 +35,8 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		patronageId = request.getModel().getInteger("patronageId");
 		patronage = this.repository.findPatronageById(patronageId);
 		result = request.getPrincipal().getActiveRoleId() == patronage.getInventor().getId();
+		result = result && !patronage.isDraftMode();
+		result = result && patronage.getStatus().equals(Status.ACCEPTED);
 
 		return result;
 	}
