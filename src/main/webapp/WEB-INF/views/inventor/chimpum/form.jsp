@@ -14,3 +14,5 @@
 	<acme:input-url code="inventor.CHIMPUM.form.label.info" path="link"/>
 
 </acme:form> 
+
+<acme:button code="inventor.CHIMPUM.form.button.artifact" action="/inventor/artifact/list-chimpum?chimpumId=${id}"/>

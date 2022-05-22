@@ -22,11 +22,15 @@ public interface InventorArtifactRepository extends AbstractRepository{
 	@Query("SELECT q.artifact FROM Quantity q WHERE q.toolkit.id =:id")
 	Collection<Artifact> findToolsAndComponentsByToolkitId(int id);
 	
+	@Query("SELECT q.artifact FROM Quantity q WHERE q.artifact.chimpum.id =:id")
+	Collection<Artifact> findToolsAndComponentsByCHIMPUMId(int id);
+	
 	@Query("SELECT a FROM Artifact a WHERE a.id = :id")
 	Artifact findArtifactById(int id);
 	
 	@Query("SELECT q FROM Quantity q WHERE q.artifact.id =:id")
 	Quantity findQuantityByArtifactId(int id);
+	
 
 	@Query("SELECT inventor.id FROM Inventor inventor")
 	Collection<Integer> findAllInventorId();

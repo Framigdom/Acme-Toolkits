@@ -18,6 +18,9 @@ public class InventorArtifactController extends AbstractController<Inventor, Art
 	protected InventorArtifactListMineService listMineService;
 	
 	@Autowired
+	protected InventorArtifactListByCHIMPUMService listCHIMPUMService;
+	
+	@Autowired
 	protected InventorArtifactListService listService;
 	
 	@Autowired
@@ -46,6 +49,7 @@ public class InventorArtifactController extends AbstractController<Inventor, Art
 		
 		super.addCommand("list", this.listService);
 		super.addCommand("list-mine", "list", this.listMineService);
+		super.addCommand("list-chimpum", "list", this.listCHIMPUMService);
 		super.addCommand("show", this.showService);
 	}
 	
