@@ -51,14 +51,16 @@ public class InventorQuantityListService implements AbstractListService<Inventor
 		int toolkitId;
 		Toolkit toolkit;
 		final boolean showCreate;
+		final boolean publishedArtifacts;
 		
 		toolkitId = request.getModel().getInteger("toolkitId");
 		toolkit = this.repository.findToolkitById(toolkitId);
 		showCreate  = (request.isPrincipal(toolkit.getInventor()) && !toolkit.isPublished());
+		publishedArtifacts = !this.repository.findPublishedArtifacts().isEmpty();
 		
 		model.setAttribute("toolkitId", toolkitId);
 		model.setAttribute("showCreate", showCreate);
-		
+		model.setAttribute("publishedArtifacts", publishedArtifacts);
 	}
 
 	@Override

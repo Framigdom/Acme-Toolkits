@@ -35,8 +35,9 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		final Integer toolkitId = request.getModel().getInteger("toolkitId");
 		final Toolkit toolkit = this.repository.findToolkitById(toolkitId);
 		final Integer activeId = request.getPrincipal().getActiveRoleId();
+		final boolean publishedArtifacts = !this.repository.findPublishedArtifacts().isEmpty();
 		
-		return (!toolkit.isPublished() && toolkit.getInventor().getId()==activeId);	
+		return (!toolkit.isPublished() && toolkit.getInventor().getId()==activeId && publishedArtifacts);	
 	}
 
 	@Override
@@ -101,7 +102,7 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		assert errors != null;
 		
 		if(entity.getArtifact().getArtifactType() == ArtifactType.TOOL) {
-			errors.state(request, !(entity.getAmount()>1), "*", "inventor.quantity.form.error.only-1-type-of-tool-allowed");
+			errors.state(request, entity.getAmount()<=1, "*", "inventor.quantity.form.error.only-1-type-of-tool-allowed");
 		}
 		if(!errors.hasErrors("artifact.name")) {
 			final Collection<Quantity> quantities = this.repository.findQuantitiesByToolkitId(entity.getToolkit().getId());
@@ -109,7 +110,9 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 			final boolean repeatedArtifact = quantities.stream()
 										.anyMatch(x -> Objects.equal(x.getArtifact().getName(), artifactName));
 			errors.state(request, !repeatedArtifact, "*", "inventor.quantity.form.error.repeated-artifact");
+			
 		}
+		
 		
 	}
 

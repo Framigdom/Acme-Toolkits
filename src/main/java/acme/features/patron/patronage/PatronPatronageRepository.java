@@ -28,4 +28,7 @@ public interface PatronPatronageRepository extends AbstractRepository {
 	
 	@Query("select inventor from Inventor inventor where inventor.userAccount.username = :username")
 	Inventor findInventorByUsername(String username);
+	
+	@Query("select cd.acceptedCurrencies from ConfigData cd")
+	String acceptedCurrencies();
 }

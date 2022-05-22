@@ -77,11 +77,18 @@ public class InventorArtifactPublishService implements AbstractUpdateService<Inv
 			assert entity != null;
 			assert errors != null;
 			
-			if (!errors.hasErrors("code")) {
+			if(!errors.hasErrors("code")) {
 				Artifact exists;
-
+				
 				exists = this.repository.findOneArtifactByCode(entity.getCode());
-				errors.state(request, exists == null || exists.getId() == entity.getId(), "code", "inventor.artifact.form.error.duplicated");
+				errors.state(request, exists== null || exists.equals(entity), "code", "inventor.artifact.form.error.duplicated");
+			}
+			
+			if (!errors.hasErrors("retailPrice")) {
+				final String currency = entity.getRetailPrice().getCurrency();
+				final String currencyAvaliable = this.repository.acceptedCurrencies();
+				errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.artifact.form.error.negative-retailPrice");
+				errors.state(request,currencyAvaliable.contains(currency), "retailPrice", "inventor.artifact.form.error.negative-currency");
 			}
 			
 		}

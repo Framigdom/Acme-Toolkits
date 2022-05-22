@@ -85,11 +85,14 @@ public class InventorArtifactCreateService implements AbstractCreateService<Inve
 			Artifact exists;
 			
 			exists = this.repository.findOneArtifactByCode(entity.getCode());
-			errors.state(request,exists== null, "code", "inventor.artifact.form.error.duplicated");
+			errors.state(request, exists== null, "code", "inventor.artifact.form.error.duplicated");
 		}
 		
 		if (!errors.hasErrors("retailPrice")) {
-			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.artifact.form.error.negative-retailPrice");
+			final String currency = entity.getRetailPrice().getCurrency();
+			final String currencyAvaliable = this.repository.acceptedCurrencies();
+			errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.artifact.form.error.negative-retailPrice");
+			errors.state(request,currencyAvaliable.contains(currency), "retailPrice", "inventor.artifact.form.error.negative-currency");
 		}
 		
 		
