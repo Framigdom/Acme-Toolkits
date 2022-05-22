@@ -38,16 +38,6 @@ master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.create-announcement = Crear anuncio
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-
 # master.menu.patron ##########################################################
 
 master.menu.patron = Mecenas
@@ -59,10 +49,6 @@ master.menu.patron.patronages = Mecenazgos
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.become-inventor = Hazte inventor
 master.menu.user-account.become-patron = Hazte patron
 
@@ -71,10 +57,8 @@ master.menu.user-account.become-patron = Hazte patron
 #master.menu.any.useraccount ##########################################
 
 master.menu.any.useraccount = Usuarios
-master.menu.any.useraccount.consumer = Lista de todos los consumidores
 master.menu.any.useraccount.inventor = Listar todos los inventores
 master.menu.any.useraccount.patron = Listar todos los patronos
-master.menu.any.useraccount.provider = Listar todos los proveedores
 
 
 # master.menu.authenticated ##########################################################
