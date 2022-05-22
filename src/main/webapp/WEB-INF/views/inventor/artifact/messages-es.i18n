@@ -27,3 +27,4 @@ inventor.artifact.form.button.create = Crear
 inventor.artifact.form.error.duplicated = Este codigo no está libre
 inventor.artifact.form.error.negative-retailPrice =  El precio debe ser positivo
 inventor.artifact.form.error.negative-currency = La moneda es incorrecta (USD, EUR, GBP)
+inventor.artifact.form.error.spam = El texto contiene spam
