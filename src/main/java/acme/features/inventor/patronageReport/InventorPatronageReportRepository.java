@@ -17,7 +17,7 @@ public interface InventorPatronageReportRepository extends AbstractRepository {
 
 	@Query("select pr from PatronageReport pr where pr.id = :id")
 	PatronageReport findPatronageReportById(int id);
+	
 	@Query("select p from Patronage p where p.id = :id")
 	Patronage findPatronageById(int id);
-	
 }

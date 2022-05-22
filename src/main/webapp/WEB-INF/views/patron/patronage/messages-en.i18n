@@ -28,3 +28,5 @@ patron.patronage.form.button.patronageReport = Report
 
 patron.patronage.form.error.finishDate = The period of time must be at least one month long
 patron.patronage.form.error.startDate = The period of time must start at least one month after the patronage is created
+patron.patronage.form.error.negative-budget = The amount must be positive
+patron.patronage.form.error.negative-currency = The currency is incorrect (USD, EUR, GBP)
