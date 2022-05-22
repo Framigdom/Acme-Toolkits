@@ -37,4 +37,6 @@ public interface InventorArtifactRepository extends AbstractRepository{
 	@Query("SELECT a from Artifact a where a.code = :code")
 	Artifact findOneArtifactByCode(String code);
 	
+	@Query("select cd.acceptedCurrencies from ConfigData cd")
+	String acceptedCurrencies();
 }
