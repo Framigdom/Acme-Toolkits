@@ -52,10 +52,11 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 		
 		Integer id;
 		id = request.getModel().getInteger("id");
-		final Double price = this.repository.findToolkitPrice(id);
+		final Double price = this.repository.findToolkitPrice(id).orElse(0.0);
 		final Money currentPrice = new Money();
-		currentPrice.setAmount(price);
 		currentPrice.setCurrency("EUR");
+		currentPrice.setAmount(price);
+
 		model.setAttribute("price", currentPrice);
 		
 		

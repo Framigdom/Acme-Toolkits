@@ -2,6 +2,7 @@ package acme.features.inventor.toolkit;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -20,7 +21,7 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	Collection<Toolkit> findToolkitsByInventorId(int id);
 	
 	@Query("SELECT SUM(q.artifact.retailPrice.amount * q.amount) FROM Quantity q WHERE q.toolkit.id = :id")
-	Double findToolkitPrice(int id);
+	Optional <Double> findToolkitPrice(int id);
 	
 	@Query("SELECT t FROM Toolkit t WHERE t.id = :id")
 	Toolkit findToolkitById(int id);
