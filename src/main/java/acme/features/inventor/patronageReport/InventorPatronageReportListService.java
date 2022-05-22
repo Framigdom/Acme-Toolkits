@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.patronage.Patronage;
 import acme.entities.patronage.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -28,15 +29,12 @@ public class InventorPatronageReportListService implements AbstractListService<I
 
 		boolean result;
 		int patronageId;
-		PatronageReport patronageReport;
+		Patronage patronage;
 
 		patronageId = request.getModel().getInteger("patronageId");
-		patronageReport = this.repository.findPatronageReportByPatronageId(patronageId)
-			.stream().findFirst().orElse(null);
-
-		result = false;
-		if(patronageReport != null)
-			result = request.getPrincipal().getActiveRoleId() == patronageReport.getPatronage().getInventor().getId();
+		patronage = this.repository.findPatronageById(patronageId);
+		
+		result = patronage.getInventor().getId() == request.getPrincipal().getActiveRoleId();
 
 		return result;
 	}
