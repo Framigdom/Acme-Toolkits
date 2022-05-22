@@ -1,13 +1,11 @@
 package acme.features.inventor.toolkit;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.artifacts.Artifact;
-import acme.entities.artifacts.Quantity;
 import acme.entities.artifacts.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -32,7 +30,7 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 		
 		final Integer activeId = request.getPrincipal().getActiveRoleId();		
 		final Collection<Integer> existingInventors = this.repository.findAllInventorId();		
-		return  existingInventors.stream().anyMatch(x -> x == activeId);
+		return  existingInventors.stream().anyMatch(x -> Objects.equals(x, activeId));
 	}
 
 	@Override
@@ -51,11 +49,10 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 		assert entity != null;
 		assert model != null;
 		
-		List<Artifact> artifacts;
-		artifacts = this.repository.findArtifactsByInventorId(request.getPrincipal().getActiveRoleId());
+		
 				
 		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link","published");
-		model.setAttribute("artifacts", artifacts);
+		
 		
 	}
 
@@ -63,9 +60,11 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 	public Toolkit instantiate(final Request<Toolkit> request) {
 		assert request != null;
 
+		final Integer activeId = request.getPrincipal().getActiveRoleId();	
 		Toolkit result;
 		result = new Toolkit();
 		result.setPublished(false);
+		result.setInventor(this.repository.findInventorById(activeId));
 
 		return result;
 	}
@@ -105,6 +104,13 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAssemblyNotes()),
 				"assemblyNotes", "inventor.toolkit.form.error.spam");
 		}
+		if(!errors.hasErrors("code")) {
+			final Collection<String> codes = this.repository.findAllToolkitCodes();
+			final String toolkitCode = entity.getCode();
+			final boolean repeatedCode = codes.stream()
+										.anyMatch(x -> x.equals(toolkitCode));
+			errors.state(request, !repeatedCode, "code", "inventor.toolkit.form.error.repeated-code");
+		}
 	}
 
 	@Override
@@ -113,31 +119,7 @@ public class InventorToolkitCreateService  implements AbstractCreateService<Inve
 		assert entity != null;
 		
 		this.repository.save(entity);
-		
-		Integer numOfArtifacts;
-		numOfArtifacts = this.repository.findArtifactsByInventorId(request.getPrincipal().getActiveRoleId()).size();
 	
-		for (int i = 1; i < numOfArtifacts+1; i++) {
-			  final String iToString = Integer.toString(i);
-			  final String artifactName = (String) request.getModel().getAttribute(iToString);
-			  if(!artifactName.equals("none")) {
-				  final Artifact artifact = this.repository.findArtifactByName(artifactName);
-				  final int j = i+100;
-				  final String jToString = Integer.toString(j);
-				  final String amount = (String) request.getModel().getAttribute(jToString);
-				  final Quantity q = new Quantity();
-					q.setAmount(Integer. parseInt(amount));
-					q.setArtifact(artifact);
-					q.setToolkit(entity);
-					this.repository.save(q);
-			  }
-
-			  
-
-			}
-
-
-		
 	}
 
 

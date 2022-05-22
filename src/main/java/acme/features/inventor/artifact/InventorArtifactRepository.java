@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.artifacts.Artifact;
 import acme.entities.artifacts.Quantity;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Inventor;
 
 @Repository
 public interface InventorArtifactRepository extends AbstractRepository{
@@ -27,4 +28,15 @@ public interface InventorArtifactRepository extends AbstractRepository{
 	@Query("SELECT q FROM Quantity q WHERE q.artifact.id =:id")
 	Quantity findQuantityByArtifactId(int id);
 
+	@Query("SELECT inventor.id FROM Inventor inventor")
+	Collection<Integer> findAllInventorId();
+	
+	@Query("SELECT i FROM Inventor i where i.id = :id")
+	Inventor findOneInventorById(int id);
+	
+	@Query("SELECT a from Artifact a where a.code = :code")
+	Artifact findOneArtifactByCode(String code);
+	
+	@Query("select cd.acceptedCurrencies from ConfigData cd")
+	String acceptedCurrencies();
 }

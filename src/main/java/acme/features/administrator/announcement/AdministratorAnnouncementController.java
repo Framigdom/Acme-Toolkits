@@ -9,6 +9,7 @@ import acme.entities.announcements.Announcement;
 import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Administrator;
 
+
 @Controller
 public class AdministratorAnnouncementController extends AbstractController<Administrator, Announcement> {
 

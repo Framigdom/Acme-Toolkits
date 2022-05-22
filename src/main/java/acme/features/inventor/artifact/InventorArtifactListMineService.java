@@ -9,6 +9,7 @@ import acme.entities.artifacts.Artifact;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.entities.Principal;
+import acme.framework.helpers.CollectionHelper;
 import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
@@ -23,16 +24,16 @@ public class InventorArtifactListMineService implements AbstractListService<Inve
 	// AbstractListService<Inventor, Artifact> interface ---------------------------
 	
 	@Override
-	public boolean authorise(Request<Artifact> request) {
+	public boolean authorise(final Request<Artifact> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Collection<Artifact> findMany(Request<Artifact> request) {
-		Principal principal = request.getPrincipal();
-		String type = request.getModel().getString("type");
+	public Collection<Artifact> findMany(final Request<Artifact> request) {
+		final Principal principal = request.getPrincipal();
+		final String type = request.getModel().getString("type");
 		if (type.equals("component")) {
 			return this.repository.findComponentsByInventorId(principal.getActiveRoleId());
 		} else {
@@ -47,8 +48,17 @@ public class InventorArtifactListMineService implements AbstractListService<Inve
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "name", "retailPrice", "artifactType");
+		request.unbind(entity, model, "name", "retailPrice", "artifactType", "published");
 		
+	}
+	
+	@Override
+	public void unbind(final Request<Artifact> request, final Collection<Artifact> entities, final Model model) {
+		assert request != null;
+		assert !CollectionHelper.someNull(entities);
+		assert model != null;
+		
+		model.setAttribute("type", request.getModel().getString("type"));
 	}
 
 }

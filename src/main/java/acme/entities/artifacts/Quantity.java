@@ -22,15 +22,15 @@ public class Quantity extends AbstractEntity{
 
 	// Attributes -------------------------------------------------------------
 	
-	@Min(0)
+	@Min(1)
 	protected int				amount;
 	
-	@ManyToOne(cascade=CascadeType.REMOVE,optional = true)
+	@ManyToOne(cascade=CascadeType.PERSIST, optional = true)
 	@Valid
 	@NotNull
 	protected Toolkit			toolkit;
 	
-	@ManyToOne(optional = true)
+	@ManyToOne(cascade=CascadeType.PERSIST, optional = true)
 	@Valid
 	@NotNull
 	protected Artifact			artifact;

@@ -1,10 +1,11 @@
 package acme.features.inventor.toolkit;
 
-import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.artifacts.Quantity;
 import acme.entities.artifacts.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -30,10 +31,9 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 		
 		Integer toolkitId;
 		toolkitId = request.getModel().getInteger("id");
-		final Integer inventorId = request.getPrincipal().getActiveRoleId();
-		
-		final Collection<Inventor> toolkitInventors = this.repository.findInventorsByToolkitId(toolkitId);		
-		return  toolkitInventors.stream().anyMatch(x -> x.getId() == inventorId);		
+		final Integer inventorId = request.getPrincipal().getActiveRoleId();		
+		final Inventor toolkitInventor = this.repository.findInventorByToolkitId(toolkitId);		
+		return inventorId.equals(toolkitInventor.getId());	
 	}
 	
 	@Override
@@ -80,6 +80,9 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 		assert entity != null;
 		assert errors != null;
 		
+		final List<Quantity> quantities = this.repository.findQuantitiesByToolkitId(entity.getId());
+		
+		errors.state(request, !quantities.isEmpty(), "*", "inventor.toolkit.form.error.empty-quantities");
 	}
 
 	@Override

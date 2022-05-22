@@ -11,11 +11,13 @@ inventor.toolkit.form.label.link = Link
 inventor.toolkit.form.label.price = Price
 inventor.toolkit.form.label.select.artifacts = Artifact
 inventor.toolkit.form.label.artifact.amount = Amount
-inventor.toolkit.form.button.artifact = See tools and components of the toolkit
+inventor.toolkit.form.button.quantity = See tools and components of the toolkit
 inventor.toolkit.form.button.update = Update
 inventor.toolkit.form.button.delete = Delete
 inventor.toolkit.form.button.publish = Publish
 inventor.toolkit.form.button.create = Create new toolkit
 
+inventor.toolkit.form.error.empty-quantities = First you need to add at least 1 artifact to this toolkit 
 inventor.toolkit.form.error.must-confirm = Must confirm to publish
 inventor.toolkit.form.error.spam = The text contains spam
+inventor.toolkit.form.error.repeated-code = This code already exists

@@ -1,9 +1,28 @@
 inventor.artifact.list.label.name = Nombre
-inventor.artifact.list.label.code = Código
-inventor.artifact.list.label.technology = Tecnología
-inventor.artifact.list.label.description = Descripción
 inventor.artifact.list.label.retailprice = Precio
 inventor.artifact.list.label.type = Tipo
-inventor.artifact.list.label.link = Enlace
+inventor.artifact.list.label.published = Publicado
+inventor.artifact.list.button.create = Crear
+
+
+inventor.artifact.form.label.name = Nombre
+inventor.artifact.form.label.code = Código
+inventor.artifact.form.label.technology = Tecnología
+inventor.artifact.form.label.description = Descripción
+inventor.artifact.form.label.retailprice = Precio
+inventor.artifact.form.label.link = Enlace
+
+
 inventor.artifact.list.label.inventor = Inventor
 inventor.artifact.list.label.quantity = Cantidad
+
+
+
+inventor.artifact.form.button.update = Actualizar
+inventor.artifact.form.button.delete = Borrar
+inventor.artifact.form.button.publish = Publicar
+inventor.artifact.form.button.create = Crear 
+
+inventor.artifact.form.error.duplicated = Este codigo no está libre
+inventor.artifact.form.error.negative-retailPrice =  El precio debe ser positivo
+inventor.artifact.form.error.negative-currency = La moneda es incorrecta
