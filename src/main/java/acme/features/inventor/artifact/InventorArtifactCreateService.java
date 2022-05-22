@@ -10,6 +10,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import features.SpamDetector;
 
 @Service
 public class InventorArtifactCreateService implements AbstractCreateService<Inventor, Artifact>{
@@ -81,6 +82,18 @@ public class InventorArtifactCreateService implements AbstractCreateService<Inve
 		assert entity != null;
 		assert errors != null;
 		
+		SpamDetector spamDetector;
+		String strongSpamTerms;
+		String weakSpamTerms;
+		int strongSpamThreshold;
+		int weakSpamThreshold;
+		
+		spamDetector = new SpamDetector();
+		strongSpamTerms = this.repository.findStrongSpamTerms();
+		weakSpamTerms = this.repository.findWeakSpamTerms();
+		strongSpamThreshold = this.repository.findStrongSpamTreshold();
+		weakSpamThreshold = this.repository.findWeakSpamTreshold();
+		
 		if(!errors.hasErrors("code")) {
 			Artifact exists;
 			
@@ -95,6 +108,23 @@ public class InventorArtifactCreateService implements AbstractCreateService<Inve
 			errors.state(request,currencyAvaliable.contains(currency), "retailPrice", "inventor.artifact.form.error.negative-currency");
 		}
 		
+		if (!errors.hasErrors("name")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getName())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getName()),
+				"name", "inventor.artifact.form.error.spam");
+		}
+		
+		if (!errors.hasErrors("technology")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTechnology())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTechnology()),
+				"name", "inventor.artifact.form.error.spam");
+		}
+		
+		if (!errors.hasErrors("description")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
+				"name", "inventor.artifact.form.error.spam");
+		}
 		
 	}
 

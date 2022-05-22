@@ -39,4 +39,16 @@ public interface InventorArtifactRepository extends AbstractRepository{
 	
 	@Query("select cd.acceptedCurrencies from ConfigData cd")
 	String acceptedCurrencies();
+	
+	@Query("select config.strongSpamTerms from ConfigData config")
+	String findStrongSpamTerms();
+	
+	@Query("select config.weakSpamTerms from ConfigData config")
+	String findWeakSpamTerms();
+	
+	@Query("select config.strongSpamTreshold from ConfigData config")
+	int findStrongSpamTreshold();
+	
+	@Query("select config.weakSpamTreshold from ConfigData config")
+	int findWeakSpamTreshold();
 }
