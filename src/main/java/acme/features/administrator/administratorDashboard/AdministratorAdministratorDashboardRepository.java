@@ -66,16 +66,16 @@ public interface AdministratorAdministratorDashboardRepository extends AbstractR
 	@Query("select count(a) from Artifact a WHERE a.chimpum is not null")
 	int ratioOfARTIFACTSWithCHIMPUMP();
 	
-	@Query("select c.pattern, avg(c.budget.amount) from CHIMPUM c group by c.budget.currency")
+	@Query("select c.budget.currency, avg(c.budget.amount) from CHIMPUM c group by c.budget.currency")
 	List<String> averageBudgetOfCHIMPUMPSGroupedByCurrency();
 	
-	@Query("select c.pattern, stddev(c.budget.amount) from CHIMPUM c group by c.budget.currency")
+	@Query("select c.budget.currency, stddev(c.budget.amount) from CHIMPUM c group by c.budget.currency")
 	List<String> deviationBudgetOfCHIMPUMPSGroupedByCurrency();
 	
-	@Query("select c.pattern, min(c.budget.amount) from CHIMPUM c group by c.budget.currency")
+	@Query("select c.budget.currency, min(c.budget.amount) from CHIMPUM c group by c.budget.currency")
 	List<String> minimumBudgetOfCHIMPUMPSGroupedByCurrency();
 	
-	@Query("select c.pattern, max(c.budget.amount) from CHIMPUM c group by c.budget.currency")
+	@Query("select c.budget.currency, max(c.budget.amount) from CHIMPUM c group by c.budget.currency")
 	List<String> maximumBudgetOfCHIMPUMPSGroupedByCurrency();
 	
 	// Others -------------------------------

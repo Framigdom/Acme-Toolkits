@@ -107,7 +107,14 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		
 		//CHIMPUM methods
 		
-
+		averageBudgetOfCHIMPUMPSGroupedByCurrency = this.CHIMPUMMethodsMap(
+			this.repository.averageBudgetOfCHIMPUMPSGroupedByCurrency());
+		deviationBudgetOfCHIMPUMPSGroupedByCurrency = this.CHIMPUMMethodsMap(
+			this.repository.deviationBudgetOfCHIMPUMPSGroupedByCurrency());
+		minimumBudgetOfCHIMPUMPSGroupedByCurrency = this.CHIMPUMMethodsMap(
+			this.repository.minimumBudgetOfCHIMPUMPSGroupedByCurrency());
+		maximumBudgetOfCHIMPUMPSGroupedByCurrency = this.CHIMPUMMethodsMap(
+			this.repository.maximumBudgetOfCHIMPUMPSGroupedByCurrency());
 		
 		
 		result = new AdministratorDashboard();
@@ -115,6 +122,7 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		result.setTotalNumberOfComponents(totalNumberOfComponents);
 		result.setTotalNumberOfTools(totalNumberOfTools);
 		result.setTotalNumberOfPatronagesGroupedByStatus(totalNumberOfPatronagesGroupedByStatus);
+		result.setRatioOfARTIFACTSWithCHIMPUMP(ratioOfARTIFACTSWithCHIMPUMP);
 		
 		result.setAverageRetailPriceOfComponentsGroupedByTechnologyAndCurrency(averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
 		result.setDeviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency(deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency);
@@ -130,6 +138,11 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 		result.setDeviationBudgetOfPatronagesGroupedByStatus(deviationBudgetOfPatronagesGroupedByStatus);
 		result.setMinimumBudgetOfPatronagesGroupedByStatus(minimumBudgetOfPatronagesGroupedByStatus);
 		result.setMaximumBudgetOfPatronagesGroupedByStatus(maximumBudgetOfPatronagesGroupedByStatus);
+		
+		result.setAverageBudgetOfCHIMPUMPSGroupedByCurrency(averageBudgetOfCHIMPUMPSGroupedByCurrency);
+		result.setDeviationBudgetOfCHIMPUMPSGroupedByCurrency(deviationBudgetOfCHIMPUMPSGroupedByCurrency);
+		result.setMinimumBudgetOfCHIMPUMPSGroupedByCurrency(minimumBudgetOfCHIMPUMPSGroupedByCurrency);
+		result.setMaximumBudgetOfCHIMPUMPSGroupedByCurrency(maximumBudgetOfCHIMPUMPSGroupedByCurrency);
 		
 		
 		
@@ -223,6 +236,27 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 	}
 	
 
+	private Map<String, Double> CHIMPUMMethodsMap(final List<String> ls) {
+		final Map<String, Double> result;
+		
+		result = new HashMap<>();
+		for(final String entry: ls) {
+			// entry -> currency, amount
+			final String[] splitEntry = entry.split(",");
+			String currency;
+			Double amount;
+			String key;
+			
+			currency = splitEntry[0].trim();
+			amount = Double.valueOf(splitEntry[1].trim());
+			key = currency;
+			
+			result.put(key, amount);
+		}
+		
+		return result;
+	}
+	
 	@Override
 	public void unbind(final Request<AdministratorDashboard> request, final AdministratorDashboard entity, final Model model) {
 		assert request != null;
@@ -260,7 +294,12 @@ public class AdministratorAdministratorDashboardShowService implements AbstractS
 			"averageBudgetOfPatronagesGroupedByStatus",
 			"deviationBudgetOfPatronagesGroupedByStatus",
 			"minimumBudgetOfPatronagesGroupedByStatus",
-			"maximumBudgetOfPatronagesGroupedByStatus");
+			"maximumBudgetOfPatronagesGroupedByStatus",
+			"ratioOfARTIFACTSWithCHIMPUMP",
+			"averageBudgetOfCHIMPUMPSGroupedByCurrency",
+			"deviationBudgetOfCHIMPUMPSGroupedByCurrency",
+			"minimumBudgetOfCHIMPUMPSGroupedByCurrency",
+			"maximumBudgetOfCHIMPUMPSGroupedByCurrency");
 		
 		
 		model.setAttribute("statusList", Status.values());
