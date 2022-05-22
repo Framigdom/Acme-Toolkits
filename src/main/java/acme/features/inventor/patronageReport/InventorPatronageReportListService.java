@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.Patronage;
 import acme.entities.patronage.PatronageReport;
+import acme.entities.patronage.Status;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.helpers.CollectionHelper;
@@ -35,6 +36,8 @@ public class InventorPatronageReportListService implements AbstractListService<I
 		patronage = this.repository.findPatronageById(patronageId);
 		
 		result = patronage.getInventor().getId() == request.getPrincipal().getActiveRoleId();
+		result = result && !patronage.isDraftMode();
+		result = result && patronage.getStatus().equals(Status.ACCEPTED);
 
 		return result;
 	}
