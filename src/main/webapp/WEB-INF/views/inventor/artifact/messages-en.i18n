@@ -25,5 +25,5 @@ inventor.artifact.form.button.create = Create
 
 inventor.artifact.form.error.duplicated = This code is taken
 inventor.artifact.form.error.negative-retailPrice = The price must be positive
-inventor.artifact.form.error.negative-currency = The currency is incorrect (USD, EUR, GBP)
+inventor.artifact.form.error.negative-currency = The currency is incorrect
 inventor.artifact.form.error.spam = Text contains spam
