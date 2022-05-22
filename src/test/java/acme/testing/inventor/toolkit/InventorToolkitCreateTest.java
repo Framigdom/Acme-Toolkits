@@ -34,7 +34,7 @@ public class InventorToolkitCreateTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, description);	
 		
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(0);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("code", code);

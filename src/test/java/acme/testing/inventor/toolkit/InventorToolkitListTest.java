@@ -34,7 +34,7 @@ public class InventorToolkitListTest extends TestHarness {
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/toolkit/toolkit.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/toolkit/list-toolkit.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void negative(final int recordIndex, final String title, final String code, final String description, final String assemblyNotes, final String link, final String price) {
 	super.signIn("patron2", "patron2");

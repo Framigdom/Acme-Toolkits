@@ -44,7 +44,7 @@ public class InventorToolkitUpdateTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "desc");
 		
-		super.clickOnListingRecord(recordIndex);		
+		super.clickOnListingRecord(0);		
 		super.checkFormExists();
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("code", code);

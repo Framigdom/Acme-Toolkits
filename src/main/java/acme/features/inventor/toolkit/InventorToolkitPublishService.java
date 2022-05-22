@@ -10,6 +10,7 @@ import acme.entities.artifacts.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
@@ -54,8 +55,11 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 		
 		Integer id;
 		id = request.getModel().getInteger("id");
-		final Double price = this.repository.findToolkitPrice(id);
-		model.setAttribute("price", price);
+		final Double price = this.repository.findToolkitPrice(id).orElse(0.0);
+		final Money currentPrice = new Money();
+		currentPrice.setCurrency("EUR");
+		currentPrice.setAmount(price);
+		model.setAttribute("price", currentPrice);
 		
 		
 		request.unbind(entity, model, "title", "code", "description", "assemblyNotes", "link","published");
