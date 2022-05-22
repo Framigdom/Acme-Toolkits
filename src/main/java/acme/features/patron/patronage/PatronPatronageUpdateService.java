@@ -96,6 +96,13 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("code")) {
+			Patronage exists;
+			
+			exists = this.repository.findPatronageByCode(entity.getCode());
+			errors.state(request, exists== null || exists.equals(entity), "code", "patronage.patronage.form.error.duplicated");
+		}
+		
 		if(!errors.hasErrors("startDate")) {
 			Calendar calendar;
 			
