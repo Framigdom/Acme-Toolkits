@@ -113,12 +113,17 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		if(!errors.hasErrors("finishDate")) {
 			Calendar calendar;
 			
-			calendar = new GregorianCalendar();
-			calendar.setTime(entity.getStartDate());
-			calendar.add(Calendar.MONTH, 1);
-			calendar.add(Calendar.DAY_OF_MONTH, -1);
+			boolean errorState = true;
 			
-			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "patron.patronage.form.error.finishDate");
+			if (entity.getStartDate() != null) {		
+				calendar = new GregorianCalendar();
+				calendar.setTime(entity.getStartDate());
+				calendar.add(Calendar.MONTH, 1);
+				calendar.add(Calendar.DAY_OF_MONTH, -1);
+				errorState = entity.getFinishDate().after(calendar.getTime());
+			}
+			
+			errors.state(request, errorState, "finishDate", "patron.patronage.form.error.finishDate");
 		}
 		
 		if (!errors.hasErrors("budget")) {
