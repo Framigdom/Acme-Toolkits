@@ -93,6 +93,13 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("code")) {
+			Patronage exists;
+			
+			exists = this.repository.findPatronageByCode(entity.getCode());
+			errors.state(request, exists== null, "code", "patronage.patronage.form.error.duplicated");
+		}
+		
 		if(!errors.hasErrors("startDate")) {
 			Calendar calendar;
 			
@@ -106,19 +113,31 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		if(!errors.hasErrors("finishDate")) {
 			Calendar calendar;
 			
-			calendar = new GregorianCalendar();
-			calendar.setTime(entity.getStartDate());
-			calendar.add(Calendar.MONTH, 1);
-			calendar.add(Calendar.DAY_OF_MONTH, -1);
+			boolean errorState = true;
 			
-			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "patron.patronage.form.error.finishDate");
+			if (entity.getStartDate() != null) {		
+				calendar = new GregorianCalendar();
+				calendar.setTime(entity.getStartDate());
+				calendar.add(Calendar.MONTH, 1);
+				calendar.add(Calendar.DAY_OF_MONTH, -1);
+				errorState = entity.getFinishDate().after(calendar.getTime());
+			}
+			
+			errors.state(request, errorState, "finishDate", "patron.patronage.form.error.finishDate");
 		}
 		
 		if (!errors.hasErrors("budget")) {
 			final String currency = entity.getBudget().getCurrency();
 			final String currencyAvaliable = this.repository.acceptedCurrencies();
+			boolean acceptedCurrency = false;
+			
+			for(final String cur: currencyAvaliable.split(",")) {
+				acceptedCurrency = cur.trim().equalsIgnoreCase(currency);
+				if(acceptedCurrency)
+					break;
+			}
 			errors.state(request, entity.getBudget().getAmount() > 0 , "budget", "patron.patronage.form.error.negative-budget");
-			errors.state(request,currencyAvaliable.contains(currency), "budget", "patron.patronage.form.error.negative-currency");
+			errors.state(request,acceptedCurrency, "budget", "patron.patronage.form.error.negative-currency");
 		}
 	}
 

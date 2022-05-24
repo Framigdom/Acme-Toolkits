@@ -29,4 +29,5 @@ patron.patronage.form.button.patronageReport = Informe
 patron.patronage.form.error.finishDate = El periodo de tiempo debe ser de al menos un mes
 patron.patronage.form.error.startDate = El periodo de tiempo debe emepzar al menos un mes después de su creación
 patron.patronage.form.error.negative-budget = La cantidad debe ser positiva
-patron.patronage.form.error.negative-currency = La moneda es incorrecta (USD, EUR, GBP)
+patron.patronage.form.error.negative-currency = La moneda es incorrecta
+patron.patronage.form.error.duplicated = Este codigo no está libre

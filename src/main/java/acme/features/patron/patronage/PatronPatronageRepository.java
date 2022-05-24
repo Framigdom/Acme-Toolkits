@@ -31,4 +31,7 @@ public interface PatronPatronageRepository extends AbstractRepository {
 	
 	@Query("select cd.acceptedCurrencies from ConfigData cd")
 	String acceptedCurrencies();
+	
+	@Query("select patronage from Patronage patronage where patronage.code = :code")
+	Patronage findPatronageByCode(String code);
 }

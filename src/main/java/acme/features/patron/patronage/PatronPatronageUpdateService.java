@@ -96,6 +96,13 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		assert entity != null;
 		assert errors != null;
 		
+		if(!errors.hasErrors("code")) {
+			Patronage exists;
+			
+			exists = this.repository.findPatronageByCode(entity.getCode());
+			errors.state(request, exists== null || exists.equals(entity), "code", "patronage.patronage.form.error.duplicated");
+		}
+		
 		if(!errors.hasErrors("startDate")) {
 			Calendar calendar;
 			
@@ -115,6 +122,20 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 			calendar.add(Calendar.DAY_OF_MONTH, -1);
 			
 			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "patron.patronage.form.error.finishDate");
+		}
+		
+		if (!errors.hasErrors("budget")) {
+			final String currency = entity.getBudget().getCurrency();
+			final String currencyAvaliable = this.repository.acceptedCurrencies();
+			boolean acceptedCurrency = false;
+			
+			for(final String cur: currencyAvaliable.split(",")) {
+				acceptedCurrency = cur.trim().equalsIgnoreCase(currency);
+				if(acceptedCurrency)
+					break;
+			}
+			errors.state(request, entity.getBudget().getAmount() > 0 , "budget", "patron.patronage.form.error.negative-budget");
+			errors.state(request,acceptedCurrency, "budget", "patron.patronage.form.error.negative-currency");
 		}
 	}
 
