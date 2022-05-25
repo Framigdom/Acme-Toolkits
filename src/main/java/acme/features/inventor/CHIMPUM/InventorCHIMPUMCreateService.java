@@ -1,5 +1,10 @@
 package acme.features.inventor.CHIMPUM;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +39,7 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "pattern", "moment", "title", "description", "startDate","finishDate","budget","link");
+		request.bind(entity, errors, "pattern","title", "description", "creationMoment","startDate","finishDate","budget","link");
 		
 	}
 
@@ -46,7 +51,7 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 		
 		
 				
-		request.unbind(entity, model, "pattern", "moment", "title", "description", "startDate","finishDate","budget","link");
+		request.unbind(entity, model, "pattern","title", "description", "creationMoment","startDate","finishDate","budget","link");
 		
 		
 	}
@@ -57,7 +62,17 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 
 		CHIMPUM result;
 		result = new CHIMPUM();
+		
+		final Date today = new Date();
 
+		final String date = new SimpleDateFormat("dd/MM/yyyy").format(today);
+		
+		result.setPattern(date);
+		
+		result.setCreationMoment(today);
+		
+		
+		
 		return result;
 	}
 
@@ -79,6 +94,8 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 		strongSpamThreshold = this.repository.findStrongSpamTreshold();
 		weakSpamThreshold = this.repository.findWeakSpamTreshold();
 		
+		
+		
 		if(!errors.hasErrors("title")) {
 			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
 				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
@@ -90,6 +107,30 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
 				"description", "inventor.CHIMPUM.form.error.spam");
 		}
+		
+		if(!errors.hasErrors("startDate")) {
+			Calendar calendar;
+			
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.MONTH, 1);
+			calendar.add(Calendar.DAY_OF_MONTH, -1);
+			
+			errors.state(request, entity.getStartDate().after(calendar.getTime()), "startDate", "inventor.chimpum.form.error.startDate");
+		}
+		
+		if(!errors.hasErrors("finishDate")) {
+			Calendar calendar;
+			
+			calendar = new GregorianCalendar();
+			calendar.setTime(entity.getStartDate());
+			calendar.add(Calendar.DAY_OF_MONTH, 6);
+			
+			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "inventor.chimpum.form.error.finishDate");
+		}
+		
+		
+		
+		
 		
 		
 	}

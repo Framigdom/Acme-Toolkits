@@ -39,10 +39,6 @@ public class CHIMPUM extends AbstractEntity {
 	@Pattern(regexp="^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$") //dd/mm/yyyy
 	protected String				pattern;
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Past
-	@NotNull
-	protected Date					moment;
 
 	@NotBlank
 	@Length(max=100)
@@ -51,6 +47,11 @@ public class CHIMPUM extends AbstractEntity {
 	@NotBlank
 	@Length(max=255)
 	protected String				description;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	@Past
+	protected Date				creationMoment;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull

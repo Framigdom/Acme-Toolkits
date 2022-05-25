@@ -13,4 +13,4 @@
 	<acme:list-column code="inventor.CHIMPUM.list.label.link" path="link"/>
 </acme:list>
 
-<acme:button  code="inventor.CHIMPUM.list.button.create" action="/inventor/CHIMPUM/create?patronageId=${patronageId}"/>
+<acme:button  code="inventor.CHIMPUM.list.button.create" action="/inventor/chimpum/create"/>

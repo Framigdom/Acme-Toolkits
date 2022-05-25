@@ -5,13 +5,13 @@
 <acme:form readonly="${readOnly}">
 	<h2><acme:message code="inventor.CHIMPUM.message.CHIMPUM"/></h2>
 	
-	<acme:input-textbox code="inventor.CHIMPUM.form.label.pattern" path="pattern"/>
-	<acme:input-textbox code="inventor.CHIMPUM.form.label.moment" path="moment"/>
+	<acme:input-textbox code="inventor.CHIMPUM.form.label.pattern" path="pattern" readonly="true"/>
 	<acme:input-textbox code="inventor.CHIMPUM.form.label.title" path="title"/>
-	<acme:input-money code="inventor.CHIMPUM.form.label.description" path="description"/>
+	<acme:input-textbox code="inventor.CHIMPUM.form.label.description" path="description"/>
+	<acme:input-moment code="inventor.CHIMPUM.form.label.creationMoment" path="creationMoment" readonly="true"/>
 	<acme:input-moment code="inventor.CHIMPUM.form.label.startDate" path="startDate"/>
 	<acme:input-moment code="inventor.CHIMPUM.form.label.finishDate" path="finishDate"/>
-	<acme:input-moment code="inventor.CHIMPUM.form.label.budget" path="budget"/>
+	<acme:input-money code="inventor.CHIMPUM.form.label.budget" path="budget"/>
 	<acme:input-url code="inventor.CHIMPUM.form.label.link" path="link"/>
 
 <jstl:choose>
