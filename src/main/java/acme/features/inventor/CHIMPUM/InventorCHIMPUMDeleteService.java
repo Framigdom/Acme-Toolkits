@@ -1,8 +1,6 @@
 package acme.features.inventor.CHIMPUM;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +10,12 @@ import acme.entities.CHIMPUM.CHIMPUM;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractDeleteService;
 import acme.roles.Inventor;
 import features.SpamDetector;
 
 @Service
-public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inventor,CHIMPUM>{	
+public class InventorCHIMPUMDeleteService  implements AbstractDeleteService<Inventor,CHIMPUM>{	
 	
 	// Internal state ---------------------------------------------------------
 
@@ -49,6 +47,7 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 		assert entity != null;
 		assert model != null;
 		
+		
 				
 		request.unbind(entity, model, "pattern","title", "description", "creationMoment","startDate","finishDate","budget","link");
 		
@@ -56,24 +55,18 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 	}
 
 	@Override
-	public CHIMPUM instantiate(final Request<CHIMPUM> request) {
+	public CHIMPUM findOne(final Request<CHIMPUM> request) {
 		assert request != null;
 
 		CHIMPUM result;
-		result = new CHIMPUM();
-		
-		final Date today = new Date();
+		int id;
 
-		final String date = new SimpleDateFormat("dd/MM/yyyy").format(today);
-		
-		result.setPattern(date);
-		
-		result.setCreationMoment(today);
-		
-		
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findCHIMPUMById(id);
+
 		return result;
 	}
+
 
 	@Override
 	public void validate(final Request<CHIMPUM> request, final CHIMPUM entity, final Errors errors) {
@@ -127,21 +120,20 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "inventor.chimpum.form.error.finishDate");
 		}
 		
-		
-		
-		
-		
-		
 	}
+		
+		@Override
+		public void delete(final Request<CHIMPUM> request, final CHIMPUM entity) {
+			assert request != null;
+			assert entity != null;
+			
+			this.repository.delete(entity);
+			
+		}
+		
+		
+		
 
-	@Override
-	public void create(final Request<CHIMPUM> request, final CHIMPUM entity) {
-		assert request != null;
-		assert entity != null;
-		
-		this.repository.save(entity);
-	
-	}
 
 
 

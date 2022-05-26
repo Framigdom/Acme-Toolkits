@@ -14,12 +14,23 @@
 	
 	<jstl:choose>	 
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && published == false}">
+		<acme:input-select code="inventor.artifact.form.label.select.chimpum" path="chimpum">
+					<jstl:forEach items="${chimpums}" var="optionChimpum">
+						<acme:input-option code="${optionChimpum.pattern}" value="${optionChimpum.pattern}"
+						selected="${chimpum.equals(optionChimpum)}"/>
+					</jstl:forEach>
+				</acme:input-select>
 			<acme:input-textbox code="inventor.artifact.list.label.type" path="artifactType" readonly="true"/>
 			<acme:submit code="inventor.artifact.form.button.update" action="/inventor/artifact/update"/>
 			<acme:submit code="inventor.artifact.form.button.delete" action="/inventor/artifact/delete"/>
 			<acme:submit code="inventor.artifact.form.button.publish" action="/inventor/artifact/publish"/>
 		</jstl:when>
 		<jstl:when test="${command == 'create'}">
+			<acme:input-select code="inventor.artifact.form.label.select.chimpum" path="chimpum">
+					<jstl:forEach items="${chimpums}" var="optionChimpum">
+						<acme:input-option code="${optionChimpum.pattern}" value="${optionChimpum.pattern}"/>
+					</jstl:forEach>
+				</acme:input-select>
 			<acme:input-textbox code="inventor.artifact.list.label.type" path="type" readonly="true"/>
 			<acme:submit code="inventor.artifact.form.button.create" action="/inventor/artifact/create"/>
 		</jstl:when>		

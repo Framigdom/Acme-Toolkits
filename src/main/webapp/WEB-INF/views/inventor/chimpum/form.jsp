@@ -16,6 +16,7 @@
 
 <jstl:choose>
 	<jstl:when test="${command == 'create'}">		
+	
 <acme:submit code="inventor.CHIMPUM.form.button.create" action="/inventor/chimpum/create"/>			
 </jstl:when>
 <jstl:when test="${acme:anyOf(command, 'show, update, delete')}">

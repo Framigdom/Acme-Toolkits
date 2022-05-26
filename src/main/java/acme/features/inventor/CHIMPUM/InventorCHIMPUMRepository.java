@@ -21,6 +21,7 @@ public interface InventorCHIMPUMRepository extends AbstractRepository{
 	
 	@Query("select a from Artifact a where a.id = :id")
 	Artifact findARTIFACTById(int id);
+
 	
 	@Query("select config.strongSpamTerms from ConfigData config")
 	String findStrongSpamTerms();
@@ -33,6 +34,8 @@ public interface InventorCHIMPUMRepository extends AbstractRepository{
 	
 	@Query("select config.weakSpamTreshold from ConfigData config")
 	int findWeakSpamTreshold();
+	
+	
 
 	/*
 	@Query("select a.chimpum from ARTIFACT a where a.id = :id")
