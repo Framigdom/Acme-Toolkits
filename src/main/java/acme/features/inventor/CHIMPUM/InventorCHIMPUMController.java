@@ -22,6 +22,9 @@ public class InventorCHIMPUMController extends AbstractController<Inventor, CHIM
 	
 	@Autowired
 	protected InventorCHIMPUMCreateService createService;
+	
+	@Autowired
+	protected InventorCHIMPUMUpdateService updateService;
 
 	// Constructors ---------------------------------------------------------------------
 
@@ -30,6 +33,7 @@ public class InventorCHIMPUMController extends AbstractController<Inventor, CHIM
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
 		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
 	}
 	
 
