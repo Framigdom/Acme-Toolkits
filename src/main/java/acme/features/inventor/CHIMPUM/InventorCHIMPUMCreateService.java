@@ -114,7 +114,7 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 			calendar.add(Calendar.MONTH, 1);
 			calendar.add(Calendar.DAY_OF_MONTH, -1);
 			
-			errors.state(request, entity.getStartDate().after(calendar.getTime()), "startDate", "inventor.chimpum.form.error.startDate");
+			errors.state(request, entity.getStartDate().after(calendar.getTime()), "startDate", "inventor.CHIMPUM.form.error.startDate");
 		}
 		
 		if(!errors.hasErrors("finishDate")) {
@@ -124,7 +124,22 @@ public class InventorCHIMPUMCreateService  implements AbstractCreateService<Inve
 			calendar.setTime(entity.getStartDate());
 			calendar.add(Calendar.DAY_OF_MONTH, 6);
 			
-			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "inventor.chimpum.form.error.finishDate");
+			errors.state(request, entity.getFinishDate().after(calendar.getTime()), "finishDate", "inventor.CHIMPUM.form.error.finishDate");
+		}
+		
+		if (!errors.hasErrors("budget")) {
+			final String currency = entity.getBudget().getCurrency();
+			final String currencyAvaliable = this.repository.acceptedCurrencies();
+			boolean acceptedCurrency = false;
+			
+			for(final String cur: currencyAvaliable.split(",")) {
+				acceptedCurrency = cur.trim().equalsIgnoreCase(currency);
+				if(acceptedCurrency)
+					break;
+			}
+			
+			errors.state(request, entity.getBudget().getAmount() > 0 , "budget", "inventor.CHIMPUM.form.error.negative-budget");
+			errors.state(request,acceptedCurrency, "budget", "inventor.CHIMPUM.form.error.negative-currency");
 		}
 		
 		

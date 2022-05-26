@@ -35,6 +35,9 @@ public interface InventorCHIMPUMRepository extends AbstractRepository{
 	@Query("select config.weakSpamTreshold from ConfigData config")
 	int findWeakSpamTreshold();
 	
+	@Query("select cd.acceptedCurrencies from ConfigData cd")
+	String acceptedCurrencies();
+	
 	
 
 	/*
