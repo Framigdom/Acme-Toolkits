@@ -1,42 +1,42 @@
-2022-05-26 20:58:34.977 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on DESKTOP-CV0IB0H with PID 860 (C:\Users\Pablo Marín Gómez\Desktop\Workspace-22.0\Frameworks\Acme-Framework-22.6\target\classes started by Pablo Mar¡n G¢mez in C:\Users\Pablo Marín Gómez\Desktop\Workspace-22.0\Projects\Acme-Toolkits-Control-Check) 
-2022-05-26 20:58:34.979 DEBUG [acme.Launcher@main] Running with Spring Boot v2.4.2, Spring v5.3.3 
-2022-05-26 20:58:34.981 INFO  [acme.Launcher@main] The following profiles are active: development,default 
-2022-05-26 20:58:38.383 DEBUG [org.apache.jasper.servlet.JasperInitializer@main] Initializing Jasper for context [application] 
-2022-05-26 20:58:44.697 DEBUG [org.apache.jasper.servlet.JspServlet@main] Scratch dir for the JSP engine is: [C:\Users\Pablo Marín Gómez\AppData\Local\Temp\tomcat.8080.8009608120994375268\work\Tomcat\localhost\acme-toolkits-22.5] 
-2022-05-26 20:58:44.700 DEBUG [org.apache.jasper.servlet.JspServlet@main] IMPORTANT: Do not modify the generated servlets 
-2022-05-26 20:58:44.720 INFO  [acme.Launcher@main] Started Launcher in 10.633 seconds (JVM running for 11.86) 
-2022-05-26 20:58:44.727 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/target/test-classes/' 
-2022-05-26 20:58:44.727 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/target/classes/' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/lib/SpamDetector.jar' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Frameworks/Acme-Framework-22.6/target/classes/' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Frameworks/Acme-Framework-22.6/target/test-classes/' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.2/spring-boot-starter-tomcat-2.4.2.jar' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.41/tomcat-embed-core-9.0.41.jar' 
-2022-05-26 20:58:44.728 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.41/tomcat-embed-websocket-9.0.41.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.41/tomcat-embed-jasper-9.0.41.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.41/tomcat-embed-el-9.0.41.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar' 
-2022-05-26 20:58:44.729 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.2/spring-boot-starter-security-2.4.2.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar' 
-2022-05-26 20:58:44.730 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/security/spring-security-web/5.4.2/spring-security-web-5.4.2.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/security/spring-security-core/5.4.2/spring-security-core-5.4.2.jar' 
-2022-05-26 20:58:44.731 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-context/5.3.3/spring-context-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar' 
-2022-05-26 20:58:44.732 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/s
+2022-05-27 15:26:55.141 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on DESKTOP-CV0IB0H with PID 5520 (C:\Users\Pablo Marín Gómez\Desktop\Workspace-22.0\Frameworks\Acme-Framework-22.6\target\classes started by Pablo Mar¡n G¢mez in C:\Users\Pablo Marín Gómez\Desktop\Workspace-22.0\Projects\Acme-Toolkits-Control-Check) 
+2022-05-27 15:26:55.143 DEBUG [acme.Launcher@main] Running with Spring Boot v2.4.2, Spring v5.3.3 
+2022-05-27 15:26:55.145 INFO  [acme.Launcher@main] The following profiles are active: development,default 
+2022-05-27 15:26:59.461 DEBUG [org.apache.jasper.servlet.JasperInitializer@main] Initializing Jasper for context [application] 
+2022-05-27 15:27:06.823 DEBUG [org.apache.jasper.servlet.JspServlet@main] Scratch dir for the JSP engine is: [C:\Users\Pablo Marín Gómez\AppData\Local\Temp\tomcat.8080.7248871622650953505\work\Tomcat\localhost\acme-toolkits-22.5] 
+2022-05-27 15:27:06.823 DEBUG [org.apache.jasper.servlet.JspServlet@main] IMPORTANT: Do not modify the generated servlets 
+2022-05-27 15:27:06.839 INFO  [acme.Launcher@main] Started Launcher in 13.207 seconds (JVM running for 15.328) 
+2022-05-27 15:27:06.847 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/target/test-classes/' 
+2022-05-27 15:27:06.847 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/target/classes/' 
+2022-05-27 15:27:06.847 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Projects/Acme-Toolkits-Control-Check/lib/SpamDetector.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Frameworks/Acme-Framework-22.6/target/classes/' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/Desktop/Workspace-22.0/Frameworks/Acme-Framework-22.6/target/test-classes/' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.2/spring-boot-starter-tomcat-2.4.2.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.41/tomcat-embed-core-9.0.41.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.41/tomcat-embed-websocket-9.0.41.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.41/tomcat-embed-jasper-9.0.41.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.41/tomcat-embed-el-9.0.41.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.2/spring-boot-starter-security-2.4.2.jar' 
+2022-05-27 15:27:06.848 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar' 
+2022-05-27 15:27:06.850 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/security/spring-security-web/5.4.2/spring-security-web-5.4.2.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/security/spring-security-core/5.4.2/spring-security-core-5.4.2.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-context/5.3.3/spring-context-5.3.3.jar' 
+2022-05-27 15:27:06.851 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar' 
+2022-05-27 15:27:06.852 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar' 
+2022-05-27 15:27:06.852 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.jar' 
+2022-05-27 15:27:06.852 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar' 
+2022-05-27 15:27:06.852 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/Pablo%20Mar%c3%adn%20G%c3%b3mez/.m2/repository/org/springframework

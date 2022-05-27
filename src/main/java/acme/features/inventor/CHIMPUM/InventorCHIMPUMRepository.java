@@ -21,6 +21,9 @@ public interface InventorCHIMPUMRepository extends AbstractRepository{
 	
 	@Query("select a from Artifact a where a.id = :id")
 	Artifact findARTIFACTById(int id);
+	
+	@Query("SELECT q.artifact FROM Quantity q WHERE q.artifact.chimpum.id =:id")
+	Collection<Artifact> findToolsAndComponentsByCHIMPUMId(int id);
 
 	
 	@Query("select config.strongSpamTerms from ConfigData config")
