@@ -10,7 +10,6 @@
 	<acme:input-textarea code="inventor.artifact.form.label.description" path="description"/>
 	<acme:input-money code="inventor.artifact.form.label.retailprice" path="retailPrice"/>
 	<acme:input-textbox code="inventor.artifact.form.label.link" path="link"/>
-
 	
 	
 	<jstl:choose>	 
@@ -28,7 +27,5 @@
 			<acme:input-textbox code="inventor.artifact.list.label.type" path="artifactType"/>
 		</jstl:when>
 	</jstl:choose>
-	
-	<acme:button code="inventor.artifact.form.button.CHIMPUM" action="/inventor/chimpum/list?artifactId=${id}"/>
 </acme:form>
 
