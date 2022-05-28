@@ -11,6 +11,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.CHIMPUM.CHIMPUM;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import acme.roles.Inventor;
@@ -61,5 +62,8 @@ public class Artifact extends AbstractEntity{
 	
 	@ManyToOne(optional = false)
 	protected Inventor			inventor;
+	
+	@ManyToOne(optional = true)
+	protected CHIMPUM			chimpum;
 
 }

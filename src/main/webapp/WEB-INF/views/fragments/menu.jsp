@@ -87,6 +87,7 @@
 			<acme:menu-suboption code="master.menu.inventor.tools-link" action="/inventor/artifact/list-mine?type=tool"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.inventor.toolkits-link" action="/inventor/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.inventor.list-chimpum" action="/inventor/chimpum/list"/>
     </acme:menu-option>
     
 	</acme:menu-left>
