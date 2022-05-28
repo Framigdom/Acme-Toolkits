@@ -17,7 +17,7 @@ inventor.artifact.list.label.inventor = Inventor
 inventor.artifact.list.label.quantity = Quantity
 
 
-
+inventor.artifact.form.button.CHIMPUM = See CHIMPUMS associated
 inventor.artifact.form.button.update = Update
 inventor.artifact.form.button.delete = Delete
 inventor.artifact.form.button.publish = Publish
