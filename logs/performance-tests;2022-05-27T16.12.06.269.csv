@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-"2022-05-27 16:11:20.04","acme.testing.inventor.chimpum.InventorChimpumCreateTest","positive",12276,""[1] recordIndex=0, pattern=30/05/2022, title=Amazing CHIMPUM 3, description=Is Amazing at best, creationMoment=2022/05/20 12:00, startDate=2022/07/21 12:00, finishDate=2022/08/01 12:00, budget=EUR 60.00, link=https://www.google.com"","Expected value 'Amazing CHIMPUM 3' in attribute 1 of record 0, but found 'Amazing CHIMPUM'"
