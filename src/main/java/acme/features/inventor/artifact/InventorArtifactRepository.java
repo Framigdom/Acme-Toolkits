@@ -31,7 +31,7 @@ public interface InventorArtifactRepository extends AbstractRepository{
 	@Query("SELECT q.artifact FROM Quantity q WHERE q.toolkit.id =:id")
 	Collection<Artifact> findToolsAndComponentsByToolkitId(int id);
 	
-	@Query("SELECT q.artifact FROM Quantity q WHERE q.artifact.chimpum.id =:id")
+	@Query("SELECT q.artifact FROM Quantity q WHERE q.artifact.chimpum.id =:id and q.artifact.published=true")
 	Collection<Artifact> findToolsAndComponentsByCHIMPUMId(int id);
 	
 	@Query("SELECT a FROM Artifact a WHERE a.id = :id")
