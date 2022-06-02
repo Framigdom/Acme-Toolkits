@@ -31,10 +31,10 @@
 			<acme:submit test="${published == false}" code="inventor.quantity.form.button.delete" action="/inventor/quantity/delete"/>		
 		</jstl:when>
 	
-		<jstl:when test="${command == 'create'}">		
-			<acme:input-select code="inventor.quantity.form.label.select.artifact" path="artifact.name">
+		<jstl:when test="${command == 'create'}">
+			<acme:input-select code="inventor.quantity.form.label.select.artifact" path="artifactId">
 				<jstl:forEach items="${artifacts}" var="optionArtifact">
-					<acme:input-option code="${optionArtifact.name}" value="${optionArtifact.name}"/>
+					<acme:input-option code="${optionArtifact.name}" value="${optionArtifact.id}"/>
 				</jstl:forEach>
 			</acme:input-select>
 			<acme:submit code="inventor.quantity.form.button.create" action="/inventor/quantity/create?toolkitId=${toolkitId}"/>			
@@ -43,3 +43,4 @@
 	</jstl:choose>
 	
 </acme:form>
+
