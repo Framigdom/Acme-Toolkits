@@ -9,6 +9,7 @@ import acme.entities.artifacts.Quantity;
 import acme.entities.artifacts.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.helpers.CollectionHelper;
 import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
@@ -70,12 +71,16 @@ public class InventorQuantityListService implements AbstractListService<Inventor
 		assert model != null;
 		
 		final String artifactName = entity.getArtifact().getName();
+		final String artifactCurrency = entity.getArtifact().getRetailPrice().getCurrency();
 		
 		request.unbind(entity, model, "amount", "artifact");
 		model.setAttribute("artifact.name", artifactName);
 		
-		final Double totalPrice = entity.getArtifact().getRetailPrice().getAmount()*entity.getAmount();		
-		model.setAttribute("total-price", totalPrice);
+		final Money totalPrice = new Money();
+		totalPrice.setCurrency(artifactCurrency);
+		totalPrice.setAmount((entity.getArtifact().getRetailPrice().getAmount()*entity.getAmount()));
+				
+		model.setAttribute("totalPrice", totalPrice);
 		
 	}
 
