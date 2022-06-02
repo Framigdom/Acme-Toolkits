@@ -132,7 +132,4 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		this.repository.save(entity);
 	
 	}
-
-
-
 }
