@@ -46,15 +46,14 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		assert entity != null;
 		assert errors != null;
 		
-		String artifactName;
+		Integer artifactId;
 		Artifact artifact;
 		
-		artifactName = (String) request.getModel().getAttribute("artifact.name");
-		artifact = this.repository.findArtifactByName(artifactName);
-		
+		artifactId = request.getModel().getInteger("artifactId");
+		artifact = this.repository.findArtifactById(artifactId);	
 
 		entity.setArtifact(artifact);
-		request.bind(entity, errors, "amount", "artifact.name");
+		request.bind(entity, errors, "amount");
 		
 	}
 
@@ -67,7 +66,7 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		List<Artifact> publishedArtifacts;	
 		publishedArtifacts = this.repository.findPublishedArtifacts();
 		
-		request.unbind(entity, model, "amount", "artifact.name");
+		request.unbind(entity, model, "amount");
 		model.setAttribute("toolkitId", request.getModel().getAttribute("toolkitId"));
 		model.setAttribute("artifacts", publishedArtifacts);
 		model.setAttribute("published", entity.getToolkit().isPublished());
@@ -104,7 +103,7 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		if(entity.getArtifact().getArtifactType() == ArtifactType.TOOL) {
 			errors.state(request, entity.getAmount()<=1, "*", "inventor.quantity.form.error.only-1-type-of-tool-allowed");
 		}
-		if(!errors.hasErrors("artifact.name")) {
+		if(!errors.hasErrors("artifact.id")) {
 			final Collection<Quantity> quantities = this.repository.findQuantitiesByToolkitId(entity.getToolkit().getId());
 			final String artifactName = entity.getArtifact().getName();
 			final boolean repeatedArtifact = quantities.stream()
@@ -121,18 +120,9 @@ public class InventorQuantityCreateService  implements AbstractCreateService<Inv
 		assert request != null;
 		assert entity != null;
 		
-		String artifactName;
-		Artifact artifact;
-		
-		artifactName = (String) request.getModel().getAttribute("artifact.name");
-		artifact = this.repository.findArtifactByName(artifactName);
-
-		entity.setArtifact(artifact);
-		
+			
 		this.repository.save(entity);
 	
 	}
-
-
 
 }
